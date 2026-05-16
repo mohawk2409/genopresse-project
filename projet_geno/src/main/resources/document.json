@@ -1,0 +1,19 @@
+{
+  "title": "Mon Document",
+  "author": "Jean Dupont",
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "content": "Ceci est le paragraphe d'introduction."
+    },
+    {
+      "heading": "Détails",
+      "level": 2,
+      "content": "Contenu avec style personnalisé.",
+      "bold": true,
+      "fontSize": 14,
+      "color": "FF0000"
+    }
+  ]
+}
