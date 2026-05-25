@@ -1,6 +1,9 @@
 var util = require('util');
 var Transform = require('stream').Transform;
 
+let date = [];
+const dict = {0:"lundi",1:"mardi",2:"mercredi",3:"jeudi",4:"vendredi",5:"samedi",6:"dimanche"};
+const dict_mois = {"JAN":"janvier","FEB":"février","MAR":"mars","APR":"avril","MAY":"mai","JUN":"juin","JUL":"juillet","AUG":"août","SEP":"septembre","OCT":"octobre","NOV":"novembre","DEC":"décembre"};
 util.inherits(Ged2Json, Transform);
 /**
  * Stream JSON objects out of GEDCOM file
@@ -49,7 +52,10 @@ Ged2Json.prototype.simplify = function simplify(obj) {
     } else if (key == 'DATE') {
       out[key] = obj[key].map(function(el) {
         if (typeof el['TIME'] !== 'undefined') {
-          el['GEDVALUE'] += ' '+el['TIME']['GEDVALUE'];
+          date.push(el['TIME']['GEDVALUE']);
+          date[1] = dict_mois[date[1]];
+          el['GEDVALUE'] = el['GEDVALUE'].concat(date[0],' ', date[1],' ',date[2]);
+          // el['GEDVALUE'] += ' '+el['TIME']['GEDVALUE']; // rajoute simplement à el['GEDVALUE'] les valeurs trouvées dans le el['TIME']['GEDVALUE']
           delete el['TIME'];
         }
         return this.simplify(el);
@@ -96,7 +102,7 @@ Ged2Json.prototype._transform = function(line, encoding, callback) {
     this.lastLevels[0] = this.currentObject;
   } else {
     var parent = this.lastLevels[level-1];
-    if (typeof parent === 'undefined') {
+    if (typeof parent === 'undefined' && level!==0) {
       console.log(JSON.stringify(this.lastLevels, null, 2));
       console.log(line);
       throw new Error('No parent for level '+level);

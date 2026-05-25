@@ -1,5 +1,5 @@
 {
-  "sourceFile": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\python_poc\\test.json",
+  "sourceFile": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\python_poc\\test.json",
   "people": [
     {
       "order": 1,
@@ -38,7 +38,7 @@
         },
         "foaf:gender": "M",
         "bio:event": {
-          "display": "Didier Michel BEDER est né le 31 AUG 1962",
+          "display": "Didier Michel BEDER né le 31 AUG 1962 à {'GEDVALUE': 'Saint-Germain-en-Laye,78100,Yvelines,├Äle-de-France,FRANCE,', 'MAP': {'LATI': 'N48.900000', 'LONG': 'E2.083330'}}",
           "_FNA": "NO",
           "dc:date": "31 AUG 1962",
           "bio:principal": {
@@ -97,7 +97,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Jeannine HRYSIO est née le 9 DEC 1937",
+            "display": "Jeannine HRYSIO née le 9 DEC 1937 à {'GEDVALUE': 'Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaur├¿s', 'MAP': {'LATI': 'N48.000000', 'LONG': 'E2.750000'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -211,7 +211,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Michel Charles BEDER est né le 3 JAN 1938",
+            "display": "Michel Charles BEDER né le 3 JAN 1938 à {'GEDVALUE': 'Maurecourt,78780,Yvelines,├Äle-de-France,FRANCE,', 'MAP': {'LATI': 'N48.996140', 'LONG': 'E2.061540'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -344,7 +344,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Charles Ars├¿ne BEDER est né le 18 MAY 1905",
+            "display": "Charles Ars├¿ne BEDER né le 18 MAY 1905 à {'GEDVALUE': 'Conflans-Sainte-Honorine,78700,Yvelines,├Äle-de-France,FRANCE,', 'MAP': {'LATI': 'N49.001580', 'LONG': 'E2.096940'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -538,7 +538,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Yolande Aur├®lienne DESJARDINS est née le 29 MAY 1908",
+            "display": "Yolande Aur├®lienne DESJARDINS née le 29 MAY 1908 à {'GEDVALUE': 'Cambrai,59400,Nord,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N50.166670', 'LONG': 'E3.233330'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -663,7 +663,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Anna HRYSIO est née le 18 FEB 1899",
+            "display": "Anna HRYSIO née le 18 FEB 1899 à {'GEDVALUE': 'Hnatkowice,,Powiat Przemyski,Vo├»vodie des Basses-Carpates,POLOGNE,', 'MAP': {'LATI': 'N49.871742', 'LONG': 'E22.767924'}}",
             "_FNA": "NO",
             "NOTE": "Hypoth├¿se : aurait une soeur Catherine n├®e le 15 juin 1904 ├á HnatKowice (en Pologne), fille de Jean HRYSIO et Marie KIBALSKA. Elle sÔÇÖest mari├®e le 25 octobre 1930 ├á Ch├ólette-sur-Loing (45) avec Gr├®goire Cycyk n├® en Pologne ├á Arlamow.",
             "dc:date": "18 FEB 1899",
@@ -846,7 +846,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Alfred ├ëdouard BEDER est né le 4 DEC 1870",
+            "display": "Alfred ├ëdouard BEDER né le 4 DEC 1870 à {'GEDVALUE': 'Dunkerque,59240,Nord,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N51.034771', 'LONG': 'E2.377253'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -1089,7 +1089,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Marie BOEGLER est née le 9 FEB 1872",
+            "display": "Marie BOEGLER née le 9 FEB 1872 à {'GEDVALUE': 'Barr,67140,Bas-Rhin,Grand Est,FRANCE,', 'MAP': {'LATI': 'N48.407550', 'LONG': 'E7.448730'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -1214,7 +1214,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Arthur Alexandre DESJARDINS est né le 5 OCT 1873",
+            "display": "Arthur Alexandre DESJARDINS né le 5 OCT 1873 à {'GEDVALUE': 'Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin', 'MAP': {'LATI': 'N50.632970', 'LONG': 'E3.058580'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -1375,7 +1375,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Camille Augustine Ang├¿le VINOT est née le 29 JUN 1878",
+            "display": "Camille Augustine Ang├¿le VINOT née le 29 JUN 1878 à {'GEDVALUE': 'Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N51.022880', 'LONG': 'E2.393590'}}",
             "_FNA": "NO",
             "SOUR": {
               "@id": {
@@ -1500,7 +1500,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Kleber Alfred BEDER est né le 23 JUN 1899",
+            "display": "Kleber Alfred BEDER né le 23 JUN 1899 à {'GEDVALUE': 'Conflans-Sainte-Honorine,78700,Yvelines,├Äle-de-France,FRANCE,', 'MAP': {'LATI': 'N49.001580', 'LONG': 'E2.096940'}}",
             "_FNA": "NO",
             "dc:date": "23 JUN 1899",
             "bio:principal": {
@@ -1644,7 +1644,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "St├®phanie Caroline BEDER est née le 21 JUL 1902",
+            "display": "St├®phanie Caroline BEDER née le 21 JUL 1902 à {'GEDVALUE': 'Conflans-Sainte-Honorine,78700,Yvelines,├Äle-de-France,FRANCE,', 'MAP': {'LATI': 'N49.001580', 'LONG': 'E2.096940'}}",
             "_FNA": "NO",
             "dc:date": "21 JUL 1902",
             "bio:principal": {
@@ -1781,7 +1781,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Florentin C├®sar BEDER est né le 6 SEP 1838",
+            "display": "Florentin C├®sar BEDER né le 6 SEP 1838 à {'GEDVALUE': 'Condren,02700,Aisne,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N49.629400', 'LONG': 'E3.281070'}}",
             "_FNA": "NO",
             "dc:date": "6 SEP 1838",
             "bio:principal": {
@@ -1890,7 +1890,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "St├®phanie Marie Virginie BEYAERT est née le 15 OCT 1832",
+            "display": "St├®phanie Marie Virginie BEYAERT née le 15 OCT 1832 à {'GEDVALUE': 'Broxeele,59470,Nord,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N50.829820', 'LONG': 'E2.319870'}}",
             "_FNA": "NO",
             "dc:date": "15 OCT 1832",
             "bio:principal": {
@@ -1977,7 +1977,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Jacques BOEGLER est né le 29 SEP 1838",
+            "display": "Jacques BOEGLER né le 29 SEP 1838 à {'GEDVALUE': 'Barr,67140,Bas-Rhin,Grand Est,FRANCE,', 'MAP': {'LATI': 'N48.407550', 'LONG': 'E7.448730'}}",
             "_FNA": "NO",
             "dc:date": "29 SEP 1838",
             "bio:principal": {
@@ -2064,7 +2064,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Caroline REISSINGER est née le 6 NOV 1844",
+            "display": "Caroline REISSINGER née le 6 NOV 1844 à {'GEDVALUE': 'Barr,67140,Bas-Rhin,Grand Est,FRANCE,', 'MAP': {'LATI': 'N48.407550', 'LONG': 'E7.448730'}}",
             "_FNA": "NO",
             "dc:date": "6 NOV 1844",
             "bio:principal": {
@@ -2233,7 +2233,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Henri DESJARDINS est né le 16 MAR 1821",
+            "display": "Henri DESJARDINS né le 16 MAR 1821 à {'GEDVALUE': 'De├╗l├®mont,59890,Nord,Hauts-de-France,FRANCE,hameau des ├®cluses', 'MAP': {'LATI': 'N50.733330', 'LONG': 'E2.950000'}}",
             "_FNA": "NO",
             "dc:date": "16 MAR 1821",
             "bio:principal": {
@@ -2320,7 +2320,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Pauline VALCKE est née le 13 DEC 1832",
+            "display": "Pauline VALCKE née le 13 DEC 1832 à {'GEDVALUE': 'Warneton,7784,Hainaut,Wallonie,BELGIQUE,', 'MAP': {'LATI': 'N50.751580', 'LONG': 'E2.946350'}}",
             "_FNA": "NO",
             "dc:date": "13 DEC 1832",
             "bio:principal": {
@@ -2407,7 +2407,7 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Ars├¿ne Armand Calixte VINOT est né le 8 APR 1853",
+            "display": "Ars├¿ne Armand Calixte VINOT né le 8 APR 1853 à {'GEDVALUE': 'Mauvages,55190,Meuse,Grand Est,FRANCE,', 'MAP': {'LATI': 'N48.594800', 'LONG': 'E5.553980'}}",
             "_FNA": "NO",
             "dc:date": "8 APR 1853",
             "bio:principal": {
@@ -2493,7 +2493,7 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Elisa P├®tronille MORGAND est née le 23 NOV 1847",
+            "display": "Elisa P├®tronille MORGAND née le 23 NOV 1847 à {'GEDVALUE': 'Estaires,59940,Nord,Hauts-de-France,FRANCE,', 'MAP': {'LATI': 'N50.645740', 'LONG': 'E2.727820'}}",
             "_FNA": "NO",
             "dc:date": "23 NOV 1847",
             "bio:principal": {
