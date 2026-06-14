@@ -1,24 +1,19 @@
 {
-  "sourceFile": "Hrysio.json",
+  "sourceFile": "Hrysio1.json",
   "people": [
     {
       "order": 1,
       "id": "_:731",
       "type": "foaf:Person",
       "title": "Didier Michel BEDER",
+      "generation": 1,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 10:18:28"
-        },
-        "CHAN": {
-          "dc:date": "2 JAN 2025 15:36:20"
-        },
         "FAMC": {
-          "display": "Didier Michel BEDER est enfant de la famille Michel Charles BEDER et Jeannine HRYSIO",
+          "display": "Didier Michel BEDER est le fils Michel Charles BEDER et Jeannine HRYSIO. Il est né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:702",
             "display": "Michel Charles BEDER et Jeannine HRYSIO",
@@ -38,8 +33,8 @@
         },
         "foaf:gender": "M",
         "bio:event": {
-          "display": "Didier Michel BEDER né le 31 AUG 1962 à Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,",
-          "_FNA": "NO",
+          "eventType": "bio:Birth",
+          "display": "Didier Michel BEDER né le vendredi 31 AUG 1962 à Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,",
           "dc:date": "31 AUG 1962",
           "bio:principal": {
             "@id": "_:731",
@@ -51,11 +46,7 @@
           },
           "@type": "bio:Birth",
           "bio:place": {
-            "GEDVALUE": "Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,",
-            "MAP": {
-              "LATI": "N48.900000",
-              "LONG": "E2.083330"
-            }
+            "GEDVALUE": "Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,"
           }
         }
       }
@@ -65,19 +56,14 @@
       "id": "_:732",
       "type": "foaf:Person",
       "title": "Jeannine HRYSIO",
+      "generation": 2,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 10:19:48"
-        },
-        "CHAN": {
-          "dc:date": "3 OCT 2025 13:14:39"
-        },
         "FAMC": {
-          "display": "Jeannine HRYSIO est enfant de la famille Anna HRYSIO",
+          "display": "Jeannine HRYSIO est la fille Anna HRYSIO. Elle est née le jeudi 9 décembre 1937 à Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès.",
           "ofFamily": {
             "@id": "_:705",
             "display": "Anna HRYSIO",
@@ -97,19 +83,14 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Jeannine HRYSIO née le 9 DEC 1937 à Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Jeannine HRYSIO née le jeudi 9 DEC 1937 à Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès",
             "SOUR": {
               "@id": {
                 "@id": "_:8317",
                 "display": "Naissance - HRYSIO Jeannine",
-                "type_source": null
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed"
               }
             },
             "dc:date": "9 DEC 1937",
@@ -123,16 +104,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès",
-              "MAP": {
-                "LATI": "N48.000000",
-                "LONG": "E2.750000"
-              }
+              "GEDVALUE": "Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès"
             }
           },
           {
-            "display": "Jeannine HRYSIO est décédé(e) le 25 NOV 1973",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Jeannine HRYSIO est décédé(e) le dimanche 25 novembre 1973",
             "dc:date": "25 NOV 1973",
             "bio:principal": {
               "@id": "_:732",
@@ -144,11 +121,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Évecquemont,78740,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.014390",
-                "LONG": "E1.944250"
-              }
+              "GEDVALUE": "Évecquemont,78740,Yvelines,Île-de-France,FRANCE,"
             }
           }
         ],
@@ -176,6 +149,7 @@
       "id": "_:733",
       "type": "foaf:Person",
       "title": "Michel Charles BEDER",
+      "generation": 2,
       "lines": {
         "OCCU": "menuisier, ingenieur électronicien des arts et métiers",
         "SIGN": "YES",
@@ -183,14 +157,8 @@
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 15:34:21"
-        },
-        "CHAN": {
-          "dc:date": "3 OCT 2025 13:14:39"
-        },
         "FAMC": {
-          "display": "Michel Charles BEDER est enfant de la famille Charles Arsène BEDER et Yolande Aurélienne DESJARDINS",
+          "display": "Michel Charles BEDER est le fils Charles Arsène BEDER et Yolande Aurélienne DESJARDINS. Il est né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:704",
             "display": "Charles Arsène BEDER et Yolande Aurélienne DESJARDINS",
@@ -211,19 +179,14 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Michel Charles BEDER né le 3 JAN 1938 à Maurecourt,78780,Yvelines,Île-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Michel Charles BEDER né le lundi 3 JAN 1938 à Maurecourt,78780,Yvelines,Île-de-France,FRANCE,",
             "SOUR": {
               "@id": {
                 "@id": "_:8318",
                 "display": "_:8318",
-                "type_source": null
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed"
               }
             },
             "dc:date": "3 JAN 1938",
@@ -237,16 +200,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N48.996140",
-                "LONG": "E2.061540"
-              }
+              "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,"
             }
           },
           {
-            "display": "Michel Charles BEDER est décédé(e) le 7 NOV 1999",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Michel Charles BEDER est décédé(e) le dimanche 7 novembre 1999",
             "dc:date": "7 NOV 1999",
             "bio:principal": {
               "@id": "_:733",
@@ -258,11 +217,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N48.982340",
-                "LONG": "E2.056870"
-              }
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,"
             }
           }
         ],
@@ -311,20 +266,15 @@
       "id": "_:734",
       "type": "foaf:Person",
       "title": "Charles Arsène BEDER",
+      "generation": 3,
       "lines": {
         "OCCU": "batelier, capitaine de remorqueur",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 15:36:29"
-        },
-        "CHAN": {
-          "dc:date": "11 JUN 2025 15:48:20"
-        },
         "FAMC": {
-          "display": "Charles Arsène BEDER est enfant de la famille Alfred Édouard BEDER et Marie BOEGLER",
+          "display": "Charles Arsène BEDER est le fils Alfred Édouard BEDER et Marie BOEGLER. Il est né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:707",
             "display": "Alfred Édouard BEDER et Marie BOEGLER",
@@ -345,19 +295,15 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Charles Arsène BEDER né le 18 MAY 1905 à Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Charles Arsène BEDER né le jeudi 18 MAY 1905 à Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
             "SOUR": {
               "@id": {
                 "@id": "_:831",
                 "display": "Naissance - BEDER Charles Arsène (1905-1986)",
-                "type_source": "https://archives.yvelines.fr/rechercher/archives-en-ligne/registres-paroissiaux-et-detat-civil/registres-paroissiaux-et-detat-civil?arko_default_618914e3ee7e4--ficheFocus=&arko_default_618914e3ee7e4--filtreGroupes%5Bmode%5D=simple&arko_default_618914e3ee7e4--filtreGroupes%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=Conflans-Sainte-Honorine%20(Yvelines%2C%20France)%5B%5Barko_fiche_60ddacc735846%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=1905&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bextras%5D%5Bmode%5D=input&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bq%5D%5B%5D=Bapt%C3%AAmes%20et%20naissances%5B%5Barko_fiche_614201ec39f69%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bextras%5D%5Bmode%5D=select&arko_default_618914e3ee7e4--from=0&arko_default_618914e3ee7e4--resultSize=25&arko_default_618914e3ee7e4--contenuIds%5B%5D=1750004&arko_default_618914e3ee7e4--modeRestit=arko_default_6189505357e83#/_recherche-api/visionneuse-infos/arko_default_618914e3ee7e4/arko_fiche_619509edd404b/arko_default_61891b88cb0c3/image/1449203"
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/registres-paroissiaux-et-detat-civil/registres-paroissiaux-et-detat-civil?arko_default_618914e3ee7e4--ficheFocus=&arko_default_618914e3ee7e4--filtreGroupes%5Bmode%5D=simple&arko_default_618914e3ee7e4--filtreGroupes%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=Conflans-Sainte-Honorine%20(Yvelines%2C%20France)%5B%5Barko_fiche_60ddacc735846%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=1905&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bextras%5D%5Bmode%5D=input&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bq%5D%5B%5D=Bapt%C3%AAmes%20et%20naissances%5B%5Barko_fiche_614201ec39f69%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bextras%5D%5Bmode%5D=select&arko_default_618914e3ee7e4--from=0&arko_default_618914e3ee7e4--resultSize=25&arko_default_618914e3ee7e4--contenuIds%5B%5D=1750004&arko_default_618914e3ee7e4--modeRestit=arko_default_6189505357e83#/_recherche-api/visionneuse-infos/arko_default_618914e3ee7e4/arko_fiche_619509edd404b/arko_default_61891b88cb0c3/image/1449203"
               }
             },
             "dc:date": "18 MAY 1905",
@@ -371,27 +317,18 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,"
             }
           },
           {
-            "display": "Charles Arsène BEDER est décédé(e) le 9 DEC 1986",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Charles Arsène BEDER est décédé(e) le mardi 9 décembre 1986",
             "SOUR": {
               "@id": {
                 "@id": "_:8321",
                 "display": "_:8321",
-                "type_source": null
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed"
               }
             },
             "NOTE": "habite au 13 avenue porte de Pontoise à Conflans",
@@ -406,17 +343,13 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Poissy,78300,Yvelines,Île-de-France,FRANCE,Hôpiital",
-              "MAP": {
-                "LATI": "N48.929020",
-                "LONG": "E2.049520"
-              }
+              "GEDVALUE": "Poissy,78300,Yvelines,Île-de-France,FRANCE,Hôpiital"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1925",
             "TYPE": "Military service",
-            "_FNA": "NO",
             "NOTE": "Cote 1R/RM 701",
             "dc:date": "1925",
             "bio:principal": {
@@ -429,17 +362,13 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Versailles,78000,Yvelines,Île-de-France,FRANCE,Matricule 654",
-              "MAP": {
-                "LATI": "N48.800000",
-                "LONG": "E2.133330"
-              }
+              "GEDVALUE": "Versailles,78000,Yvelines,Île-de-France,FRANCE,Matricule 654"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1954",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:734",
@@ -451,11 +380,7 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise"
             }
           }
         ],
@@ -506,20 +431,15 @@
       "id": "_:735",
       "type": "foaf:Person",
       "title": "Yolande Aurélienne DESJARDINS",
+      "generation": 3,
       "lines": {
         "OCCU": "coupeuse en bonneterie",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 15:36:44"
-        },
-        "CHAN": {
-          "dc:date": "4 JUN 2025 16:34:55"
-        },
         "FAMC": {
-          "display": "Yolande Aurélienne DESJARDINS est enfant de la famille Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
+          "display": "Yolande Aurélienne DESJARDINS est la fille Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT. Elle est née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:709",
             "display": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
@@ -540,19 +460,15 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Yolande Aurélienne DESJARDINS née le 29 MAY 1908 à Cambrai,59400,Nord,Hauts-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Yolande Aurélienne DESJARDINS née le vendredi 29 MAY 1908 à Cambrai,59400,Nord,Hauts-de-France,FRANCE,",
             "SOUR": {
               "@id": {
                 "@id": "_:832",
                 "display": "Naissance - DESJARDINS Yolande Aurélienne (1908-1969)",
-                "type_source": "https://archivesdepartementales.lenord.fr/ark:/33518/gbqwknp91jv2/4a1672d2-114b-4763-a66d-280f433c0f46"
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/ark:/33518/gbqwknp91jv2/4a1672d2-114b-4763-a66d-280f433c0f46"
               }
             },
             "dc:date": "29 MAY 1908",
@@ -566,27 +482,18 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Cambrai,59400,Nord,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.166670",
-                "LONG": "E3.233330"
-              }
+              "GEDVALUE": "Cambrai,59400,Nord,Hauts-de-France,FRANCE,"
             }
           },
           {
-            "display": "Yolande Aurélienne DESJARDINS est décédé(e) le 13 JAN 1969",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Yolande Aurélienne DESJARDINS est décédé(e) le lundi 13 janvier 1969",
             "SOUR": {
               "@id": {
                 "@id": "_:8319",
                 "display": "_:8319",
-                "type_source": null
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed"
               }
             },
             "NOTE": "décédée au 13 rue Porte de Pontoise",
@@ -601,11 +508,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise"
             }
           }
         ],
@@ -633,20 +536,15 @@
       "id": "_:736",
       "type": "foaf:Person",
       "title": "Anna HRYSIO",
+      "generation": 3,
       "lines": {
         "OCCU": "domestique agricole",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 15:48:08"
-        },
-        "CHAN": {
-          "dc:date": "11 JUN 2025 16:56:52"
-        },
         "FAMC": {
-          "display": "Anna HRYSIO est enfant de la famille HRYSIO",
+          "display": "Anna HRYSIO est la fille HRYSIO. Elle est née le samedi 18 février 1899 à Hnatkowice, , Powiat Przemyski, Voïvodie des Basses-Carpates, POLOGNE.",
           "ofFamily": {
             "@id": "_:7019",
             "display": "HRYSIO",
@@ -666,8 +564,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Anna HRYSIO née le 18 FEB 1899 à Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Anna HRYSIO née le samedi 18 FEB 1899 à Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,",
             "NOTE": "Hypothèse : aurait une soeur Catherine née le 15 juin 1904 à HnatKowice (en Pologne), fille de Jean HRYSIO et Marie KIBALSKA. Elle s’est mariée le 25 octobre 1930 à Châlette-sur-Loing (45) avec Grégoire Cycyk né en Pologne à Arlamow.",
             "dc:date": "18 FEB 1899",
             "bio:principal": {
@@ -680,16 +578,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,",
-              "MAP": {
-                "LATI": "N49.871742",
-                "LONG": "E22.767924"
-              }
+              "GEDVALUE": "Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,"
             }
           },
           {
-            "display": "Anna HRYSIO est décédé(e) le 1 APR 1977",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Anna HRYSIO est décédé(e) le vendredi 1 avril 1977",
             "NOTE": "inhumée au Cimetière des hautes roches 9DIDN104 de Conflans Sainte-Honorine",
             "dc:date": "1 APR 1977",
             "bio:principal": {
@@ -703,18 +597,22 @@
             "@type": "bio:Death"
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1936",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "OBJE": [
               {
                 "@id": "_:7934",
-                "display": "Pièce jointe _:7934 - Recensement St Maurice sur Fessard 1936-1.png - /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard 1936-1.jpg",
+                "display": "Pièce jointe 1/2 | Titre: Recensement St Maurice sur Fessard 1936-1.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard 1936-1.jpg | [PRIMAIRE]",
+                "title": "Recensement St Maurice sur Fessard 1936-1.png",
+                "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard 1936-1.jpg",
                 "_PRIM": "YES"
               },
               {
                 "@id": "_:7935",
-                "display": "Pièce jointe _:7935 - Recensement St Maurice sur Fessard-2.png - /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard-2.jpg"
+                "display": "Pièce jointe 2/2 | Titre: Recensement St Maurice sur Fessard-2.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard-2.jpg",
+                "title": "Recensement St Maurice sur Fessard-2.png",
+                "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard-2.jpg"
               }
             ],
             "NOTE": "domestique agricole chez André Walerack (polonais)",
@@ -729,17 +627,13 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,Le Casrouge",
-              "MAP": {
-                "LATI": "N47.992310",
-                "LONG": "E2.621570"
-              }
+              "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,Le Casrouge"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1937",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "dc:date": "1937",
             "bio:principal": {
               "@id": "_:736",
@@ -751,20 +645,18 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,",
-              "MAP": {
-                "LATI": "N47.992310",
-                "LONG": "E2.621570"
-              }
+              "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1946",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "OBJE": {
               "@id": "_:7938",
-              "display": "Pièce jointe _:7938 - Recensement 1946 Corquilleroy quartier Buges.png - /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement 1946 Corquilleroy quartier Buges.jpg",
+              "display": "Pièce jointe 1/1 | Titre: Recensement 1946 Corquilleroy quartier Buges.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement 1946 Corquilleroy quartier Buges.jpg | [PRIMAIRE]",
+              "title": "Recensement 1946 Corquilleroy quartier Buges.png",
+              "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement 1946 Corquilleroy quartier Buges.jpg",
               "_PRIM": "YES"
             },
             "NOTE": "pas de recensements postérieurs à 1946",
@@ -779,11 +671,7 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Corquilleroy,45120,Loiret,Centre-Val de Loire,FRANCE,Buges",
-              "MAP": {
-                "LATI": "N48.042120",
-                "LONG": "E2.703820"
-              }
+              "GEDVALUE": "Corquilleroy,45120,Loiret,Centre-Val de Loire,FRANCE,Buges"
             }
           }
         ],
@@ -799,24 +687,474 @@
       }
     },
     {
+      "order": 7,
+      "id": "_:737",
+      "type": "foaf:Person",
+      "title": "Alfred Édouard BEDER",
+      "generation": 4,
+      "lines": {
+        "OCCU": "capitaine de remorqueur à la société générale de touage et remorquage à Andrésy",
+        "_FIL": {
+          "display": "Enfant légitime",
+          "raw": "LEGITIMATE_CHILD"
+        },
+        "NOTE": "son bateau est la « guèpe 15 »",
+        "OBJE": [
+          {
+            "@id": "_:794",
+            "display": "Pièce jointe 1/2 | Titre: Capture d’écran 2025-01-03 à 09.36.54.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-03 à 09.36.54.jpg | [PRIMAIRE]",
+            "title": "Capture d’écran 2025-01-03 à 09.36.54.png",
+            "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-03 à 09.36.54.jpg",
+            "_PRIM": "YES"
+          },
+          {
+            "@id": "_:7920",
+            "display": "Pièce jointe 2/2 | Titre: image_berroux_charles_remorqueur_entr_ph38780_987707.jpg | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
+            "title": "image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
+            "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/image_berroux_charles_remorqueur_entr_ph38780_987707.jpg"
+          }
+        ],
+        "FAMC": {
+          "display": "Alfred Édouard BEDER est le fils Florentin César BEDER et Stéphanie Marie Virginie BEYAERT. Il est né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE.",
+          "ofFamily": {
+            "@id": "_:7012",
+            "display": "Florentin César BEDER et Stéphanie Marie Virginie BEYAERT",
+            "type": "family",
+            "name": "Florentin César BEDER et Stéphanie Marie Virginie BEYAERT",
+            "participants": [
+              "Florentin César BEDER",
+              "Stéphanie Marie Virginie BEYAERT"
+            ]
+          }
+        },
+        "foaf:name": {
+          "display": "Alfred Édouard BEDER",
+          "GEDVALUE": "Alfred Édouard/BEDER/",
+          "GIVN": "Alfred Édouard",
+          "SURN": "BEDER"
+        },
+        "foaf:gender": "M",
+        "bio:event": [
+          {
+            "eventType": "bio:Birth",
+            "display": "Alfred Édouard BEDER né le dimanche 4 DEC 1870 à Dunkerque,59240,Nord,Hauts-de-France,FRANCE,",
+            "SOUR": {
+              "@id": {
+                "@id": "_:833",
+                "display": "Naissance - BEDER Alfred Édouard (1870-1938)",
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/ark:/33518/5bnqf6px7th4/60849ca9-725c-41a9-a6a2-52096d26ca9c"
+              }
+            },
+            "dc:date": "4 DEC 1870",
+            "bio:principal": {
+              "@id": "_:737",
+              "display": "Alfred Édouard BEDER",
+              "type": "person",
+              "name": "Alfred Édouard BEDER",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Birth",
+            "bio:place": {
+              "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,"
+            }
+          },
+          {
+            "eventType": "bio:Death",
+            "display": "Alfred Édouard BEDER est décédé(e) le samedi 13 août 1938",
+            "SOUR": [
+              {
+                "@id": {
+                  "@id": "_:836",
+                  "display": "Déclaration de succession 1",
+                  "type": "source",
+                  "type_source": "Deed",
+                  "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf3c8bd34/arko_default_60f543615a2d5/image/919273"
+                }
+              },
+              {
+                "@id": {
+                  "@id": "_:837",
+                  "display": "Déclaration de succession 2",
+                  "type": "source",
+                  "type_source": "Deed",
+                  "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf4495dc6/arko_default_60f543615a2d5/image/919276"
+                }
+              },
+              {
+                "@id": {
+                  "@id": "_:8315",
+                  "display": "Décès - BEDER Alfred",
+                  "type": "source",
+                  "type_source": "Deed"
+                }
+              }
+            ],
+            "dc:date": "13 AUG 1938",
+            "bio:principal": {
+              "@id": "_:737",
+              "display": "Alfred Édouard BEDER",
+              "type": "person",
+              "name": "Alfred Édouard BEDER",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Death",
+            "bio:place": {
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,"
+            }
+          },
+          {
+            "eventType": "bio:Graduation",
+            "display": "Événement daté du mercredi 11 décembre 1895",
+            "OBJE": {
+              "@id": "_:7928",
+              "display": "Pièce jointe 1/1 | Titre: Capture d’écran 2025-01-05 à 17.10.11.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-05 à 17.10.11.jpg | [PRIMAIRE]",
+              "title": "Capture d’écran 2025-01-05 à 17.10.11.png",
+              "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-05 à 17.10.11.jpg",
+              "_PRIM": "YES"
+            },
+            "NOTE": "Capitaine de remorqueur",
+            "dc:date": "11 DEC 1895",
+            "bio:principal": {
+              "@id": "_:737",
+              "display": "Alfred Édouard BEDER",
+              "type": "person",
+              "name": "Alfred Édouard BEDER",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Graduation",
+            "bio:place": {
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,"
+            }
+          },
+          {
+            "eventType": "bio:Graduation",
+            "display": "Événement daté du lundi 23 avril 1923",
+            "OBJE": {
+              "@id": "_:7929",
+              "display": "Pièce jointe 1/1 | Titre: PV examen.png | Fichier: /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/PV examen.jpg | [PRIMAIRE]",
+              "title": "PV examen.png",
+              "file": "/Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/PV examen.jpg",
+              "_PRIM": "YES"
+            },
+            "NOTE": "Capitaine de bateaux automobiles",
+            "dc:date": "23 APR 1923",
+            "bio:principal": {
+              "@id": "_:737",
+              "display": "Alfred Édouard BEDER",
+              "type": "person",
+              "name": "Alfred Édouard BEDER",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Graduation",
+            "bio:place": {
+              "GEDVALUE": "Bougival,78380,Yvelines,Île-de-France,FRANCE,"
+            }
+          },
+          {
+            "eventType": "bio:IndividualEvent",
+            "display": "Événement daté du 1890",
+            "TYPE": "Military service",
+            "SOUR": {
+              "@id": {
+                "@id": "_:838",
+                "display": "Service militaire - BEDER Alfred Édouard (1870-1938)",
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/ark:/33518/cjf7hp8g01s5/2ee3d77c-4354-45e4-9155-fb21ff767869",
+                "text": "{'GEDVALUE': 'Signalement : ', 'CONT': ['cheveux et sourcis chatains, yeux bleus, front large, nez ordinaire, bouche moyenne, menton rond, visage ovale, taille : 1m69.', 'Détail des services : parti le 10 novembre 1891 pour le 110e régiment d’infanterie. Dispensé de ses obligations militaires car un frère au service. Mais il a perdu ses droits à la dispense, le frère qui la lui avait conférée ayant obtenu une dispen'], 'CONC': 'se, comme aîné d’une famille de 7 enfants.'}"
+              }
+            },
+            "dc:date": "1890",
+            "bio:principal": {
+              "@id": "_:737",
+              "display": "Alfred Édouard BEDER",
+              "type": "person",
+              "name": "Alfred Édouard BEDER",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:IndividualEvent",
+            "bio:place": {
+              "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,"
+            }
+          }
+        ],
+        "bio:relationship": {
+          "@id": "_:707",
+          "display": "Alfred Édouard BEDER et Marie BOEGLER",
+          "type": "family",
+          "name": "Alfred Édouard BEDER et Marie BOEGLER",
+          "participants": [
+            "Alfred Édouard BEDER",
+            "Marie BOEGLER"
+          ]
+        },
+        "rel:spouseOf": {
+          "@id": "_:738",
+          "display": "Marie BOEGLER",
+          "type": "person",
+          "name": "Marie BOEGLER",
+          "gender": "F"
+        }
+      }
+    },
+    {
+      "order": 8,
+      "id": "_:738",
+      "type": "foaf:Person",
+      "title": "Marie BOEGLER",
+      "generation": 4,
+      "lines": {
+        "OCCU": "ménagère",
+        "_FIL": {
+          "display": "Enfant légitime",
+          "raw": "LEGITIMATE_CHILD"
+        },
+        "FAMC": {
+          "display": "Marie BOEGLER est la fille Jacques BOEGLER et Caroline REISSINGER. Elle est née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE.",
+          "ofFamily": {
+            "@id": "_:7014",
+            "display": "Jacques BOEGLER et Caroline REISSINGER",
+            "type": "family",
+            "name": "Jacques BOEGLER et Caroline REISSINGER",
+            "participants": [
+              "Jacques BOEGLER",
+              "Caroline REISSINGER"
+            ]
+          }
+        },
+        "foaf:name": {
+          "display": "Marie BOEGLER",
+          "GEDVALUE": "Marie/BOEGLER/",
+          "GIVN": "Marie",
+          "SURN": "BOEGLER"
+        },
+        "foaf:gender": "F",
+        "bio:event": [
+          {
+            "eventType": "bio:Birth",
+            "display": "Marie BOEGLER née le vendredi 9 FEB 1872 à Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "SOUR": {
+              "@id": {
+                "@id": "_:8312",
+                "display": "_:8312",
+                "type": "source",
+                "type_source": "Deed",
+                "text": "{'CONT': ['N°2', 'BOEGLER Caroline', 'née le 9 février', '1872', 'Décédée à Andresy', 'Le 10.8.1953', 'Colmar le 12.2.57', 'Le Greffier de l’Etat-civil', '      Mairie  de    Barr       _____________ arrondissement  de    Sélestat        ____________', '            Le  dix  février     mille huit  cent  soixante-douze                 à   onze          heures  du      matin ', '           Acte  de  naissance de       Marie BOEGLER     ________________________', 'née  à     Barr                     le     neuf  février         mille     huit     cent  soixante-douze', 'à     trois    heures              de  l’après-midi           enfant   légitime                de   Jacques BOEGLER                 ', '_____________    âgé de    trente-trois              ans ,        profession   commis tanneur         ', 'né     à     Barr                  habitant        à   Barr                      _______________________', 'et    de     Caroline REISSINGER                    ______________     âgée   de vingt-sept         ans', 'Profession  sans ______        habitant     à   Barr, son épouse légitime              ______________', \"            L'enfant   qui   nous   a   été   présenté   a   été  reconnu   de   sexe     féminin         ___________\", 'Premier témoin:     Jacques Adam               ________________       âgé   de    trente-quatre        ans', 'Profession   commis tanneur    ___  habitant  à   Barr           ____ département   Bas-Rhin   ', 'Deuxième témoin :     Guillaume Kleinhenni       ____________      âgé   de     trente-six              ans', 'Profession   (garde de couloir\\xa0?)      habitant   à   Barr   _______    département    Bas-Rhin', \"            Sur   la   présente   déclaration   qui   m'a   été   faite   par     le père de l’enfant             __________\", '  ____________________________________________ ___     et   après   lecture   du   présent   acte', 'ont    signé            ', '            Fait   devant    moi   Gottfried  Bossert                      ______________________________  maire ', \"en   ma   qualité   d'officier   de   l'état  civil .\", '         Jacques Boegler                                                          Le maire', '            Jacques Adam                                                          G. Bossert', '            Guillaume Kleinhennig']}"
+              }
+            },
+            "dc:date": "9 FEB 1872",
+            "bio:principal": {
+              "@id": "_:738",
+              "display": "Marie BOEGLER",
+              "type": "person",
+              "name": "Marie BOEGLER",
+              "gender": "F",
+              "self": true
+            },
+            "@type": "bio:Birth",
+            "bio:place": {
+              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,"
+            }
+          },
+          {
+            "eventType": "bio:Death",
+            "display": "Marie BOEGLER est décédé(e) le lundi 10 août 1953",
+            "SOUR": {
+              "@id": {
+                "@id": "_:835",
+                "display": "Décès - BOEGLER Marie (1872-1953)",
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1953%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf472817f/arko_default_60f543615a2d5/image/919317"
+              }
+            },
+            "dc:date": "10 AUG 1953",
+            "bio:principal": {
+              "@id": "_:738",
+              "display": "Marie BOEGLER",
+              "type": "person",
+              "name": "Marie BOEGLER",
+              "gender": "F",
+              "self": true
+            },
+            "@type": "bio:Death",
+            "bio:place": {
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis"
+            }
+          }
+        ],
+        "bio:relationship": {
+          "@id": "_:707",
+          "display": "Alfred Édouard BEDER et Marie BOEGLER",
+          "type": "family",
+          "name": "Alfred Édouard BEDER et Marie BOEGLER",
+          "participants": [
+            "Alfred Édouard BEDER",
+            "Marie BOEGLER"
+          ]
+        },
+        "rel:spouseOf": {
+          "@id": "_:737",
+          "display": "Alfred Édouard BEDER",
+          "type": "person",
+          "name": "Alfred Édouard BEDER",
+          "gender": "M"
+        }
+      }
+    },
+    {
+      "order": 9,
+      "id": "_:739",
+      "type": "foaf:Person",
+      "title": "Arthur Alexandre DESJARDINS",
+      "generation": 4,
+      "lines": {
+        "OCCU": "batelier, marinier",
+        "_FIL": {
+          "display": "Enfant légitime",
+          "raw": "LEGITIMATE_CHILD"
+        },
+        "FAMC": {
+          "display": "Arthur Alexandre DESJARDINS est le fils Henri DESJARDINS et Pauline VALCKE. Il est né le dimanche 5 octobre 1873 à Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin.",
+          "ofFamily": {
+            "@id": "_:7016",
+            "display": "Henri DESJARDINS et Pauline VALCKE",
+            "type": "family",
+            "name": "Henri DESJARDINS et Pauline VALCKE",
+            "participants": [
+              "Henri DESJARDINS",
+              "Pauline VALCKE"
+            ]
+          }
+        },
+        "foaf:name": {
+          "display": "Arthur Alexandre DESJARDINS",
+          "GEDVALUE": "Arthur Alexandre/DESJARDINS/",
+          "GIVN": "Arthur Alexandre",
+          "SURN": "DESJARDINS"
+        },
+        "foaf:gender": "M",
+        "bio:event": [
+          {
+            "eventType": "bio:Birth",
+            "display": "Arthur Alexandre DESJARDINS né le dimanche 5 OCT 1873 à Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin",
+            "SOUR": {
+              "@id": {
+                "@id": "_:839",
+                "display": "Naissance - DESJARDINS Arthur Alexandre (1873-)",
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/ark:/33518/gx5tps1kd6c0/8e32b65b-2085-4a82-ad05-f83331c81bdd"
+              }
+            },
+            "dc:date": "5 OCT 1873",
+            "bio:principal": {
+              "@id": "_:739",
+              "display": "Arthur Alexandre DESJARDINS",
+              "type": "person",
+              "name": "Arthur Alexandre DESJARDINS",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Birth",
+            "bio:place": {
+              "GEDVALUE": "Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin"
+            }
+          },
+          {
+            "eventType": "bio:Death",
+            "display": "Arthur Alexandre DESJARDINS est décédé(e) le jeudi 13 décembre 1923",
+            "SOUR": {
+              "@id": {
+                "@id": "_:8314",
+                "display": "Décès - DESJARDINS Arthur",
+                "type": "source",
+                "type_source": "Deed"
+              }
+            },
+            "dc:date": "13 DEC 1923",
+            "bio:principal": {
+              "@id": "_:739",
+              "display": "Arthur Alexandre DESJARDINS",
+              "type": "person",
+              "name": "Arthur Alexandre DESJARDINS",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:Death",
+            "bio:place": {
+              "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,rue de l'éperon"
+            }
+          },
+          {
+            "eventType": "bio:IndividualEvent",
+            "display": "Événement daté du 1893",
+            "TYPE": "Military service",
+            "SOUR": {
+              "@id": {
+                "@id": "_:8311",
+                "display": "Service militaire - DESJARDINS Arthur Alexandre (1873-)",
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/images/5991753e-4096-4a44-8809-783feb8d2ed5.jpg",
+                "text": "{'GEDVALUE': 'Signalement : taille 1m77.', 'CONT': 'Etat des services : Rappelé à l’activité le 2 août 1914, arrivé au corps le 9 août. Passé au 10e régiment de génie comme sapeur marinier le 1er décembre 1915. Il est en suite mis en sursis au titre des voies navigables. Sa mission est suspendue le ', 'CONC': '30 janvier 1919 et terminée le 11 juin 1920.'}"
+              }
+            },
+            "dc:date": "1893",
+            "bio:principal": {
+              "@id": "_:739",
+              "display": "Arthur Alexandre DESJARDINS",
+              "type": "person",
+              "name": "Arthur Alexandre DESJARDINS",
+              "gender": "M",
+              "self": true
+            },
+            "@type": "bio:IndividualEvent",
+            "bio:place": {
+              "GEDVALUE": "Lille,59000,Nord,Hauts-de-France,FRANCE,"
+            }
+          }
+        ],
+        "bio:relationship": {
+          "@id": "_:709",
+          "display": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
+          "type": "family",
+          "name": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
+          "participants": [
+            "Arthur Alexandre DESJARDINS",
+            "Camille Augustine Angèle VINOT"
+          ]
+        },
+        "rel:spouseOf": {
+          "@id": "_:7310",
+          "display": "Camille Augustine Angèle VINOT",
+          "type": "person",
+          "name": "Camille Augustine Angèle VINOT",
+          "gender": "F"
+        }
+      }
+    },
+    {
       "order": 10,
       "id": "_:7310",
       "type": "foaf:Person",
       "title": "Camille Augustine Angèle VINOT",
+      "generation": 4,
       "lines": {
         "OCCU": "bonne, ménagère",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 16:11:41"
-        },
-        "CHAN": {
-          "dc:date": "4 JUN 2025 16:49:57"
-        },
         "FAMC": {
-          "display": "Camille Augustine Angèle VINOT est enfant de la famille Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND",
+          "display": "Camille Augustine Angèle VINOT est la fille Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND. Elle est née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:7018",
             "display": "Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND",
@@ -837,19 +1175,15 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Camille Augustine Angèle VINOT née le 29 JUN 1878 à Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Camille Augustine Angèle VINOT née le samedi 29 JUN 1878 à Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,",
             "SOUR": {
               "@id": {
                 "@id": "_:8313",
                 "display": "Naissance - VINOT Camille Augustine Angèle (1878-1963)",
-                "type_source": "https://archivesdepartementales.lenord.fr/ark:/33518/bl0q1t8wpk96/e8ee6da7-7d35-481d-8240-d8d61a5384fe"
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed",
+                "url": "https://archivesdepartementales.lenord.fr/ark:/33518/bl0q1t8wpk96/e8ee6da7-7d35-481d-8240-d8d61a5384fe"
               }
             },
             "dc:date": "29 JUN 1878",
@@ -863,27 +1197,18 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N51.022880",
-                "LONG": "E2.393590"
-              }
+              "GEDVALUE": "Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,"
             }
           },
           {
-            "display": "Camille Augustine Angèle VINOT est décédé(e) le 10 MAR 1963",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Camille Augustine Angèle VINOT est décédé(e) le dimanche 10 mars 1963",
             "SOUR": {
               "@id": {
                 "@id": "_:8320",
                 "display": "_:8320",
-                "type_source": null
-              },
-              "QUAY": "3",
-              "_QUAL": {
-                "_SOUR": "O",
-                "_INFO": "P",
-                "_EVID": "D"
+                "type": "source",
+                "type_source": "Deed"
               }
             },
             "dc:date": "10 MAR 1963",
@@ -897,11 +1222,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,3 rue Victor Hugo",
-              "MAP": {
-                "LATI": "N48.982340",
-                "LONG": "E2.056870"
-              }
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,3 rue Victor Hugo"
             }
           }
         ],
@@ -929,20 +1250,15 @@
       "id": "_:7311",
       "type": "foaf:Person",
       "title": "Kleber Alfred BEDER",
+      "generation": null,
       "lines": {
         "OCCU": "chef d'atelier",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 16:18:56"
-        },
-        "CHAN": {
-          "dc:date": "3 JAN 2025 18:26:08"
-        },
         "FAMC": {
-          "display": "Kleber Alfred BEDER est enfant de la famille Alfred Édouard BEDER et Marie BOEGLER",
+          "display": "Kleber Alfred BEDER est le fils Alfred Édouard BEDER et Marie BOEGLER. Il est né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:707",
             "display": "Alfred Édouard BEDER et Marie BOEGLER",
@@ -963,8 +1279,8 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Kleber Alfred BEDER né le 23 JUN 1899 à Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Kleber Alfred BEDER né le vendredi 23 JUN 1899 à Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
             "dc:date": "23 JUN 1899",
             "bio:principal": {
               "@id": "_:7311",
@@ -976,16 +1292,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,"
             }
           },
           {
-            "display": "Kleber Alfred BEDER est décédé(e) le 26 AUG 1992",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Kleber Alfred BEDER est décédé(e) le mercredi 26 août 1992",
             "dc:date": "26 AUG 1992",
             "bio:principal": {
               "@id": "_:7311",
@@ -997,17 +1309,13 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1954",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:7311",
@@ -1019,11 +1327,7 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,1 rue de Verdun",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,1 rue de Verdun"
             }
           }
         ],
@@ -1074,19 +1378,14 @@
       "id": "_:7312",
       "type": "foaf:Person",
       "title": "Stéphanie Caroline BEDER",
+      "generation": null,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "2 JAN 2025 16:19:22"
-        },
-        "CHAN": {
-          "dc:date": "3 JAN 2025 18:09:32"
-        },
         "FAMC": {
-          "display": "Stéphanie Caroline BEDER est enfant de la famille Alfred Édouard BEDER et Marie BOEGLER",
+          "display": "Stéphanie Caroline BEDER est la fille Alfred Édouard BEDER et Marie BOEGLER. Elle est née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
           "ofFamily": {
             "@id": "_:707",
             "display": "Alfred Édouard BEDER et Marie BOEGLER",
@@ -1107,8 +1406,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
+            "eventType": "bio:Birth",
             "display": "Stéphanie Caroline BEDER née le 21 JUL 1902 à Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-            "_FNA": "NO",
             "dc:date": "21 JUL 1902",
             "bio:principal": {
               "@id": "_:7312",
@@ -1120,17 +1419,13 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.001580",
-                "LONG": "E2.096940"
-              }
+              "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1954",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:7312",
@@ -1142,11 +1437,7 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis",
-              "MAP": {
-                "LATI": "N48.982340",
-                "LONG": "E2.056870"
-              }
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis"
             }
           }
         ],
@@ -1180,16 +1471,11 @@
       "id": "_:7313",
       "type": "foaf:Person",
       "title": "Germaine Madeleine DEGAHIEL",
+      "generation": null,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 09:04:47"
-        },
-        "CHAN": {
-          "dc:date": "3 JAN 2025 18:07:21"
         },
         "foaf:name": {
           "display": "Germaine Madeleine DEGAHIEL",
@@ -1222,18 +1508,13 @@
       "id": "_:7314",
       "type": "foaf:Person",
       "title": "Florentin César BEDER",
+      "generation": 5,
       "lines": {
         "OCCU": "cabaretier, batelier",
         "SIGN": "NO",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 17:20:39"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 16:34:59"
         },
         "foaf:name": {
           "display": "Florentin César BEDER",
@@ -1244,8 +1525,8 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Florentin César BEDER né le 6 SEP 1838 à Condren,02700,Aisne,Hauts-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Florentin César BEDER né le jeudi 6 SEP 1838 à Condren,02700,Aisne,Hauts-de-France,FRANCE,",
             "dc:date": "6 SEP 1838",
             "bio:principal": {
               "@id": "_:7314",
@@ -1257,16 +1538,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Condren,02700,Aisne,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N49.629400",
-                "LONG": "E3.281070"
-              }
+              "GEDVALUE": "Condren,02700,Aisne,Hauts-de-France,FRANCE,"
             }
           },
           {
-            "display": "Florentin César BEDER est décédé(e) le 6 NOV 1902",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Florentin César BEDER est décédé(e) le jeudi 6 novembre 1902",
             "dc:date": "6 NOV 1902",
             "bio:principal": {
               "@id": "_:7314",
@@ -1278,17 +1555,13 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Harnes,62440,Pas-de-Calais,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.446430",
-                "LONG": "E2.904810"
-              }
+              "GEDVALUE": "Harnes,62440,Pas-de-Calais,Hauts-de-France,FRANCE,"
             }
           },
           {
+            "eventType": "bio:IndividualEvent",
             "display": "Événement daté du 1870",
             "TYPE": "Residence",
-            "_FNA": "NO",
             "dc:date": "1870",
             "bio:principal": {
               "@id": "_:7314",
@@ -1300,11 +1573,7 @@
             },
             "@type": "bio:IndividualEvent",
             "bio:place": {
-              "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,28 marché aux poissons",
-              "MAP": {
-                "LATI": "N51.034771",
-                "LONG": "E2.377253"
-              }
+              "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,28 marché aux poissons"
             }
           }
         ],
@@ -1332,17 +1601,12 @@
       "id": "_:7315",
       "type": "foaf:Person",
       "title": "Stéphanie Marie Virginie BEYAERT",
+      "generation": 5,
       "lines": {
         "OCCU": "cabaretière",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 17:22:06"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 17:04:48"
         },
         "foaf:name": {
           "display": "Stéphanie Marie Virginie BEYAERT",
@@ -1353,8 +1617,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Stéphanie Marie Virginie BEYAERT née le 15 OCT 1832 à Broxeele,59470,Nord,Hauts-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Stéphanie Marie Virginie BEYAERT née le lundi 15 OCT 1832 à Broxeele,59470,Nord,Hauts-de-France,FRANCE,",
             "dc:date": "15 OCT 1832",
             "bio:principal": {
               "@id": "_:7315",
@@ -1366,16 +1630,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Broxeele,59470,Nord,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.829820",
-                "LONG": "E2.319870"
-              }
+              "GEDVALUE": "Broxeele,59470,Nord,Hauts-de-France,FRANCE,"
             }
           },
           {
-            "display": "Stéphanie Marie Virginie BEYAERT est décédé(e) le 9 FEB 1880",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Stéphanie Marie Virginie BEYAERT est décédé(e) le lundi 9 février 1880",
             "dc:date": "9 FEB 1880",
             "bio:principal": {
               "@id": "_:7315",
@@ -1387,11 +1647,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Meurchin,62410,Pas-de-Calais,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.498310",
-                "LONG": "E2.893180"
-              }
+              "GEDVALUE": "Meurchin,62410,Pas-de-Calais,Hauts-de-France,FRANCE,"
             }
           }
         ],
@@ -1419,17 +1675,12 @@
       "id": "_:7316",
       "type": "foaf:Person",
       "title": "Jacques BOEGLER",
+      "generation": 5,
       "lines": {
         "OCCU": "commis tanneur",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 17:35:01"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 16:39:00"
         },
         "foaf:name": {
           "display": "Jacques BOEGLER",
@@ -1440,8 +1691,8 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Jacques BOEGLER né le 29 SEP 1838 à Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Jacques BOEGLER né le samedi 29 SEP 1838 à Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
             "dc:date": "29 SEP 1838",
             "bio:principal": {
               "@id": "_:7316",
@@ -1453,16 +1704,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-              "MAP": {
-                "LATI": "N48.407550",
-                "LONG": "E7.448730"
-              }
+              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,"
             }
           },
           {
-            "display": "Jacques BOEGLER est décédé(e) le 2 AUG 1905",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Jacques BOEGLER est décédé(e) le mercredi 2 août 1905",
             "dc:date": "2 AUG 1905",
             "bio:principal": {
               "@id": "_:7316",
@@ -1474,11 +1721,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-              "MAP": {
-                "LATI": "N48.407550",
-                "LONG": "E7.448730"
-              }
+              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,"
             }
           }
         ],
@@ -1506,17 +1749,12 @@
       "id": "_:7317",
       "type": "foaf:Person",
       "title": "Caroline REISSINGER",
+      "generation": 5,
       "lines": {
         "OCCU": "sans profession",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 17:35:19"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 16:42:40"
         },
         "foaf:name": {
           "display": "Caroline REISSINGER",
@@ -1527,8 +1765,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Caroline REISSINGER née le 6 NOV 1844 à Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Caroline REISSINGER née le mercredi 6 NOV 1844 à Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
             "dc:date": "6 NOV 1844",
             "bio:principal": {
               "@id": "_:7317",
@@ -1540,16 +1778,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-              "MAP": {
-                "LATI": "N48.407550",
-                "LONG": "E7.448730"
-              }
+              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,"
             }
           },
           {
-            "display": "Caroline REISSINGER est décédé(e) le 24 SEP 1911",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Caroline REISSINGER est décédé(e) le dimanche 24 septembre 1911",
             "dc:date": "24 SEP 1911",
             "bio:principal": {
               "@id": "_:7317",
@@ -1561,11 +1795,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
-              "MAP": {
-                "LATI": "N48.407550",
-                "LONG": "E7.448730"
-              }
+              "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,"
             }
           }
         ],
@@ -1593,19 +1823,14 @@
       "id": "_:7318",
       "type": "foaf:Person",
       "title": "Lucienne Raymonde BEDER",
+      "generation": null,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
-        "_CREA": {
-          "dc:date": "3 JAN 2025 18:12:03"
-        },
-        "CHAN": {
-          "dc:date": "3 JAN 2025 18:13:09"
-        },
         "FAMC": {
-          "display": "Lucienne Raymonde BEDER est enfant de la famille Alfred Édouard BEDER et Marie BOEGLER",
+          "display": "Lucienne Raymonde BEDER est la fille Alfred Édouard BEDER et Marie BOEGLER. Elle est née le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
           "ofFamily": {
             "@id": "_:707",
             "display": "Alfred Édouard BEDER et Marie BOEGLER",
@@ -1625,8 +1850,8 @@
         },
         "foaf:gender": "F",
         "bio:event": {
-          "display": "Lucienne Raymonde BEDER est décédé(e) le 12 OCT 1908",
-          "_FNA": "NO",
+          "eventType": "bio:Death",
+          "display": "Lucienne Raymonde BEDER est décédé(e) le lundi 12 octobre 1908",
           "dc:date": "12 OCT 1908",
           "bio:principal": {
             "@id": "_:7318",
@@ -1638,11 +1863,7 @@
           },
           "@type": "bio:Death",
           "bio:place": {
-            "GEDVALUE": "Tarascon-sur-Ariège,09400,Ariège,Occitanie,FRANCE,",
-            "MAP": {
-              "LATI": "N42.845450",
-              "LONG": "E1.603320"
-            }
+            "GEDVALUE": "Tarascon-sur-Ariège,09400,Ariège,Occitanie,FRANCE,"
           }
         },
         "rel:siblingOf": [
@@ -1675,17 +1896,12 @@
       "id": "_:7319",
       "type": "foaf:Person",
       "title": "Henri DESJARDINS",
+      "generation": 5,
       "lines": {
         "OCCU": "batelier",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "4 JAN 2025 16:29:30"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 17:18:37"
         },
         "foaf:name": {
           "display": "Henri DESJARDINS",
@@ -1696,8 +1912,8 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Henri DESJARDINS né le 16 MAR 1821 à Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Henri DESJARDINS né le vendredi 16 MAR 1821 à Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses",
             "dc:date": "16 MAR 1821",
             "bio:principal": {
               "@id": "_:7319",
@@ -1709,16 +1925,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses",
-              "MAP": {
-                "LATI": "N50.733330",
-                "LONG": "E2.950000"
-              }
+              "GEDVALUE": "Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses"
             }
           },
           {
-            "display": "Henri DESJARDINS est décédé(e) le 9 NOV 1882",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Henri DESJARDINS est décédé(e) le jeudi 9 novembre 1882",
             "dc:date": "9 NOV 1882",
             "bio:principal": {
               "@id": "_:7319",
@@ -1730,11 +1942,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Courrières,62710,Pas-de-Calais,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.457010",
-                "LONG": "E2.947240"
-              }
+              "GEDVALUE": "Courrières,62710,Pas-de-Calais,Hauts-de-France,FRANCE,"
             }
           }
         ],
@@ -1762,17 +1970,12 @@
       "id": "_:7320",
       "type": "foaf:Person",
       "title": "Pauline VALCKE",
+      "generation": 5,
       "lines": {
         "OCCU": "batelière",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "4 JAN 2025 16:29:58"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 17:19:45"
         },
         "foaf:name": {
           "display": "Pauline VALCKE",
@@ -1783,8 +1986,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Pauline VALCKE née le 13 DEC 1832 à Warneton,7784,Hainaut,Wallonie,BELGIQUE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Pauline VALCKE née le jeudi 13 DEC 1832 à Warneton,7784,Hainaut,Wallonie,BELGIQUE,",
             "dc:date": "13 DEC 1832",
             "bio:principal": {
               "@id": "_:7320",
@@ -1796,16 +1999,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Warneton,7784,Hainaut,Wallonie,BELGIQUE,",
-              "MAP": {
-                "LATI": "N50.751580",
-                "LONG": "E2.946350"
-              }
+              "GEDVALUE": "Warneton,7784,Hainaut,Wallonie,BELGIQUE,"
             }
           },
           {
-            "display": "Pauline VALCKE est décédé(e) le 5 FEB 1903",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Pauline VALCKE est décédé(e) le jeudi 5 février 1903",
             "dc:date": "5 FEB 1903",
             "bio:principal": {
               "@id": "_:7320",
@@ -1817,11 +2016,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Bruay-sur-l'Escaut,59860,Nord,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.399180",
-                "LONG": "E3.543800"
-              }
+              "GEDVALUE": "Bruay-sur-l'Escaut,59860,Nord,Hauts-de-France,FRANCE,"
             }
           }
         ],
@@ -1849,17 +2044,12 @@
       "id": "_:7321",
       "type": "foaf:Person",
       "title": "Arsène Armand Calixte VINOT",
+      "generation": 5,
       "lines": {
         "OCCU": "marinier",
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "5 JAN 2025 16:52:04"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 17:46:12"
         },
         "foaf:name": {
           "display": "Arsène Armand Calixte VINOT",
@@ -1870,8 +2060,8 @@
         "foaf:gender": "M",
         "bio:event": [
           {
-            "display": "Arsène Armand Calixte VINOT né le 8 APR 1853 à Mauvages,55190,Meuse,Grand Est,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Arsène Armand Calixte VINOT né le vendredi 8 APR 1853 à Mauvages,55190,Meuse,Grand Est,FRANCE,",
             "dc:date": "8 APR 1853",
             "bio:principal": {
               "@id": "_:7321",
@@ -1883,16 +2073,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Mauvages,55190,Meuse,Grand Est,FRANCE,",
-              "MAP": {
-                "LATI": "N48.594800",
-                "LONG": "E5.553980"
-              }
+              "GEDVALUE": "Mauvages,55190,Meuse,Grand Est,FRANCE,"
             }
           },
           {
-            "display": "Arsène Armand Calixte VINOT est décédé(e) le 24 FEB 1929",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Arsène Armand Calixte VINOT est décédé(e) le dimanche 24 février 1929",
             "dc:date": "24 FEB 1929",
             "bio:principal": {
               "@id": "_:7321",
@@ -1904,11 +2090,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N48.982340",
-                "LONG": "E2.056870"
-              }
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,"
             }
           }
         ],
@@ -1936,16 +2118,11 @@
       "id": "_:7322",
       "type": "foaf:Person",
       "title": "Elisa Pétronille MORGAND",
+      "generation": 5,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "5 JAN 2025 16:52:30"
-        },
-        "CHAN": {
-          "dc:date": "23 APR 2026 17:46:33"
         },
         "foaf:name": {
           "display": "Elisa Pétronille MORGAND",
@@ -1956,8 +2133,8 @@
         "foaf:gender": "F",
         "bio:event": [
           {
-            "display": "Elisa Pétronille MORGAND née le 23 NOV 1847 à Estaires,59940,Nord,Hauts-de-France,FRANCE,",
-            "_FNA": "NO",
+            "eventType": "bio:Birth",
+            "display": "Elisa Pétronille MORGAND née le mardi 23 NOV 1847 à Estaires,59940,Nord,Hauts-de-France,FRANCE,",
             "dc:date": "23 NOV 1847",
             "bio:principal": {
               "@id": "_:7322",
@@ -1969,16 +2146,12 @@
             },
             "@type": "bio:Birth",
             "bio:place": {
-              "GEDVALUE": "Estaires,59940,Nord,Hauts-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N50.645740",
-                "LONG": "E2.727820"
-              }
+              "GEDVALUE": "Estaires,59940,Nord,Hauts-de-France,FRANCE,"
             }
           },
           {
-            "display": "Elisa Pétronille MORGAND est décédé(e) le 5 FEB 1934",
-            "_FNA": "NO",
+            "eventType": "bio:Death",
+            "display": "Elisa Pétronille MORGAND est décédé(e) le lundi 5 février 1934",
             "dc:date": "5 FEB 1934",
             "bio:principal": {
               "@id": "_:7322",
@@ -1990,11 +2163,7 @@
             },
             "@type": "bio:Death",
             "bio:place": {
-              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
-              "MAP": {
-                "LATI": "N48.982340",
-                "LONG": "E2.056870"
-              }
+              "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,"
             }
           }
         ],
@@ -2022,16 +2191,11 @@
       "id": "_:7323",
       "type": "foaf:Person",
       "title": "HRYSIO",
+      "generation": 4,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "5 MAR 2025 10:55:38"
-        },
-        "CHAN": {
-          "dc:date": "5 MAR 2025 10:55:40"
         },
         "foaf:name": {
           "display": "HRYSIO",
@@ -2055,16 +2219,11 @@
       "id": "_:7324",
       "type": "foaf:Person",
       "title": "Maryse Alice Odette LOUSTE",
+      "generation": null,
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
-        },
-        "_CREA": {
-          "dc:date": "2 JUN 2025 12:14:35"
-        },
-        "CHAN": {
-          "dc:date": "2 JUN 2025 12:15:28"
         },
         "foaf:name": {
           "display": "Maryse Alice Odette LOUSTE",

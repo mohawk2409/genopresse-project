@@ -36,8 +36,8 @@ dictionnaire_jour = {0:"lundi",1:"mardi",2:"mercredi",3:"jeudi",4:"vendredi",5:"
 # Expression régulière pour identifier les chaînes de caractères qui sont des
 # identifiants de référence dans le JSON (ex: _:A123).
 ID_PATTERN = re.compile(r'^_:[A-Za-z0-9]+$')
-
-
+SKIP_KEYS = {'MAP', 'CHAN', '_CREA', '_QUAL', 'QUAY', '_FNA'}
+date_value = ""
 # --- Fonctions Utilitaires ("Helpers") ---
 # Ces fonctions sont des "aides" internes au script, préfixées par `_`.
 
@@ -125,6 +125,31 @@ def _gender_role(node: Dict[str, Any]) -> str:
         return 'l\'époux'
     return 'le conjoint'
 
+def _gender(node: Dict[str, Any]) -> str:
+    """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
+    gender = str(node.get('foaf:gender', '')).upper()
+    if gender == 'F':
+        return 'la fille'
+    if gender == 'M':
+        return 'le fils'
+    return 'l\'enfant'
+
+def _gender_pronoun(node: Dict[str, Any], majuscule=False) -> str:
+    """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
+    gender = str(node.get('foaf:gender', '')).upper()
+    if majuscule:
+        if gender == 'F':
+            return 'Elle'
+        if gender == 'M':
+            return 'Il'
+    else:
+        if gender == 'F':
+            return 'elle'
+        if gender == 'M':
+            return 'il'
+    return 'l\'enfant'
+
+
 
 def _family_label(family_id: str, index: Dict[str, Dict[str, Any]]) -> str:
     """
@@ -208,18 +233,20 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
             if isinstance(p, dict) and p.get('@id') in index
         ]
 
-    elif target.get('@type') =='_:SOUR':
-        if target.get('@type') == '_:SOUR':
-            # resolved['title'] = title
-            resolved['type_source'] = target.get('TYPE')
-            resolved['type_source'] = target.get('WWW')
-            if target.get('DATA'):
-                t = target.get('DATA')
-                u = t.get('TEXT')
-                u = u.values
-                for e in u:
-                    resolved['texte'] += e
-        print("je suis ici")
+    elif target.get('@type') == '_:SOUR':
+        # Gestion des sources (sources bibliographiques)
+        resolved['type'] = 'source'
+        resolved['type_source'] = target.get('TYPE', '')
+        if target.get('WWW', '') != "":
+            resolved['url'] = target.get('WWW', '')
+        if target.get('DATA'):
+            try:
+                data_field = target.get('DATA')
+                if isinstance(data_field, dict) and data_field.get('TEXT'):
+                    resolved['text'] = str(data_field.get('TEXT', '')).strip()
+            except Exception as source_error:
+                print(f"WARNING: Error parsing source data - {source_error}")
+        resolved['display'] = resolved.get('display', f"Source: {resolved.get('type_source', 'inconnu')}")
     else:
         title = target.get('TITL')
         if title:
@@ -250,6 +277,9 @@ def _format_birth_event(event: Dict[str, Any], person_name: str, person_gender_p
         Une chaîne de caractères formatée décrivant la naissance.
     """
     date_value = str(event.get('dc:date', '')).strip()
+    # date_value = _pretty_date(date_value)
+    weekday = _get_weekday(str(event.get('dc:date', '')).strip())
+    
     place_info = event.get('bio:place')
     place_value = ''
     if isinstance(place_info, dict):
@@ -261,7 +291,9 @@ def _format_birth_event(event: Dict[str, Any], person_name: str, person_gender_p
 
     # Construire la phrase en plusieurs parties
     parts = [person_name, person_gender_prefix]
-    if date_value:
+    if weekday and date_value:
+        parts.append(f"le {weekday} {date_value}")
+    elif date_value:
         parts.append(f"le {date_value}")
     if place_value:
         parts.append(f"à {place_value}")
@@ -274,6 +306,117 @@ def _format_birth_event(event: Dict[str, Any], person_name: str, person_gender_p
     return ""
 
 
+def _collect_links(value: Any) -> List[str]:
+    """Recursively collecte les URLs / chemins présents dans une valeur (event, dict, list, string)."""
+    links: List[str] = []
+    if isinstance(value, str):
+        v = value.strip()
+        if v.startswith('http') or v.startswith('/') or re.search(r'\.(jpg|jpeg|png|gif|pdf|docx|txt|html|webp)$', v.lower()):
+            links.append(v)
+    elif isinstance(value, dict):
+        for k, v in value.items():
+            if k in {'WWW', 'URL', 'FILE', 'GEDVALUE'} and isinstance(v, (str, dict)):
+                if isinstance(v, str):
+                    links.extend(_collect_links(v))
+                elif isinstance(v, dict) and 'GEDVALUE' in v and isinstance(v.get('GEDVALUE'), str):
+                    links.extend(_collect_links(v.get('GEDVALUE')))
+            else:
+                links.extend(_collect_links(v))
+    elif isinstance(value, list):
+        for item in value:
+            links.extend(_collect_links(item))
+
+    # remove duplicates while preserving order
+    seen = set()
+    unique_links: List[str] = []
+    for l in links:
+        if l not in seen:
+            seen.add(l)
+            unique_links.append(l)
+    return unique_links
+
+
+def _pretty_date(date_string: str) -> str:
+    """
+    Formate une date au format GEDCOM (ex: "15 JAN 1950") 
+    en format français lisible (ex: "15 janvier 1950").
+    
+    Args:
+        date_string: Chaîne de date au format GEDCOM (JJ MMM AAAA)
+        
+    Returns:
+        Date formatée en français ou la date originale si format invalide
+    """
+    if not date_string or not date_string.strip():
+        return ''
+    
+    months = {
+        "JAN": "janvier", "FEB": "février", "MAR": "mars", "APR": "avril", 
+        "MAY": "mai", "JUN": "juin", "JUI": "juillet", "AUG": "août", 
+        "SEP": "septembre", "OCT": "octobre", "NOV": "novembre", "DEC": "décembre"
+    }
+    
+    try:
+        parts = date_string.strip().split()
+        if len(parts) < 2:
+            return date_string  # Retourner la date telle quelle si format invalide
+        
+        day = parts[0]
+        month_abbr = parts[1].upper()
+        year = parts[2] if len(parts) > 2 else ''
+        
+        month_name = months.get(month_abbr, month_abbr)
+        new_date = f"{day} {month_name} {year}".strip()
+        return new_date
+    except Exception as e:
+        print(f"Warning: Could not parse date '{date_string}': {e}")
+        return date_string
+
+
+def _get_weekday(date_string: str) -> str:
+    """
+    Extrait le jour de la semaine a partir d'une date au format GEDCOM.
+    
+    Args:
+        date_string: Chaine de date au format GEDCOM (JJ MMM AAAA, ex: "15 JAN 1950")
+        
+    Returns:
+        Jour de la semaine en francais (ex: "lundi") ou chaine vide si parsing impossible
+    """
+    if not date_string or not date_string.strip():
+        return ''
+    
+    # Dictionnaire mois GEDCOM -> numero
+    months_dict = {
+        "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
+        "JUI": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12
+    }
+    
+    try:
+        parts = date_string.strip().split()
+        if len(parts) < 3:
+            return ''  # Format invalide
+        
+        day = int(parts[0])
+        month_abbr = parts[1].upper()
+        year = int(parts[2])
+        
+        month = months_dict.get(month_abbr)
+        if month is None:
+            return ''  # Mois invalide
+        
+        # Creer objet date Python
+        date_obj = date(year, month, day)
+        # Recuperer le jour de la semaine (0=lundi, 6=dimanche)
+        weekday_num = date_obj.weekday()
+        weekday_name = dictionnaire_jour.get(weekday_num, '')
+        
+        return weekday_name
+    except Exception as e:
+        print(f"Warning: Could not extract weekday from '{date_string}': {e}")
+        return ''
+
+
 def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]], current_node: Dict[str, Any]) -> Any:
     """
     Fonction récursive au cœur de la transformation des données.
@@ -282,6 +425,10 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
     - Formate les événements (naissance, mariage) en phrases descriptives.
     - Ajoute des labels 'display' pour un affichage direct.
     """
+    # Skip unwanted metadata keys globally
+    if key in SKIP_KEYS:
+        return None
+
     if key == 'foaf:name' and isinstance(value, dict):
         display_name = _display_name(current_node)
         return {
@@ -304,8 +451,49 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
             family_id = family_id.get('@id')
 
         family_name = _family_label(str(family_id), index) if family_id else 'inconnue'
-        role = 'enfant de' if key == 'FAMC' else _gender_role(current_node)
-        display = f"{_display_name(current_node)} est {role} la famille {family_name}"
+        role1 = _gender(current_node)
+        pronoun = _gender_pronoun(current_node, True)
+        prefix = _gender_prefix(current_node)
+        
+        # Extraire et formater la date depuis bio:event du noeud courant
+        date_value = ''
+        bio_events = current_node.get('bio:event', [])
+        if not isinstance(bio_events, list):
+            bio_events = [bio_events]
+        
+        # Chercher la première date disponible dans les événements
+        for event in bio_events:
+            if isinstance(event, dict) and 'dc:date' in event:
+                date_value = str(event.get('dc:date', '')).strip()
+                place_info = event.get('bio:place')
+                place_value = ''
+                if isinstance(place_info, dict):
+                    # Si le lieu est un objet, on cherche la valeur dans 'GEDVALUE'
+                    place_value = str(place_info.get('GEDVALUE', '')).strip()
+                elif place_info:
+                    # Sinon, on utilise la valeur directement
+                    place_value = str(place_info).strip()
+                if(place_value[-1] == ","):
+                    print("place_value",place_value)
+                    place_value = place_value.strip(",")
+                    place_value = place_value.replace(",", ", ")
+                break
+        
+        pretty_date = _pretty_date(date_value) if date_value else ''
+        weekday = _get_weekday(date_value) if date_value else ''
+        
+        # Construire la phrase avec jour de la semaine et date
+        if weekday and pretty_date:
+            date_info = f"{weekday} {pretty_date}"
+        elif pretty_date:
+            date_info = pretty_date
+        else:
+            date_info = ''
+        
+        
+        display = f"{_display_name(current_node)} est {role1} {family_name}. {pronoun} est {prefix} le {date_info} à {place_value}."
+
+        # display = f"{_format_birth_event(event, _display_name(current_node), _gender_prefix(current_node))}"
 
         result: Dict[str, Any] = {'display': display}
         if family_id is not None:
@@ -326,22 +514,42 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 
             event_type = str(event.get('@type', ''))
             date_value = str(event.get('dc:date', '')).strip()
+            pretty_date_val = _pretty_date(date_value) if date_value else ''
+            weekday_val = _get_weekday(date_value) if date_value else ''
+            
+            # Construire l'info de date avec jour de la semaine
+            if weekday_val and pretty_date_val:
+                date_info = f"{weekday_val} {pretty_date_val}"
+            elif pretty_date_val:
+                date_info = pretty_date_val
+            else:
+                date_info = ''
+
             display = None
             if event_type == 'bio:Birth':
                 display = _format_birth_event(event, _display_name(current_node), _gender_prefix(current_node))
-            elif event_type == 'bio:Death' and date_value:
-                display = f"{_display_name(current_node)} est décédé(e) le {date_value}"
-            elif event_type == 'bio:Marriage' and date_value:
-                display = f"{_display_name(current_node)} s'est marié(e) le {date_value}"
-            elif date_value:
-                display = f"Événement daté du {date_value}"
+            elif event_type == 'bio:Death' and date_info:
+                display = f"{_display_name(current_node)} est décédé(e) le {date_info}"
+            elif event_type == 'bio:Marriage' and date_info:
+                display = f"{_display_name(current_node)} s'est marié(e) le {date_info}"
+            elif date_info:
+                display = f"Événement daté du {date_info}"
 
             pretty_event: Dict[str, Any] = {}
+            # Ajout du type d'événement lisible
+            if event_type:
+                pretty_event['eventType'] = event_type
+
+            # Collecte des liens / chemins présents dans l'événement
+            links = _collect_links(event)
+            if links:
+                pretty_event['links'] = links
+
             if display:
                 pretty_event['display'] = display
             for sub_key, sub_value in event.items():
                 # On ignore les clés 'display' (que l'on vient de créer) et 'MAP'
-                if sub_key not in {'display', 'MAP'}:
+                if sub_key not in {'display', 'MAP', '_QUAL', 'QUAY', '_FNA'}:
                     pretty_event[sub_key] = _pretty_nested_value(sub_key, sub_value, index, current_node)
             pretty_events.append(pretty_event)
 
@@ -357,43 +565,76 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
     if key == 'OBJE':
         entries = value if isinstance(value, list) else [value]
         pretty_media: List[Any] = []
-        for entry in entries:
+        
+        for idx, entry in enumerate(entries, 1):
             if not isinstance(entry, dict):
                 pretty_media.append(entry)
                 continue
 
             media_item: Dict[str, Any] = {}
             media_id = entry.get('@id')
+            
             if media_id:
                 media_item['@id'] = media_id
                 target = index.get(str(media_id), {})
-                title = target.get('TITL')
-                file_value = None
+                
+                # Extraire les informations de la pièce jointe
+                title = target.get('TITL', '')
+                file_value = ''
                 file_info = target.get('FILE')
+                
                 if isinstance(file_info, dict):
-                    file_value = file_info.get('GEDVALUE')
-                display_bits = [f"Pièce jointe {media_id}"]
+                    file_value = str(file_info.get('GEDVALUE', '')).strip()
+                elif isinstance(file_info, str):
+                    file_value = file_info.strip()
+                
+                # Construire l'affichage
+                display_bits = [f"Pièce jointe {idx}/{len(entries)}"]
                 if title:
-                    display_bits.append(str(title))
+                    display_bits.append(f"Titre: {str(title).strip()}")
                 if file_value:
-                    display_bits.append(str(file_value))
-                media_item['display'] = ' - '.join(display_bits)
+                    display_bits.append(f"Fichier: {file_value}")
+                
+                # Ajouter le statut primaire si présent
+                if entry.get('_PRIM') == 'YES':
+                    display_bits.append("[PRIMAIRE]")
+                
+                media_item['display'] = ' | '.join(display_bits)
+                media_item['title'] = title
+                media_item['file'] = file_value
+                
             if entry.get('_PRIM'):
                 media_item['_PRIM'] = entry.get('_PRIM')
+                
             pretty_media.append(media_item)
+        
         return pretty_media if isinstance(value, list) else pretty_media[0]
 
     if isinstance(value, dict):
         result: Dict[str, Any] = {}
         for sub_key, sub_value in value.items():
-            result[sub_key] = _pretty_nested_value(sub_key, sub_value, index, current_node)
+            if sub_key in SKIP_KEYS:
+                continue
+            sub_val = _pretty_nested_value(sub_key, sub_value, index, current_node)
+            if sub_val is not None:
+                result[sub_key] = sub_val
         return result
 
     if isinstance(value, list):
         if all(isinstance(item, (str, int, float, bool, type(None))) for item in value):
             return value if len(value) > 1 else (value[0] if value else '')
-
-        return [_pretty_nested_value(key, item, index, current_node) for item in value]
+        processed: List[Any] = []
+        for item in value:
+            pv = _pretty_nested_value(key, item, index, current_node)
+            if pv is None:
+                continue
+            processed.append(pv)
+        # simplify single-item lists for readability
+        if not processed:
+            return []
+        if len(processed) == 1:
+            return processed[0]
+        return processed
 
     return value
 
@@ -412,6 +653,8 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
     root = _load_json(json_file)
     index = _node_index(root)
 
+    generation_map = _compute_generations(root, index)
+
     report: Dict[str, Any] = {
         'sourceFile': str(json_file),
         'people': []
@@ -427,13 +670,17 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
                 continue
 
             node_id = node.get('@id', 'ID inconnu')
-            print(f"Traitement de la personne {order}/{len(graph)} : {node_id} - {_display_name(node)}")
+            generation = generation_map.get(str(node_id))
+
+            print(f"Traitement de la personne {order}/{len(graph)} : {node_id} - {_display_name(node)}" 
+                  + (f" [Génération {generation}]" if generation else ""))
 
             heading = _display_name(node)
 
             person_dict: Dict[str, Any] = {}
             for key, value in node.items():
-                if key in {'@id', '@type'}:
+                # Ne pas inclure ces métadonnées de création/modification
+                if key in {'@id', '@type', '_CREA', 'CHAN', 'MAP', '_QUAL', 'QUAY', '_FNA'}:
                     continue
                 person_dict[key] = _pretty_nested_value(key, value, index, node)
 
@@ -443,6 +690,7 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
                     'id': node.get('@id'),
                     'type': node.get('@type'),
                     'title': str(heading),
+                    'generation': generation,
                     'lines': person_dict,
                 }
             )
@@ -476,6 +724,73 @@ def _set_header_footer(document: Document, title: str) -> None:
     footer_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     _add_page_number(footer_paragraph)
 
+def _compute_generations(root: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> Dict[str, int]:
+    """
+    Calcule la génération de chaque personne à partir du premier foaf:Person du graph.
+    La personne de référence est génération 1, ses parents génération 2, etc.
+    Utilise un BFS (parcours en largeur) en remontant via FAMC → famille → parents (FAMS).
+    """
+    # Trouver la personne de référence (premier foaf:Person)
+    ref_id = None
+    for node in root.get('@graph', []):
+        if isinstance(node, dict) and node.get('@type') == 'foaf:Person':
+            ref_id = node.get('@id')
+            break
+
+    if not ref_id:
+        return {}
+
+    generations: Dict[str, int] = {ref_id: 1}
+    queue = [(ref_id, 1)]
+
+    while queue:
+        person_id, gen = queue.pop(0)
+        person = index.get(person_id, {})
+
+        # Remonter vers les parents via FAMC (famille où la personne est enfant)
+        famc = person.get('FAMC')
+        if famc is None:
+            continue
+        if not isinstance(famc, list):
+            famc = [famc]
+
+        for famc_entry in famc:
+            # Extraire l'ID de la famille
+            family_id = None
+            if isinstance(famc_entry, dict):
+                of_family = famc_entry.get('ofFamily')
+                if isinstance(of_family, dict):
+                    family_id = of_family.get('@id')
+                elif isinstance(of_family, str):
+                    family_id = of_family
+                elif isinstance(famc_entry.get('@id'), str):
+                    family_id = famc_entry.get('@id')
+            elif isinstance(famc_entry, str):
+                family_id = famc_entry
+
+            if not family_id:
+                continue
+
+            family = index.get(str(family_id), {})
+            participants = family.get('bio:participant', [])
+            if isinstance(participants, dict):
+                participants = [participants]
+
+            for participant in participants:
+                if not isinstance(participant, dict):
+                    continue
+                parent_id = participant.get('@id')
+                if not parent_id or parent_id == person_id:
+                    continue
+                parent = index.get(str(parent_id), {})
+                if parent.get('@type') != 'foaf:Person':
+                    continue
+                if parent_id not in generations:
+                    generations[parent_id] = gen + 1
+                    queue.append((parent_id, gen + 1))
+
+    return generations
+
 
 def _dict_to_text_lines(data: Any, indent: int = 0) -> List[str]:
     """Recursively convert a dict/value structure back to indented text lines for display."""
@@ -486,7 +801,29 @@ def _dict_to_text_lines(data: Any, indent: int = 0) -> List[str]:
         if 'display' in data:
             lines.append(f"{prefix}{data['display']}")
         for key, value in data.items():
-            if key == 'display':
+            if key == 'display' or key in SKIP_KEYS:
+                continue
+            # Afficher explicitement les liens si présents
+            if key == 'links':
+                if isinstance(value, list):
+                    for l in value:
+                        lines.append(f"{prefix}  → Lien: {l}")
+                else:
+                    lines.append(f"{prefix}  → Lien: {value}")
+                continue
+            # Gérer les pièces jointes de manière spéciale
+            if key == 'OBJE':
+                lines.append(f"{prefix}📎 PIÈCES JOINTES:")
+                if isinstance(value, list):
+                    for idx, item in enumerate(value, 1):
+                        if isinstance(item, dict):
+                            lines.extend(_dict_to_text_lines(item, indent + 2))
+                        else:
+                            lines.append(f"{prefix}  [{idx}] {item}")
+                elif isinstance(value, dict):
+                    lines.extend(_dict_to_text_lines(value, indent + 2))
+                else:
+                    lines.append(f"{prefix}  {value}")
                 continue
             if isinstance(value, dict):
                 lines.append(f"{prefix}{key}:")
@@ -606,7 +943,9 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
         title_run.font.size = Pt(14)
 
         meta_paragraph = document.add_paragraph()
-        meta_run = meta_paragraph.add_run(f"@id: {person.get('id', '')}    @type: {person.get('type', '')}")
+        generation = person.get('generation')
+        generation_str = f"    Génération: {generation}" if generation is not None else "    Génération: non reliée"
+        meta_run = meta_paragraph.add_run(f"@id: {person.get('id', '')}    @type: {person.get('type', '')}{generation_str}")
         meta_run.italic = True
         meta_run.font.size = Pt(9)
 
