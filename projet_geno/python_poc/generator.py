@@ -15,6 +15,7 @@ Le processus se déroule en deux étapes principales :
 """
 import json
 import re
+import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from datetime import date
@@ -23,7 +24,7 @@ from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Pt
+from docx.shared import Inches, Pt
 
 # --- Constantes ---
 # Ces constantes définissent les chemins par défaut pour les fichiers d'entrée,
@@ -37,6 +38,8 @@ dictionnaire_jour = {0:"lundi",1:"mardi",2:"mercredi",3:"jeudi",4:"vendredi",5:"
 # identifiants de référence dans le JSON (ex: _:A123).
 ID_PATTERN = re.compile(r'^_:[A-Za-z0-9]+$')
 SKIP_KEYS = {'MAP', 'CHAN', '_CREA', '_QUAL', 'QUAY', '_FNA'}
+IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.tif'}
+_FILE_SENTINEL = '__FILE__'
 date_value = ""
 # --- Fonctions Utilitaires ("Helpers") ---
 # Ces fonctions sont des "aides" internes au script, préfixées par `_`.
@@ -105,6 +108,34 @@ def _display_name(node: Dict[str, Any]) -> str:
         return name_value.strip().replace('/', ' ').replace('  ', ' ')
     return str(node.get('@id', 'Person'))
 
+def _display_work(node: Dict[str, Any]) -> str:
+    """
+    Extrait et formate un nom complet et lisible pour une personne (nœud).
+    Combine le prénom (GIVN) et le nom (SURN) ou utilise d'autres champs si indisponibles.
+    """
+    work_value = node.get('OCCU')
+    if work_value:
+        sentence = " " + _gender_pronoun(node, True) + " a été " + work_value + "."
+        return sentence
+
+def _display_name(node: Dict[str, Any]) -> str:
+    """
+    Extrait et formate un nom complet et lisible pour une personne (nœud).
+    Combine le prénom (GIVN) et le nom (SURN) ou utilise d'autres champs si indisponibles.
+    """
+    name_value = node.get('foaf:name')
+    if isinstance(name_value, dict):
+        given = str(name_value.get('GIVN') or '').strip()
+        surname = str(name_value.get('SURN') or '').strip()
+        gedvalue = str(name_value.get('GEDVALUE') or '').strip()
+        if given and surname:
+            return f"{given} {surname}"
+        if gedvalue:
+            return gedvalue.replace('/', ' ').replace('  ', ' ').strip()
+    if isinstance(name_value, str) and name_value.strip():
+        return name_value.strip().replace('/', ' ').replace('  ', ' ')
+    return str(node.get('@id', 'Person'))
+
 
 def _gender_prefix(node: Dict[str, Any]) -> str:
     """Retourne un préfixe accordé en genre ("né", "née", "né(e)")."""
@@ -125,14 +156,42 @@ def _gender_role(node: Dict[str, Any]) -> str:
         return 'l\'époux'
     return 'le conjoint'
 
+def _gender_d(node: Dict[str, Any]) -> str:
+    """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
+    gender = node.get('foaf:name', '')
+    prefixe = str(gender.get('SURN', '')).upper()
+    if prefixe[0] == 'A' or prefixe[0] == 'E' or prefixe[0] == 'I' or prefixe[0] == 'O' or prefixe[0] == 'U' or prefixe[0] == 'Y':
+        return "d'"
+    else:
+        return 'de '
+
+
 def _gender(node: Dict[str, Any]) -> str:
     """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
     gender = str(node.get('foaf:gender', '')).upper()
     if gender == 'F':
-        return 'la fille'
+        return 'fille'
     if gender == 'M':
-        return 'le fils'
-    return 'l\'enfant'
+        return 'fils'
+    return 'enfant'
+
+def _gender_marriage(node: Dict[str, Any]) -> str:
+    """Retourne un rôle accordé en genre ("marié", "mariée", marié(e))."""
+    gender = str(node.get('foaf:gender', '')).upper()
+    if gender == 'F':
+        return 'mariée'
+    if gender == 'M':
+        return 'marié'
+    return 'marié(e)'
+
+def _gender_death(node: Dict[str, Any]) -> str:
+    """Retourne un rôle accordé en genre ("décédé", "décédée", décédé(e))."""
+    gender = str(node.get('foaf:gender', '')).upper()
+    if gender == 'F':
+        return 'décédée'
+    if gender == 'M':
+        return 'décédé'
+    return 'décédé(e)'
 
 def _gender_pronoun(node: Dict[str, Any], majuscule=False) -> str:
     """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
@@ -177,6 +236,17 @@ def _family_label(family_id: str, index: Dict[str, Dict[str, Any]]) -> str:
     return str(family_id)
 
 
+def _note_label(note: str, index: Dict[str, Dict[str, Any]]) -> str:
+    """
+    Ajoute les notes associées à la personne
+    """
+    note = index.get("NOTE")
+    if not note:
+        return "Aucune note associée."
+    
+    return note
+
+
 def _reference_summary(reference_id: str, index: Dict[str, Dict[str, Any]]) -> str:
     """
     Génère un résumé textuel pour un objet référencé par son ID.
@@ -188,11 +258,19 @@ def _reference_summary(reference_id: str, index: Dict[str, Dict[str, Any]]) -> s
 
     target_type = str(target.get('@type', ''))
     if target_type == 'foaf:Person':
-        return _display_name(target)
+        final_texte = _display_name(target)
+        marriage_phrase = _marriage_phrase(target, index)
+        if marriage_phrase:
+            final_texte += f", {marriage_phrase}"
+        return final_texte
     if target_type == 'bio:Relationship':
         return _family_label(str(reference_id), index)
+        # if target_type == 'bio:IndividualEvent':
+        #     final_texte += _note_label(str(reference_id), index)
+        # return final_texte
 
-    title = target.get('TITL')
+
+    title = target.get('TITL') or target.get('ABBR')
     if title:
         return str(title)
 
@@ -206,6 +284,81 @@ def _reference_summary(reference_id: str, index: Dict[str, Dict[str, Any]]) -> s
     return str(reference_id)
 
 
+def _person_marriages_in_order(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> List[str]:
+    """
+    Retourne les ID des familles (bio:Relationship) où la personne est conjoint,
+    triées par date de mariage croissante. Boucle sur 'bio:relationship' pour
+    collecter les familles, les mariages sans date connue sont placés en dernier,
+    dans leur ordre d'apparition.
+    """
+    relationships = person.get('bio:relationship', [])
+    if isinstance(relationships, dict):
+        relationships = [relationships]
+
+    dated_families = []
+    for order, rel in enumerate(relationships):
+        if not (isinstance(rel, dict) and rel.get('@id') in index):
+            continue
+        fid = str(rel.get('@id'))
+        family = index[fid]
+        if family.get('@type') != 'bio:Relationship':
+            continue
+        marriage_event = family.get('bio:event')
+        if isinstance(marriage_event, list):
+            marriage_event = next(
+                (e for e in marriage_event if isinstance(e, dict) and e.get('@type') == 'bio:Marriage'),
+                None,
+            )
+        year = _event_year(marriage_event) if isinstance(marriage_event, dict) else None
+        dated_families.append((fid, year, order))
+
+    dated_families.sort(key=lambda item: (item[1] is None, item[1] if item[1] is not None else 0, item[2]))
+    return [fid for fid, _, _ in dated_families]
+
+
+def _marriage_phrase(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> str:
+    """
+    Construit une courte phrase indiquant que la personne s'est mariée, avec le nom
+    du conjoint et, si connue, la date et le lieu du mariage (premier mariage connu).
+    """
+    family_ids = _person_marriages_in_order(person, index)
+    if not family_ids:
+        return ''
+
+    family = index.get(family_ids[0], {})
+    participants = family.get('bio:participant', [])
+    if isinstance(participants, dict):
+        participants = [participants]
+    person_id = person.get('@id')
+    spouse_id = next(
+        (p.get('@id') for p in participants
+         if isinstance(p, dict) and p.get('@id') != person_id and p.get('@id') in index),
+        None,
+    )
+    if not spouse_id:
+        return ''
+
+    marriage_event = family.get('bio:event')
+    if isinstance(marriage_event, list):
+        marriage_event = next(
+            (e for e in marriage_event if isinstance(e, dict) and e.get('@type') == 'bio:Marriage'),
+            None,
+        )
+
+    marriage_phrase = ''
+    if isinstance(marriage_event, dict):
+        date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
+        place_value = _event_place(marriage_event)
+        bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
+        marriage_phrase = ' '.join(bits)
+
+    spouse_name = _display_name(index[spouse_id])
+    verb_phrase = _gender_marriage(person)
+    if marriage_phrase:
+        return f"{verb_phrase} avec {spouse_name} {marriage_phrase}"
+    return f"{verb_phrase} avec {spouse_name}"
+
+
 def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], current_node: Dict[str, Any]) -> Dict[str, Any]:
     """
     Résout une référence ID en un objet structuré contenant des informations clés.
@@ -214,6 +367,7 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
     """
     target = index.get(str(reference_id), {})
     resolved: Dict[str, Any] = {'@id': reference_id, 'display': _reference_summary(reference_id, index)}
+    work_value = _display_work(current_node)
 
     if target.get('@type') == 'foaf:Person':
         resolved['type'] = 'person'
@@ -227,11 +381,69 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
         participants = target.get('bio:participant', [])
         if isinstance(participants, dict):
             participants = [participants]
-        resolved['participants'] = [
-            _display_name(index[p.get('@id')])
-            for p in participants
+        participant_ids = [
+            p.get('@id') for p in participants
             if isinstance(p, dict) and p.get('@id') in index
         ]
+        resolved['participants'] = [_display_name(index[pid]) for pid in participant_ids]
+
+        # Si la personne courante est l'un des conjoints de cette famille, on construit
+        # une description de cette union précise : phrase de mariage (ou remariage selon
+        # son rang chronologique parmi tous ses mariages), biographie du conjoint et
+        # éventuels enfants de cette union. Une seule famille est décrite ici : celle
+        # référencée par reference_id, pour éviter de dupliquer l'historique marital
+        # complet dans chaque entrée de 'bio:relationship'.
+        current_id = current_node.get('@id')
+        if current_id in participant_ids:
+            description_parts = []
+
+            ordered_family_ids = _person_marriages_in_order(current_node, index)
+            family_id = str(reference_id)
+            rank = ordered_family_ids.index(family_id) if family_id in ordered_family_ids else 0
+
+            spouse_id = next((pid for pid in participant_ids if pid != current_id), None)
+            if spouse_id:
+                marriage_event = target.get('bio:event')
+                if isinstance(marriage_event, list):
+                    marriage_event = next(
+                        (e for e in marriage_event if isinstance(e, dict) and e.get('@type') == 'bio:Marriage'),
+                        None,
+                    )
+                marriage_phrase = ''
+                if isinstance(marriage_event, dict):
+                    date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
+                    place_value = _event_place(marriage_event)
+                    bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
+                    marriage_phrase = ' '.join(bits)
+
+                spouse_name = _display_name(index[spouse_id])
+                pronoun = _gender_pronoun(current_node, True)
+                verb_phrase = _gender_marriage(current_node) if rank == 0 else f"re{_gender_marriage(current_node)}"
+                if marriage_phrase:
+                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name} {marriage_phrase}.")
+                else:
+                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name}.")
+                description_parts.append(_person_biography(spouse_id, index))
+                if work_value and _display_work(current_node) not in description_parts:
+                    description_parts.append(work_value)
+
+                children = target.get('CHIL')
+                if children:
+                    children_list = children if isinstance(children, list) else [children]
+                    child_ids = [
+                        c.get('@id') for c in children_list
+                        if isinstance(c, dict) and c.get('@id') in index
+                    ]
+                    if child_ids:
+                        intro = (
+                            "De cette union est né un enfant :" if len(child_ids) == 1
+                            else f"De cette union sont nés {len(child_ids)} enfants :"
+                        )
+                        description_parts.append(intro)
+                        description_parts.extend(_person_biography(cid, index) for cid in child_ids)
+
+            resolved['display'] = ' '.join(part for part in description_parts if part)
+
 
     elif target.get('@type') == '_:SOUR':
         # Gestion des sources (sources bibliographiques)
@@ -246,6 +458,10 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
                     resolved['text'] = str(data_field.get('TEXT', '')).strip()
             except Exception as source_error:
                 print(f"WARNING: Error parsing source data - {source_error}")
+        # Récupérer les pièces jointes (images, PDF, ...) attachées à la source
+        source_media = target.get('OBJE')
+        if source_media:
+            resolved['OBJE'] = _pretty_nested_value('OBJE', source_media, index, current_node)
         resolved['display'] = resolved.get('display', f"Source: {resolved.get('type_source', 'inconnu')}")
     else:
         title = target.get('TITL')
@@ -277,24 +493,23 @@ def _format_birth_event(event: Dict[str, Any], person_name: str, person_gender_p
         Une chaîne de caractères formatée décrivant la naissance.
     """
     date_value = str(event.get('dc:date', '')).strip()
-    # date_value = _pretty_date(date_value)
     weekday = _get_weekday(str(event.get('dc:date', '')).strip())
     
     place_info = event.get('bio:place')
     place_value = ''
     if isinstance(place_info, dict):
         # Si le lieu est un objet, on cherche la valeur dans 'GEDVALUE'
-        place_value = str(place_info.get('GEDVALUE', '')).strip()
+        place_value = _format_place(str(place_info.get('GEDVALUE', '')).strip())
     elif place_info:
         # Sinon, on utilise la valeur directement
-        place_value = str(place_info).strip()
+        place_value = _format_place(str(place_info).strip())
 
     # Construire la phrase en plusieurs parties
     parts = [person_name, person_gender_prefix]
     if weekday and date_value:
-        parts.append(f"le {weekday} {date_value}")
+        parts.append(f"le {weekday} {_pretty_date(date_value)}")
     elif date_value:
-        parts.append(f"le {date_value}")
+        parts.append(f"le {_pretty_date(date_value)}")
     if place_value:
         parts.append(f"à {place_value}")
 
@@ -311,7 +526,7 @@ def _collect_links(value: Any) -> List[str]:
     links: List[str] = []
     if isinstance(value, str):
         v = value.strip()
-        if v.startswith('http') or v.startswith('/') or re.search(r'\.(jpg|jpeg|png|gif|pdf|docx|txt|html|webp)$', v.lower()):
+        if v.startswith('http') or v.startswith('/') or v.startswith('C') or re.search(r'\.(jpg|jpeg|png|gif|pdf|docx|txt|html|webp)$', v.lower()):
             links.append(v)
     elif isinstance(value, dict):
         for k, v in value.items():
@@ -417,6 +632,96 @@ def _get_weekday(date_string: str) -> str:
         return ''
 
 
+def _find_event(node: Dict[str, Any], event_type: str) -> Optional[Dict[str, Any]]:
+    """Retourne le premier événement d'un type donné (ex: 'bio:Birth') pour une personne."""
+    events = node.get('bio:event', [])
+    if not isinstance(events, list):
+        events = [events]
+    for event in events:
+        if isinstance(event, dict) and event.get('@type') == event_type:
+            return event
+    return None
+
+
+def _event_year(event: Optional[Dict[str, Any]]) -> Optional[int]:
+    """Extrait l'année (4 chiffres) de la date d'un événement, si disponible."""
+    if not event:
+        return None
+    match = re.search(r'(\d{4})', str(event.get('dc:date', '')))
+    return int(match.group(1)) if match else None
+
+
+def _format_place(place_value: str) -> str:
+    """Découpe le lieu par virgule, retire les segments vides (champs GEDCOM absents)
+    et les espaces superflus, puis rejoint proprement avec ', '."""
+    if not place_value:
+        return ''
+    parts = [part.strip() for part in place_value.split(',')]
+    return ', '.join(part for part in parts if part)
+
+
+def _event_place(event: Dict[str, Any]) -> str:
+    """Extrait la valeur de lieu d'un événement (gère les formats objet et chaîne)."""
+    place_info = event.get('bio:place')
+    if isinstance(place_info, dict):
+        return _format_place(str(place_info.get('GEDVALUE', '')).strip())
+    if place_info:
+        return _format_place(str(place_info).strip())
+    return ''
+
+
+def _event_date_phrase(date_value: str) -> str:
+    """Formate une date GEDCOM en phrase ('le lundi 3 janvier 1938')."""
+    if not date_value:
+        return ''
+    weekday = _get_weekday(date_value)
+    pretty = _pretty_date(date_value).lower()
+    return f"le {weekday} {pretty}" if weekday else (f"le {pretty}" if pretty else '')
+
+
+def _person_biography(person_id: str, index: Dict[str, Dict[str, Any]]) -> str:
+    """
+    Construit une phrase biographique complète pour une personne : naissance (date, lieu)
+    et, si connu, décès (date, lieu, âge atteint).
+    """
+    person = index.get(str(person_id), {})
+    if not person:
+        return ''
+
+    name = _display_name(person)
+    birth_event = _find_event(person, 'bio:Birth')
+    death_event = _find_event(person, 'bio:Death')
+
+    if birth_event:
+        sentence = _format_birth_event(birth_event, name, _gender_prefix(person))
+    else:
+        sentence = ''
+    if not sentence:
+        sentence = f"{name} ({_gender_prefix(person)}, date de naissance inconnue)"
+    sentence = sentence.strip().rstrip('.') + '.'
+
+    if death_event:
+        age = None
+        birth_year = _event_year(birth_event)
+        death_year = _event_year(death_event)
+        if birth_year is not None and death_year is not None:
+            age = death_year - birth_year
+        death_verb = "est " + _gender_death(person)
+        death_bits = [_gender_pronoun(person, True), death_verb]
+        date_phrase = _event_date_phrase(str(death_event.get('dc:date', '')).strip())
+        if date_phrase:
+            death_bits.append(date_phrase)
+        place_value = _event_place(death_event)
+        if place_value:
+            death_bits.append(f"à {place_value}")
+        death_sentence = ' '.join(death_bits)
+        if age is not None:
+            death_sentence += f", à l'âge de {age} ans"
+        sentence += f" {death_sentence}."
+        
+    return sentence
+
+
 def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]], current_node: Dict[str, Any]) -> Any:
     """
     Fonction récursive au cœur de la transformation des données.
@@ -469,17 +774,13 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
                 place_value = ''
                 if isinstance(place_info, dict):
                     # Si le lieu est un objet, on cherche la valeur dans 'GEDVALUE'
-                    place_value = str(place_info.get('GEDVALUE', '')).strip()
+                    place_value = _format_place(str(place_info.get('GEDVALUE', '')).strip())
                 elif place_info:
                     # Sinon, on utilise la valeur directement
-                    place_value = str(place_info).strip()
-                if(place_value[-1] == ","):
-                    print("place_value",place_value)
-                    place_value = place_value.strip(",")
-                    place_value = place_value.replace(",", ", ")
+                    place_value = _format_place(str(place_info).strip())
                 break
         
-        pretty_date = _pretty_date(date_value) if date_value else ''
+        pretty_date = _pretty_date(date_value).lower() if date_value else ''
         weekday = _get_weekday(date_value) if date_value else ''
         
         # Construire la phrase avec jour de la semaine et date
@@ -490,14 +791,13 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
         else:
             date_info = ''
         
-        
-        display = f"{_display_name(current_node)} est {role1} {family_name}. {pronoun} est {prefix} le {date_info} à {place_value}."
+        display = f"{_display_name(current_node)}, {role1} {_gender_d(current_node)}{family_name}. {pronoun} est {prefix} le {date_info} à {place_value}."
 
         # display = f"{_format_birth_event(event, _display_name(current_node), _gender_prefix(current_node))}"
 
         result: Dict[str, Any] = {'display': display}
         if family_id is not None:
-            result['ofFamily'] = _resolve_reference(str(family_id), index, current_node)
+            result['ofFamily'] = _resolve_reference(str(family_id), index, current_node)['display']
         if isinstance(value, dict):
             for sub_key, sub_value in value.items():
                 if sub_key != 'ofFamily':
@@ -514,7 +814,7 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 
             event_type = str(event.get('@type', ''))
             date_value = str(event.get('dc:date', '')).strip()
-            pretty_date_val = _pretty_date(date_value) if date_value else ''
+            pretty_date_val = _pretty_date(date_value).lower() if date_value else ''
             weekday_val = _get_weekday(date_value) if date_value else ''
             
             # Construire l'info de date avec jour de la semaine
@@ -529,11 +829,15 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
             if event_type == 'bio:Birth':
                 display = _format_birth_event(event, _display_name(current_node), _gender_prefix(current_node))
             elif event_type == 'bio:Death' and date_info:
-                display = f"{_display_name(current_node)} est décédé(e) le {date_info}"
+                display = f"{_display_name(current_node)} est {_gender_death(current_node)} le {date_info}"
             elif event_type == 'bio:Marriage' and date_info:
-                display = f"{_display_name(current_node)} s'est marié(e) le {date_info}"
+                display = f"{_display_name(current_node)} s'est {_gender_marriage(current_node)} le {date_info}"
             elif date_info:
                 display = f"Événement daté du {date_info}"
+
+            note_value = str(event.get('NOTE', '')).strip()
+            if display and note_value:
+                display += f"{display} ({note_value})"
 
             pretty_event: Dict[str, Any] = {}
             # Ajout du type d'événement lisible
@@ -555,12 +859,11 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 
         return pretty_events if isinstance(value, list) else pretty_events[0]
 
-    if isinstance(value, str) and ID_PATTERN.match(value):
-        return _resolve_reference(value, index, current_node)
-
-    if isinstance(value, dict) and '@id' in value and len(value) == 1:
-        reference_id = str(value.get('@id'))
-        return _resolve_reference(reference_id, index, current_node)
+    # if isinstance(value, str) and ID_PATTERN.match(value):
+    #     return _resolve_reference(value, index, current_node)
+    # if isinstance(value, dict) and '@id' in value and len(value) == 1:
+    #     reference_id = str(value.get('@id'))
+    #     return _resolve_reference(reference_id, index, current_node)
 
     if key == 'OBJE':
         entries = value if isinstance(value, list) else [value]
@@ -611,13 +914,17 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
         return pretty_media if isinstance(value, list) else pretty_media[0]
 
     if isinstance(value, dict):
+        ref_id = value.get('@id')
+        if isinstance(ref_id, str) and index.get(ref_id, {}).get('@type') == '_:SOUR':
+            # Résout la source pour récupérer ses pièces jointes (OBJE / images).
+            return _resolve_reference(ref_id, index, current_node)
         result: Dict[str, Any] = {}
         for sub_key, sub_value in value.items():
             if sub_key in SKIP_KEYS:
                 continue
-            sub_val = _pretty_nested_value(sub_key, sub_value, index, current_node)
-            if sub_val is not None:
-                result[sub_key] = sub_val
+            # sub_val = _pretty_nested_value(sub_key, sub_value, index, current_node)
+            # if sub_val is not None:
+            #     result[sub_key] = sub_val
         return result
 
     if isinstance(value, list):
@@ -689,7 +996,7 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
                     'order': order,
                     'id': node.get('@id'),
                     'type': node.get('@type'),
-                    'title': str(heading),
+                    'title': str(heading),  
                     'generation': generation,
                     'lines': person_dict,
                 }
@@ -814,16 +1121,16 @@ def _dict_to_text_lines(data: Any, indent: int = 0) -> List[str]:
             # Gérer les pièces jointes de manière spéciale
             if key == 'OBJE':
                 lines.append(f"{prefix}📎 PIÈCES JOINTES:")
-                if isinstance(value, list):
-                    for idx, item in enumerate(value, 1):
-                        if isinstance(item, dict):
-                            lines.extend(_dict_to_text_lines(item, indent + 2))
-                        else:
-                            lines.append(f"{prefix}  [{idx}] {item}")
-                elif isinstance(value, dict):
-                    lines.extend(_dict_to_text_lines(value, indent + 2))
-                else:
-                    lines.append(f"{prefix}  {value}")
+                entries = value if isinstance(value, list) else [value]
+                for item in entries:
+                    if isinstance(item, dict):
+                        if 'display' in item:
+                            lines.append(f"{prefix}  {item['display']}")
+                        file_path = item.get('file', '')
+                        if file_path:
+                            lines.append(f"{_FILE_SENTINEL}{file_path}")
+                    else:
+                        lines.append(f"{prefix}  {item}")
                 continue
             if isinstance(value, dict):
                 lines.append(f"{prefix}{key}:")
@@ -953,6 +1260,22 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
         person_lines = _dict_to_text_lines(person.get('lines', {}))
         
         for line in person_lines:
+            if line.startswith(_FILE_SENTINEL):
+                file_path = line[len(_FILE_SENTINEL):]
+                ext = Path(file_path).suffix.lower()
+                if ext in IMAGE_EXTENSIONS:
+                    try:
+                        document.add_picture(file_path, width=Inches(4))
+                        document.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    except Exception as img_err:
+                        p = document.add_paragraph()
+                        p.add_run(f"[Image non chargée : {Path(file_path).name} — {img_err}]").italic = True
+                else:
+                    p = document.add_paragraph()
+                    p.paragraph_format.left_indent = Pt(28)
+                    p.add_run(f"📄 {Path(file_path).name}")
+                continue
+
             indent = 0
             content = line
             while content.startswith('  '):

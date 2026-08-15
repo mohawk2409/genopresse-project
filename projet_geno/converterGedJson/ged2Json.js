@@ -52,10 +52,10 @@ Ged2Json.prototype.simplify = function simplify(obj) {
     } else if (key == 'DATE') {
       out[key] = obj[key].map(function(el) {
         if (typeof el['TIME'] !== 'undefined') {
-          date.push(el['TIME']['GEDVALUE']);
-          date[1] = dict_mois[date[1]];
-          el['GEDVALUE'] = el['GEDVALUE'].concat(date[0],' ', date[1],' ',date[2]);
-          // el['GEDVALUE'] += ' '+el['TIME']['GEDVALUE']; // rajoute simplement à el['GEDVALUE'] les valeurs trouvées dans le el['TIME']['GEDVALUE']
+          // date.push(el['TIME']['GEDVALUE']);
+          // date[1] = dict_mois[date[1]];
+          // el['GEDVALUE'] = el['GEDVALUE'].concat(date[0],' ', date[1],' ',date[2]);
+          el['GEDVALUE'] += ' '+el['TIME']['GEDVALUE']; // rajoute simplement à el['GEDVALUE'] les valeurs trouvées dans le el['TIME']['GEDVALUE']
           delete el['TIME'];
         }
         return this.simplify(el);
@@ -79,6 +79,9 @@ Ged2Json.prototype.simplify = function simplify(obj) {
 };
 
 Ged2Json.prototype._transform = function(line, encoding, callback) {
+  if (!line || line.trim() === '') {
+    return callback();
+  }
   var s = line.indexOf(' ');
   var level = parseInt(line.slice(0,s));
   var s2 = line.indexOf(' ', s+1);

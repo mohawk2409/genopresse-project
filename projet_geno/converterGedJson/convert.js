@@ -165,7 +165,6 @@ function simplify(obj) {
       delete out['GEDVALUE'];
     }
   }
-  //console.log('simplified', JSON.stringify(out, null, 2));
 
   renameProperty(out, 'DATE', 'dc:date');
   return out;
