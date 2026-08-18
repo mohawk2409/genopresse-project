@@ -17,7 +17,7 @@ import json
 import re
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 from datetime import date
 
 from docx import Document
@@ -410,19 +410,26 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
                         None,
                     )
                 marriage_phrase = ''
+                age = None
                 if isinstance(marriage_event, dict):
                     date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
                     place_value = _event_place(marriage_event)
                     bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
                     marriage_phrase = ' '.join(bits)
+                    birth_event = _find_event(current_node, 'bio:Birth')
+                    age = _compute_age(
+                        str(birth_event.get('dc:date', '')).strip() if birth_event else '',
+                        str(marriage_event.get('dc:date', '')).strip(),
+                    )
 
                 spouse_name = _display_name(index[spouse_id])
                 pronoun = _gender_pronoun(current_node, True)
                 verb_phrase = _gender_marriage(current_node) if rank == 0 else f"re{_gender_marriage(current_node)}"
+                age_phrase = f" à l'âge de {age} ans" if age is not None else ""
                 if marriage_phrase:
-                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name} {marriage_phrase}.")
+                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name} {marriage_phrase}{age_phrase}.")
                 else:
-                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name}.")
+                    description_parts.append(f"{pronoun} s'est {verb_phrase} avec {spouse_name}{age_phrase}.")
                 description_parts.append(_person_biography(spouse_id, index))
                 # if work_value and _display_work(current_node) not in description_parts:
                 #     description_parts.append(work_value)
@@ -550,7 +557,6 @@ def _collect_links(value: Any) -> List[str]:
             unique_links.append(l)
     return unique_links
 
-
 def _pretty_date(date_string: str) -> str:
     """
     Formate une date au format GEDCOM (ex: "15 JAN 1950") 
@@ -651,6 +657,81 @@ def _event_year(event: Optional[Dict[str, Any]]) -> Optional[int]:
     return int(match.group(1)) if match else None
 
 
+def _date_parts(date_string: str) -> Optional[Tuple[int, Optional[int], Optional[int]]]:
+    """
+    Décompose une date GEDCOM en (année, mois, jour). Le mois et le jour valent
+    None s'ils sont absents (ex: "1950" ou "JAN 1950"). Les préfixes GEDCOM
+    d'imprécision (ABT, BEF, AFT, EST, CAL...) sont ignorés.
+
+    Args:
+        date_string: Chaîne de date au format GEDCOM (ex: "15 JAN 1950")
+
+    Returns:
+        Tuple (année, mois, jour) ou None si aucune année n'est identifiable.
+    """
+    if not date_string or not str(date_string).strip():
+        return None
+
+    months_dict = {
+        "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
+        "JUI": 7, "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12
+    }
+
+    year: Optional[int] = None
+    month: Optional[int] = None
+    day: Optional[int] = None
+
+    for token in str(date_string).strip().split():
+        token = token.strip('.,').upper()
+        if token in months_dict:
+            month = months_dict[token]
+        elif token.isdigit():
+            value = int(token)
+            if len(token) == 4:
+                year = value
+            elif 1 <= value <= 31:
+                day = value
+
+    if year is None:
+        return None
+    if month is None:
+        day = None
+    return year, month, day
+
+
+def _compute_age(start_date: str, end_date: str) -> Optional[int]:
+    """
+    Calcule l'âge (en années révolues) entre deux dates GEDCOM.
+
+    L'anniversaire est pris en compte : si la date de fin précède l'anniversaire
+    de l'année en cours, une année est retranchée. Quand le mois ou le jour
+    manquent dans l'une des deux dates, le calcul se fait sur les seules années.
+
+    Args:
+        start_date: Date de départ au format GEDCOM (ex: naissance, "15 JAN 1950")
+        end_date: Date de fin au format GEDCOM (ex: décès ou mariage)
+
+    Returns:
+        L'âge en années, ou None si les dates sont inexploitables ou incohérentes
+        (âge négatif).
+    """
+    start = _date_parts(start_date)
+    end = _date_parts(end_date)
+    if not start or not end:
+        return None
+
+    start_year, start_month, start_day = start
+    end_year, end_month, end_day = end
+
+    age = end_year - start_year
+    # Anniversaire pas encore passé à la date de fin : on retire une année.
+    if None not in (start_month, end_month):
+        if (end_month, end_day or 1) < (start_month, start_day or 1):
+            age -= 1
+
+    return age if age >= 0 else None
+
+
 def _format_place(place_value: str) -> str:
     """Découpe le lieu par virgule, retire les segments vides (champs GEDCOM absents)
     et les espaces superflus, puis rejoint proprement avec ', '."""
@@ -701,11 +782,10 @@ def _person_biography(person_id: str, index: Dict[str, Dict[str, Any]]) -> str:
     sentence = sentence.strip().rstrip('.') + '.'
 
     if death_event:
-        age = None
-        birth_year = _event_year(birth_event)
-        death_year = _event_year(death_event)
-        if birth_year is not None and death_year is not None:
-            age = death_year - birth_year
+        age = _compute_age(
+            str(birth_event.get('dc:date', '')).strip() if birth_event else '',
+            str(death_event.get('dc:date', '')).strip(),
+        )
         death_verb = "est " + _gender_death(person)
         death_bits = [_gender_pronoun(person, True), death_verb]
         date_phrase = _event_date_phrase(str(death_event.get('dc:date', '')).strip())
@@ -754,11 +834,17 @@ def _marriages_text(node: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> L
                 None,
             )
         marriage_phrase = ''
+        age = None
         if isinstance(marriage_event, dict):
             date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
             place_value = _event_place(marriage_event)
             bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
             marriage_phrase = ' '.join(bits)
+            birth_event = _find_event(node, 'bio:Birth')
+            age = _compute_age(
+                str(birth_event.get('dc:date', '')).strip() if birth_event else '',
+                str(marriage_event.get('dc:date', '')).strip(),
+            )
 
         pronoun = _gender_pronoun(node, True)
         verb_phrase = _gender_marriage(node) if rank == 0 else f"re{_gender_marriage(node)}"
@@ -766,6 +852,8 @@ def _marriages_text(node: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> L
         sentence = f"{pronoun} s'est {verb_phrase} avec {spouse_name}"
         if marriage_phrase:
             sentence += f" {marriage_phrase}"
+        if age is not None:
+            sentence += f", à l'âge de {age} ans"
         parts.append(sentence + '.')
 
         spouse_bio = _person_biography(spouse_id, index)
@@ -861,6 +949,7 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
     if key == 'bio:event':
         events = value if isinstance(value, list) else [value]
         pretty_events: List[Any] = []
+        birth_date_value = ''
         for event in events:
             if not isinstance(event, dict):
                 pretty_events.append(event)
@@ -888,7 +977,9 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
             if event_type == 'bio:Birth':
                 display = _format_birth_event(event, _gender_pronoun(current_node, True), _gender_prefix(current_node))+"."
             elif event_type == 'bio:Marriage' and date_info:
-                display = f"{_display_name(current_node)} s'est {_gender_marriage(current_node)} le {date_info}."
+                age = _compute_age(birth_date_value, date_value)
+                age_text = f" à l'âge de {age} ans" if age is not None else ""
+                display = f"{_display_name(current_node)} s'est {_gender_marriage(current_node)} le {date_info}{age_text}."
             elif event_type == 'bio:Death' and date_info:
                 display = f"{_gender_pronoun(current_node,True)} est {_gender_death(current_node)} le {date_info} à {place_value}."
             elif date_info:
@@ -1006,6 +1097,10 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 
     return value
 
+# TODO Faire les index :
+# Récupérer chaque personne l'ajouter dans un tableau et rajouter à cette personne l'index associé 
+# (si c'est la profession alors on ajoute la profession). 
+# Pour afficher l'index il suffira de filtrer par soit la profession ou autre et de l'afficher avec le nom de la personne
 
 def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> str:
     """
@@ -1310,14 +1405,21 @@ def _create_cover_page(document: Document, first_person_name: str):
     p_titre = document.add_paragraph()
     p_titre.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run_titre = p_titre.add_run("TITRE\n") # Remplacez "TITRE" par le texte souhaité
-    run_titre.font.size = Pt(36)
-    run_titre.bold = True
+    run_titre.font.size = Pt(48)
+    run_titre.font.name = "Georgia"
+    run_titre.italic = True
 
     # Ajoute le nom de la première personne
+    font = document .styles['Normal'].font
+    font.name = "Garamond"
     p_personne = document.add_paragraph()
     p_personne.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # p_personne.font = "Garamond"
     run_personne = p_personne.add_run(f"de {first_person_name}\n\n")
     run_personne.font.size = Pt(18)
+    run_personne.font.name = "Georgia"
+    run_personne.italic = True
+    run_personne.bold = True
 
     # Ajoute les images (assurez-vous que les chemins sont corrects)
     try:

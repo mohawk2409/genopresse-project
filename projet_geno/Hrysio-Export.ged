@@ -1,0 +1,1906 @@
+0 HEAD
+1 SOUR Heredis MAC2025
+2 VERS 2025
+2 NAME Heredis MAC
+2 CORP Heredis SCOP
+3 WWW www.heredis.com
+1 DATE 23 APR 2026
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 _GUID 560A00F6-CA63-4FCB-B0C4-CFA6470308A1
+1 PLAC
+2 FORM Town, Area code, County, Region, Country, Subdivision
+0 @731@ INDI
+1 NAME Didier Michel/BEDER/
+2 GIVN Didier Michel
+2 SURN BEDER
+1 SEX M
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 10:18:28
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 15:36:20
+1 BIRT
+2 DATE 31 AUG 1962
+2 PLAC Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.900000
+4 LONG E2.083330
+2 _FNA NO
+1 FAMC @702@
+0 @732@ INDI
+1 NAME Jeannine/HRYSIO/
+2 GIVN Jeannine
+2 SURN HRYSIO
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 10:19:48
+1 CHAN
+2 DATE 3 OCT 2025
+3 TIME 13:14:39
+1 FAMS @702@
+1 BIRT
+2 DATE 9 DEC 1937
+2 PLAC Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès
+3 MAP
+4 LATI N48.000000
+4 LONG E2.750000
+2 _FNA NO
+2 SOUR @8317@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 25 NOV 1973
+2 PLAC Évecquemont,78740,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.014390
+4 LONG E1.944250
+2 _FNA NO
+1 FAMC @705@
+0 @733@ INDI
+1 NAME Michel Charles/BEDER/
+2 GIVN Michel Charles
+2 SURN BEDER
+1 SEX M
+1 OCCU menuisier, ingenieur électronicien des arts et métiers
+1 SIGN YES
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:34:21
+1 CHAN
+2 DATE 3 OCT 2025
+3 TIME 13:14:39
+1 FAMS @702@
+1 FAMS @7020@
+1 BIRT
+2 DATE 3 JAN 1938
+2 PLAC Maurecourt,78780,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.996140
+4 LONG E2.061540
+2 _FNA NO
+2 SOUR @8318@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 7 NOV 1999
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+1 FAMC @704@
+0 @734@ INDI
+1 NAME Charles Arsène/BEDER/
+2 GIVN Charles Arsène
+2 SURN BEDER
+1 SEX M
+1 OCCU batelier, capitaine de remorqueur
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:36:29
+1 CHAN
+2 DATE 11 JUN 2025
+3 TIME 15:48:20
+1 FAMS @704@
+1 BIRT
+2 DATE 18 MAY 1905
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+2 SOUR @831@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 EVEN
+2 TYPE Military service
+2 DATE 1925
+2 PLAC Versailles,78000,Yvelines,Île-de-France,FRANCE,Matricule 654
+3 MAP
+4 LATI N48.800000
+4 LONG E2.133330
+2 _FNA NO
+2 NOTE Cote 1R/RM 701
+1 EVEN
+2 TYPE Residence
+2 DATE 1954
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 DEAT
+2 DATE 9 DEC 1986
+2 PLAC Poissy,78300,Yvelines,Île-de-France,FRANCE,Hôpiital
+3 MAP
+4 LATI N48.929020
+4 LONG E2.049520
+2 _FNA NO
+2 SOUR @8321@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+2 NOTE habite au 13 avenue porte de Pontoise à Conflans
+1 FAMC @707@
+0 @735@ INDI
+1 NAME Yolande Aurélienne/DESJARDINS/
+2 GIVN Yolande Aurélienne
+2 SURN DESJARDINS
+1 SEX F
+1 OCCU coupeuse en bonneterie
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:36:44
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:34:55
+1 FAMS @704@
+1 BIRT
+2 DATE 29 MAY 1908
+2 PLAC Cambrai,59400,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.166670
+4 LONG E3.233330
+2 _FNA NO
+2 SOUR @832@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 13 JAN 1969
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+2 SOUR @8319@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+2 NOTE décédée au 13 rue Porte de Pontoise
+1 FAMC @709@
+0 @736@ INDI
+1 NAME Anna/HRYSIO/
+2 GIVN Anna
+2 SURN HRYSIO
+1 SEX F
+1 OCCU domestique agricole
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:48:08
+1 CHAN
+2 DATE 11 JUN 2025
+3 TIME 16:56:52
+1 FAMS @705@
+1 BIRT
+2 DATE 18 FEB 1899
+2 PLAC Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,
+3 MAP
+4 LATI N49.871742
+4 LONG E22.767924
+2 _FNA NO
+2 NOTE Hypothèse : aurait une soeur Catherine née le 15 juin 1904 à HnatKowice (en Pologne), fille de Jean HRYSIO et Marie KIBALSKA. Elle s’est mariée le 25 octobre 1930 à Châlette-sur-Loing (45) avec Grégoire Cycyk né en Pologne à Arlamow.
+1 EVEN
+2 TYPE Residence
+2 DATE 1936
+2 PLAC Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,Le Casrouge
+3 MAP
+4 LATI N47.992310
+4 LONG E2.621570
+2 _FNA NO
+2 OBJE @7934@
+3 _PRIM YES
+2 OBJE @7935@
+2 NOTE domestique agricole chez André Walerack (polonais)
+1 EVEN
+2 TYPE Residence
+2 DATE 1937
+2 PLAC Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,
+3 MAP
+4 LATI N47.992310
+4 LONG E2.621570
+2 _FNA NO
+1 EVEN
+2 TYPE Residence
+2 DATE 1946
+2 PLAC Corquilleroy,45120,Loiret,Centre-Val de Loire,FRANCE,Buges
+3 MAP
+4 LATI N48.042120
+4 LONG E2.703820
+2 _FNA NO
+2 OBJE @7938@
+3 _PRIM YES
+2 NOTE pas de recensements postérieurs à 1946
+1 DEAT
+2 DATE 1 APR 1977
+2 _FNA NO
+2 NOTE inhumée au Cimetière des hautes roches 9DIDN104 de Conflans Sainte-Honorine
+1 FAMC @7019@
+0 @737@ INDI
+1 NAME Alfred Édouard/BEDER/
+2 GIVN Alfred Édouard
+2 SURN BEDER
+1 SEX M
+1 OCCU capitaine de remorqueur à la société générale de touage et remorquage à Andrésy
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:55:33
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:24:47
+1 FAMS @707@
+1 BIRT
+2 DATE 4 DEC 1870
+2 PLAC Dunkerque,59240,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N51.034771
+4 LONG E2.377253
+2 _FNA NO
+2 SOUR @833@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 EVEN
+2 TYPE Military service
+2 DATE 1890
+2 PLAC Dunkerque,59240,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N51.034771
+4 LONG E2.377253
+2 _FNA NO
+2 SOUR @838@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 GRAD
+2 DATE 11 DEC 1895
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+2 OBJE @7928@
+3 _PRIM YES
+2 NOTE Capitaine de remorqueur
+1 GRAD
+2 DATE 23 APR 1923
+2 PLAC Bougival,78380,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.862230
+4 LONG E2.141480
+2 _FNA NO
+2 OBJE @7929@
+3 _PRIM YES
+2 NOTE Capitaine de bateaux automobiles
+1 DEAT
+2 DATE 13 AUG 1938
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+2 SOUR @836@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+2 SOUR @837@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+2 SOUR @8315@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 NOTE son bateau est la « guèpe 15 »
+1 OBJE @794@
+2 _PRIM YES
+1 OBJE @7920@
+1 FAMC @7012@
+0 @738@ INDI
+1 NAME Marie/BOEGLER/
+2 GIVN Marie
+2 SURN BOEGLER
+1 SEX F
+1 OCCU ménagère
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:56:10
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 16:38:59
+1 FAMS @707@
+1 BIRT
+2 DATE 9 FEB 1872
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+2 SOUR @8312@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 10 AUG 1953
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+2 SOUR @835@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 FAMC @7014@
+0 @739@ INDI
+1 NAME Arthur Alexandre/DESJARDINS/
+2 GIVN Arthur Alexandre
+2 SURN DESJARDINS
+1 SEX M
+1 OCCU batelier, marinier
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:11:21
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:12:47
+1 FAMS @709@
+1 BIRT
+2 DATE 5 OCT 1873
+2 PLAC Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin
+3 MAP
+4 LATI N50.632970
+4 LONG E3.058580
+2 _FNA NO
+2 SOUR @839@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 EVEN
+2 TYPE Military service
+2 DATE 1893
+2 PLAC Lille,59000,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.632970
+4 LONG E3.058580
+2 _FNA NO
+2 SOUR @8311@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 13 DEC 1923
+2 PLAC Maurecourt,78780,Yvelines,Île-de-France,FRANCE,rue de l'éperon
+3 MAP
+4 LATI N48.996140
+4 LONG E2.061540
+2 _FNA NO
+2 SOUR @8314@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 FAMC @7016@
+0 @7310@ INDI
+1 NAME Camille Augustine Angèle/VINOT/
+2 GIVN Camille Augustine Angèle
+2 SURN VINOT
+1 SEX F
+1 OCCU bonne, ménagère
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:11:41
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:49:57
+1 FAMS @709@
+1 BIRT
+2 DATE 29 JUN 1878
+2 PLAC Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N51.022880
+4 LONG E2.393590
+2 _FNA NO
+2 SOUR @8313@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 DEAT
+2 DATE 10 MAR 1963
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,3 rue Victor Hugo
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+2 SOUR @8320@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 FAMC @7018@
+0 @7311@ INDI
+1 NAME Kleber Alfred/BEDER/
+2 GIVN Kleber Alfred
+2 SURN BEDER
+1 SEX M
+1 OCCU chef d'atelier
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:18:56
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:26:08
+1 FAMS @7010@
+1 BIRT
+2 DATE 23 JUN 1899
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 EVEN
+2 TYPE Residence
+2 DATE 1954
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,1 rue de Verdun
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 DEAT
+2 DATE 26 AUG 1992
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 FAMC @707@
+0 @7312@ INDI
+1 NAME Stéphanie Caroline/BEDER/
+2 GIVN Stéphanie Caroline
+2 SURN BEDER
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:19:22
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:09:32
+1 BIRT
+2 DATE 21 JUL 1902
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 EVEN
+2 TYPE Residence
+2 DATE 1954
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+1 FAMC @707@
+0 @7313@ INDI
+1 NAME Germaine Madeleine/DEGAHIEL/
+2 GIVN Germaine Madeleine
+2 SURN DEGAHIEL
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 09:04:47
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:07:21
+1 FAMS @7010@
+0 @7314@ INDI
+1 NAME Florentin César/BEDER/
+2 GIVN Florentin César
+2 SURN BEDER
+1 SEX M
+1 OCCU cabaretier, batelier
+1 SIGN NO
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:20:39
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:34:59
+1 FAMS @7012@
+1 BIRT
+2 DATE 6 SEP 1838
+2 PLAC Condren,02700,Aisne,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N49.629400
+4 LONG E3.281070
+2 _FNA NO
+1 EVEN
+2 TYPE Residence
+2 DATE 1870
+2 PLAC Dunkerque,59240,Nord,Hauts-de-France,FRANCE,28 marché aux poissons
+3 MAP
+4 LATI N51.034771
+4 LONG E2.377253
+2 _FNA NO
+1 DEAT
+2 DATE 6 NOV 1902
+2 PLAC Harnes,62440,Pas-de-Calais,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.446430
+4 LONG E2.904810
+2 _FNA NO
+0 @7315@ INDI
+1 NAME Stéphanie Marie Virginie/BEYAERT/
+2 GIVN Stéphanie Marie Virginie
+2 SURN BEYAERT
+1 SEX F
+1 OCCU cabaretière
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:22:06
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:04:48
+1 FAMS @7012@
+1 BIRT
+2 DATE 15 OCT 1832
+2 PLAC Broxeele,59470,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.829820
+4 LONG E2.319870
+2 _FNA NO
+1 DEAT
+2 DATE 9 FEB 1880
+2 PLAC Meurchin,62410,Pas-de-Calais,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.498310
+4 LONG E2.893180
+2 _FNA NO
+0 @7316@ INDI
+1 NAME Jacques/BOEGLER/
+2 GIVN Jacques
+2 SURN BOEGLER
+1 SEX M
+1 OCCU commis tanneur
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:35:01
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:39:00
+1 FAMS @7014@
+1 BIRT
+2 DATE 29 SEP 1838
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+1 DEAT
+2 DATE 2 AUG 1905
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+0 @7317@ INDI
+1 NAME Caroline/REISSINGER/
+2 GIVN Caroline
+2 SURN REISSINGER
+1 SEX F
+1 OCCU sans profession
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:35:19
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:42:40
+1 FAMS @7014@
+1 BIRT
+2 DATE 6 NOV 1844
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+1 DEAT
+2 DATE 24 SEP 1911
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+0 @7318@ INDI
+1 NAME Lucienne Raymonde/BEDER/
+2 GIVN Lucienne Raymonde
+2 SURN BEDER
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:12:03
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:13:09
+1 DEAT
+2 DATE 12 OCT 1908
+2 PLAC Tarascon-sur-Ariège,09400,Ariège,Occitanie,FRANCE,
+3 MAP
+4 LATI N42.845450
+4 LONG E1.603320
+2 _FNA NO
+1 FAMC @707@
+0 @7319@ INDI
+1 NAME Henri/DESJARDINS/
+2 GIVN Henri
+2 SURN DESJARDINS
+1 SEX M
+1 OCCU batelier
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 4 JAN 2025
+3 TIME 16:29:30
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:18:37
+1 FAMS @7016@
+1 BIRT
+2 DATE 16 MAR 1821
+2 PLAC Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses
+3 MAP
+4 LATI N50.733330
+4 LONG E2.950000
+2 _FNA NO
+1 DEAT
+2 DATE 9 NOV 1882
+2 PLAC Courrières,62710,Pas-de-Calais,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.457010
+4 LONG E2.947240
+2 _FNA NO
+0 @7320@ INDI
+1 NAME Pauline/VALCKE/
+2 GIVN Pauline
+2 SURN VALCKE
+1 SEX F
+1 OCCU batelière
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 4 JAN 2025
+3 TIME 16:29:58
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:19:45
+1 FAMS @7016@
+1 BIRT
+2 DATE 13 DEC 1832
+2 PLAC Warneton,7784,Hainaut,Wallonie,BELGIQUE,
+3 MAP
+4 LATI N50.751580
+4 LONG E2.946350
+2 _FNA NO
+1 DEAT
+2 DATE 5 FEB 1903
+2 PLAC Bruay-sur-l'Escaut,59860,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.399180
+4 LONG E3.543800
+2 _FNA NO
+0 @7321@ INDI
+1 NAME Arsène Armand Calixte/VINOT/
+2 GIVN Arsène Armand Calixte
+2 SURN VINOT
+1 SEX M
+1 OCCU marinier
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:52:04
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:46:12
+1 FAMS @7018@
+1 BIRT
+2 DATE 8 APR 1853
+2 PLAC Mauvages,55190,Meuse,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.594800
+4 LONG E5.553980
+2 _FNA NO
+1 DEAT
+2 DATE 24 FEB 1929
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+0 @7322@ INDI
+1 NAME Elisa Pétronille/MORGAND/
+2 GIVN Elisa Pétronille
+2 SURN MORGAND
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:52:30
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:46:33
+1 FAMS @7018@
+1 BIRT
+2 DATE 23 NOV 1847
+2 PLAC Estaires,59940,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.645740
+4 LONG E2.727820
+2 _FNA NO
+1 DEAT
+2 DATE 5 FEB 1934
+2 PLAC Andrésy,78570,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.982340
+4 LONG E2.056870
+2 _FNA NO
+0 @7323@ INDI
+1 NAME /HRYSIO/
+2 GIVN
+2 SURN HRYSIO
+1 SEX M
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 5 MAR 2025
+3 TIME 10:55:38
+1 CHAN
+2 DATE 5 MAR 2025
+3 TIME 10:55:40
+1 FAMS @7019@
+0 @7324@ INDI
+1 NAME Maryse Alice Odette/LOUSTE/
+2 GIVN Maryse Alice Odette
+2 SURN LOUSTE
+1 SEX F
+1 _FIL LEGITIMATE_CHILD
+1 _CREA
+2 DATE 2 JUN 2025
+3 TIME 12:14:35
+1 CHAN
+2 DATE 2 JUN 2025
+3 TIME 12:15:28
+1 FAMS @7020@
+0 @702@ FAM
+1 HUSB @733@
+1 WIFE @732@
+1 _UST MARRIED
+1 CHIL @731@
+1 MARR
+2 DATE 6 JUN 1960
+2 PLAC Paris,75000,Paris,Île-de-France,FRANCE,XVIIe
+3 MAP
+4 LATI N48.853410
+4 LONG E2.348800
+2 _FNA NO
+2 NOTE demande faite le 3 octobre 2025
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:36:20
+1 CHAN
+2 DATE 3 OCT 2025
+3 TIME 13:14:39
+0 @7020@ FAM
+1 HUSB @733@
+1 WIFE @7324@
+1 _UST MARRIED
+1 MARR
+2 DATE 24 JUN 1978
+2 PLAC Fontenay-le-Fleury,78330,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.812530
+4 LONG E2.048630
+2 _FNA NO
+1 _CREA
+2 DATE 2 JUN 2025
+3 TIME 12:14:35
+1 CHAN
+2 DATE 2 JUN 2025
+3 TIME 12:15:28
+0 @704@ FAM
+1 HUSB @734@
+1 WIFE @735@
+1 _UST MARRIED
+1 CHIL @733@
+1 MARR
+2 DATE 18 AUG 1934
+2 PLAC Maurecourt,78780,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.996140
+4 LONG E2.061540
+2 _FNA NO
+2 SOUR @8316@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:37:04
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:27:27
+0 @705@ FAM
+1 WIFE @736@
+1 CHIL @732@
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:48:20
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 15:48:20
+0 @707@ FAM
+1 HUSB @737@
+1 WIFE @738@
+1 _UST MARRIED
+1 CHIL @7311@
+1 CHIL @7312@
+1 CHIL @734@
+1 CHIL @7318@
+1 MARR
+2 DATE 18 AUG 1898
+2 PLAC Suresnes,92150,Hauts-de-Seine,Île-de-France,FRANCE,
+3 MAP
+4 LATI N48.871430
+4 LONG E2.229290
+2 _FNA NO
+2 SOUR @834@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:56:27
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:32:28
+0 @709@ FAM
+1 HUSB @739@
+1 WIFE @7310@
+1 _UST MARRIED
+1 CHIL @735@
+1 MARR
+2 DATE 23 JUL 1901
+2 PLAC Paris,75000,Paris,Île-de-France,FRANCE,XIXe
+3 MAP
+4 LATI N48.853410
+4 LONG E2.348800
+2 _FNA NO
+2 SOUR @8310@
+3 QUAY 3
+3 _QUAL
+4 _SOUR O
+4 _INFO P
+4 _EVID D
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:12:03
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 10:39:16
+0 @7010@ FAM
+1 HUSB @7311@
+1 WIFE @7313@
+1 _UST MARRIED
+1 MARR
+2 DATE 18 AUG 1923
+2 PLAC Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,
+3 MAP
+4 LATI N49.001580
+4 LONG E2.096940
+2 _FNA NO
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 09:04:47
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:07:21
+0 @7012@ FAM
+1 HUSB @7314@
+1 WIFE @7315@
+1 _UST MARRIED
+1 CHIL @737@
+1 MARR
+2 DATE 30 JUL 1867
+2 PLAC Dunkerque,59240,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N51.034771
+4 LONG E2.377253
+2 _FNA NO
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:22:53
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:34:59
+0 @7014@ FAM
+1 HUSB @7316@
+1 WIFE @7317@
+1 _UST MARRIED
+1 CHIL @738@
+1 MARR
+2 DATE 18 JAN 1866
+2 PLAC Barr,67140,Bas-Rhin,Grand Est,FRANCE,
+3 MAP
+4 LATI N48.407550
+4 LONG E7.448730
+2 _FNA NO
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:35:51
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:38:39
+0 @7016@ FAM
+1 HUSB @7319@
+1 WIFE @7320@
+1 _UST MARRIED
+1 CHIL @739@
+1 MARR
+2 DATE 30 JUL 1856
+2 PLAC Deûlémont,59890,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N50.733330
+4 LONG E2.950000
+2 _FNA NO
+1 _CREA
+2 DATE 4 JAN 2025
+3 TIME 16:30:15
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:18:37
+0 @7018@ FAM
+1 HUSB @7321@
+1 WIFE @7322@
+1 _UST MARRIED
+1 CHIL @7310@
+1 MARR
+2 DATE 26 JUN 1876
+2 PLAC Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,
+3 MAP
+4 LATI N51.022880
+4 LONG E2.393590
+2 _FNA NO
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:52:42
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 17:46:12
+0 @7019@ FAM
+1 HUSB @7323@
+1 CHIL @736@
+1 _CREA
+2 DATE 5 MAR 2025
+3 TIME 10:55:40
+1 CHAN
+2 DATE 5 MAR 2025
+3 TIME 10:55:40
+0 @8317@ SOUR
+1 QUAY 0
+1 TITL Naissance - HRYSIO Jeannine
+1 ABBR Naissance - HRYSIO Jeannine
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7933@
+2 _PRIM YES
+1 _CREA
+2 DATE 14 JAN 2025
+3 TIME 10:33:06
+1 CHAN
+2 DATE 14 JAN 2025
+3 TIME 10:33:06
+0 @8318@ SOUR
+1 QUAY 0
+1 ABBR Naissance - BEDER Michel Charles
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7939@
+2 _PRIM YES
+1 _CREA
+2 DATE 2 JUN 2025
+3 TIME 12:17:46
+1 CHAN
+2 DATE 2 JUN 2025
+3 TIME 12:17:46
+0 @831@ SOUR
+1 QUAY 3
+1 TITL Naissance - BEDER Charles Arsène (1905-1986)
+1 ABBR Naissance - BEDER Charles Arsène (1905-1986)
+1 TYPE Deed
+1 WWW https://archives.yvelines.fr/rechercher/archives-en-ligne/registres-paroissiaux-et-detat-civil/registres-paroissiaux-et-detat-civil?arko_default_618914e3ee7e4--ficheFocus=&arko_default_618914e3ee7e4--filtreGroupes%5Bmode%5D=simple&arko_default_618914e3ee7e4--filtreGroupes%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=Conflans-Sainte-Honorine%20(Yvelines%2C%20France)%5B%5Barko_fiche_60ddacc735846%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=1905&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bextras%5D%5Bmode%5D=input&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bq%5D%5B%5D=Bapt%C3%AAmes%20et%20naissances%5B%5Barko_fiche_614201ec39f69%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bextras%5D%5Bmode%5D=select&arko_default_618914e3ee7e4--from=0&arko_default_618914e3ee7e4--resultSize=25&arko_default_618914e3ee7e4--contenuIds%5B%5D=1750004&arko_default_618914e3ee7e4--modeRestit=arko_default_6189505357e83#/_recherche-api/visionneuse-infos/arko_default_618914e3ee7e4/arko_fiche_619509edd404b/arko_default_61891b88cb0c3/image/1449203
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @791@
+2 _PRIM YES
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:54:58
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 15:55:12
+0 @8321@ SOUR
+1 QUAY 0
+1 ABBR Décès - BEDER Charles Arsène
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7942@
+2 _PRIM YES
+1 _CREA
+2 DATE 11 JUN 2025
+3 TIME 15:48:20
+1 CHAN
+2 DATE 11 JUN 2025
+3 TIME 15:48:20
+0 @832@ SOUR
+1 QUAY 3
+1 TITL Naissance - DESJARDINS Yolande Aurélienne (1908-1969)
+1 ABBR Naissance - DESJARDINS Yolande Aurélienne (1908-1969)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/ark:/33518/gbqwknp91jv2/4a1672d2-114b-4763-a66d-280f433c0f46
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @792@
+2 _PRIM YES
+1 OBJE @793@
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:10:52
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 16:11:09
+0 @8319@ SOUR
+1 QUAY 0
+1 ABBR Décès - DESJARDINS Yolande
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7940@
+2 _PRIM YES
+1 _CREA
+2 DATE 4 JUN 2025
+3 TIME 16:34:55
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:34:55
+0 @833@ SOUR
+1 QUAY 3
+1 TITL Naissance - BEDER Alfred Édouard (1870-1938)
+1 ABBR Naissance - BEDER Alfred Édouard (1870-1938)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/ark:/33518/5bnqf6px7th4/60849ca9-725c-41a9-a6a2-52096d26ca9c
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @795@
+2 _PRIM YES
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:24:37
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:24:51
+0 @838@ SOUR
+1 QUAY 3
+1 TITL Service militaire - BEDER Alfred Édouard (1870-1938)
+1 ABBR Service militaire - BEDER Alfred Édouard (1870-1938)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/ark:/33518/cjf7hp8g01s5/2ee3d77c-4354-45e4-9155-fb21ff767869
+1 DATA
+2 TEXT Signalement : 
+3 CONT cheveux et sourcis chatains, yeux bleus, front large, nez ordinaire, bouche moyenne, menton rond, visage ovale, taille : 1m69.
+3 CONT Détail des services : parti le 10 novembre 1891 pour le 110e régiment d’infanterie. Dispensé de ses obligations militaires car un frère au service. Mais il a perdu ses droits à la dispense, le frère qui la lui avait conférée ayant obtenu une dispen
+3 CONC se, comme aîné d’une famille de 7 enfants.
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7919@
+2 _PRIM YES
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:46:09
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:51:24
+0 @836@ SOUR
+1 QUAY 3
+1 TITL Déclaration de succession 1
+1 ABBR Déclaration de succession - BEDER Alfred Édouard (1870-1938)
+1 TYPE Deed
+1 WWW https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf3c8bd34/arko_default_60f543615a2d5/image/919273
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7911@
+2 _PRIM YES
+1 OBJE @7912@
+1 OBJE @7913@
+1 OBJE @7914@
+1 OBJE @7915@
+1 OBJE @7916@
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:29:45
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:23:13
+0 @837@ SOUR
+1 QUAY 3
+1 TITL Déclaration de succession 2
+1 ABBR Déclaration de succession - BEDER Alfred Édouard (1870-1938)
+1 TYPE Deed
+1 WWW https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf4495dc6/arko_default_60f543615a2d5/image/919276
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7917@
+2 _PRIM YES
+1 OBJE @7918@
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:32:50
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:23:39
+0 @8315@ SOUR
+1 QUAY 0
+1 TITL Décès - BEDER Alfred
+1 ABBR Décès - BEDER Alfred
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7931@
+2 _PRIM YES
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:24:47
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:24:47
+0 @8312@ SOUR
+1 QUAY 0
+1 ABBR Naissance - BOEGLER Marie
+1 TYPE Deed
+1 DATA
+2 TEXT 
+3 CONT N°2
+3 CONT
+3 CONT BOEGLER Caroline
+3 CONT née le 9 février
+3 CONT 1872
+3 CONT
+3 CONT
+3 CONT
+3 CONT
+3 CONT
+3 CONT Décédée à Andresy
+3 CONT Le 10.8.1953
+3 CONT Colmar le 12.2.57
+3 CONT Le Greffier de l’Etat-civil
+3 CONT
+3 CONT
+3 CONT       Mairie  de    Barr       _____________ arrondissement  de    Sélestat        ____________
+3 CONT
+3 CONT             Le  dix  février     mille huit  cent  soixante-douze                 à   onze          heures  du      matin 
+3 CONT
+3 CONT            Acte  de  naissance de       Marie BOEGLER     ________________________
+3 CONT née  à     Barr                     le     neuf  février         mille     huit     cent  soixante-douze
+3 CONT à     trois    heures              de  l’après-midi           enfant   légitime                de   Jacques BOEGLER                 
+3 CONT _____________    âgé de    trente-trois              ans ,        profession   commis tanneur         
+3 CONT né     à     Barr                  habitant        à   Barr                      _______________________
+3 CONT et    de     Caroline REISSINGER                    ______________     âgée   de vingt-sept         ans
+3 CONT Profession  sans ______        habitant     à   Barr, son épouse légitime              ______________
+3 CONT
+3 CONT             L'enfant   qui   nous   a   été   présenté   a   été  reconnu   de   sexe     féminin         ___________
+3 CONT Premier témoin:     Jacques Adam               ________________       âgé   de    trente-quatre        ans
+3 CONT Profession   commis tanneur    ___  habitant  à   Barr           ____ département   Bas-Rhin   
+3 CONT Deuxième témoin :     Guillaume Kleinhenni       ____________      âgé   de     trente-six              ans
+3 CONT Profession   (garde de couloir ?)      habitant   à   Barr   _______    département    Bas-Rhin
+3 CONT             Sur   la   présente   déclaration   qui   m'a   été   faite   par     le père de l’enfant             __________
+3 CONT   ____________________________________________ ___     et   après   lecture   du   présent   acte
+3 CONT ont    signé            
+3 CONT
+3 CONT             Fait   devant    moi   Gottfried  Bossert                      ______________________________  maire 
+3 CONT en   ma   qualité   d'officier   de   l'état  civil .
+3 CONT
+3 CONT          Jacques Boegler                                                          Le maire
+3 CONT             Jacques Adam                                                          G. Bossert
+3 CONT             Guillaume Kleinhennig
+3 CONT
+3 CONT
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7926@
+2 _PRIM YES
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:38:59
+1 CHAN
+2 DATE 8 JUN 2025
+3 TIME 10:34:17
+0 @835@ SOUR
+1 QUAY 3
+1 TITL Décès - BOEGLER Marie (1872-1953)
+1 ABBR Décès - BOEGLER Marie (1872-1953)
+1 TYPE Deed
+1 WWW https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1953%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf472817f/arko_default_60f543615a2d5/image/919317
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @799@
+2 _PRIM YES
+1 OBJE @7910@
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:16:03
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:16:12
+0 @839@ SOUR
+1 QUAY 3
+1 TITL Naissance - DESJARDINS Arthur Alexandre (1873-)
+1 ABBR Naissance - DESJARDINS Arthur Alexandre (1873-)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/ark:/33518/gx5tps1kd6c0/8e32b65b-2085-4a82-ad05-f83331c81bdd
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7921@
+2 _PRIM YES
+1 _CREA
+2 DATE 4 JAN 2025
+3 TIME 16:31:02
+1 CHAN
+2 DATE 4 JAN 2025
+3 TIME 16:31:17
+0 @8311@ SOUR
+1 QUAY 3
+1 TITL Service militaire - DESJARDINS Arthur Alexandre (1873-)
+1 ABBR Service militaire - DESJARDINS Arthur Alexandre (1873-)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/images/5991753e-4096-4a44-8809-783feb8d2ed5.jpg
+1 DATA
+2 TEXT Signalement : taille 1m77.
+3 CONT
+3 CONT Etat des services : Rappelé à l’activité le 2 août 1914, arrivé au corps le 9 août. Passé au 10e régiment de génie comme sapeur marinier le 1er décembre 1915. Il est en suite mis en sursis au titre des voies navigables. Sa mission est suspendue le 
+3 CONC 30 janvier 1919 et terminée le 11 juin 1920.
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7936@
+2 _PRIM YES
+1 OBJE @7937@
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 11:04:04
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 17:27:49
+0 @8314@ SOUR
+1 QUAY 0
+1 TITL Décès - DESJARDINS Arthur
+1 ABBR Décès - DESJARDINS Arthur
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7930@
+2 _PRIM YES
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:12:47
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:12:47
+0 @8313@ SOUR
+1 QUAY 3
+1 TITL Naissance - VINOT Camille Augustine Angèle (1878-1963)
+1 ABBR Naissance - VINOT Camille Augustine Angèle (1878-1963)
+1 TYPE Deed
+1 WWW https://archivesdepartementales.lenord.fr/ark:/33518/bl0q1t8wpk96/e8ee6da7-7d35-481d-8240-d8d61a5384fe
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7927@
+2 _PRIM YES
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:53:45
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 16:54:34
+0 @8320@ SOUR
+1 QUAY 0
+1 ABBR Décès - VINOT Camille
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7941@
+2 _PRIM YES
+1 _CREA
+2 DATE 4 JUN 2025
+3 TIME 16:49:57
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:49:57
+0 @8316@ SOUR
+1 QUAY 0
+1 TITL Mariage - BEDER & DESJARDINS
+1 ABBR Mariage - BEDER & DESJARDINS
+1 TYPE Deed
+1 REPO
+2 CALN
+3 MEDI Other
+1 OBJE @7932@
+2 _PRIM YES
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:27:27
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:27:27
+0 @834@ SOUR
+1 QUAY 3
+1 TITL Mariage - BEDER Alfred Édouard (1870-1938) & BOEGLER Marie (1872-)
+1 ABBR Mariage - BEDER Alfred Édouard (1870-1938) & BOEGLER Marie (1872-)
+1 TYPE Deed
+1 WWW https://archives.hauts-de-seine.fr/ark:/74903/vta23390521634902a2/dao/0/1/idsearch:RECH_31aeaa0c293d1d88dfcad570a8baedde?id=https%3A%2F%2Farchives.hauts-de-seine.fr%2Fark%3A%2F74903%2Fvta23390521634902a2%2Fcanvas%2F0%2F59&vx=2860.03&vy=-1221.4&vr=0&vz=5.03872
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @796@
+2 _PRIM YES
+1 OBJE @797@
+1 OBJE @798@
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:32:28
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:32:38
+0 @8310@ SOUR
+1 QUAY 3
+1 TITL Mariage - DESJARDINS Arthur Alexandre (1873-) & VINOT Camille Augustine Angèle (1878-1963)
+1 ABBR Mariage - DESJARDINS Arthur Alexandre (1873-) & VINOT Camille Augustine Angèle (1878-1963)
+1 TYPE Deed
+1 WWW https://archives.paris.fr/arkotheque/visionneuse/visionneuse.php?arko=YTo2OntzOjQ6ImRhdGUiO3M6MTA6IjIwMjUtMDEtMDQiO3M6MTA6InR5cGVfZm9uZHMiO3M6MTE6ImFya29fc2VyaWVsIjtzOjQ6InJlZjEiO2k6NDtzOjQ6InJlZjIiO2k6MzAwNTEwO3M6MTY6InZpc2lvbm5ldXNlX2h0bWwiO2I6MTtzOjIxOiJ2aXNpb25uZXVzZV9odG1sX21vZGUiO3M6NDoicHJvZCI7fQ==#uielem_move=-1863%2C-1544&uielem_islocked=0&uielem_zoom=208&uielem_brightness=0&uielem_contrast=0&uielem_isinverted=0&uielem_rotate=F
+1 REPO
+2 CALN
+3 MEDI Numerisation
+1 OBJE @7922@
+2 _PRIM YES
+1 OBJE @7923@
+1 OBJE @7924@
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 10:39:16
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 10:39:37
+0 @7934@ OBJE
+1 TITL Recensement St Maurice sur Fessard 1936-1.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard 1936-1.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 14 JAN 2025
+3 TIME 18:15:09
+1 CHAN
+2 DATE 14 JAN 2025
+3 TIME 18:15:09
+0 @7935@ OBJE
+1 TITL Recensement St Maurice sur Fessard-2.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement St Maurice sur Fessard-2.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 14 JAN 2025
+3 TIME 18:15:13
+1 CHAN
+2 DATE 14 JAN 2025
+3 TIME 18:15:13
+0 @7938@ OBJE
+1 TITL Recensement 1946 Corquilleroy quartier Buges.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Recensement 1946 Corquilleroy quartier Buges.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 MAR 2025
+3 TIME 12:52:11
+1 CHAN
+2 DATE 5 MAR 2025
+3 TIME 12:52:11
+0 @7928@ OBJE
+1 TITL Capture d’écran 2025-01-05 à 17.10.11.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-05 à 17.10.11.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 17:21:16
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 17:21:16
+0 @7929@ OBJE
+1 TITL PV examen.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/PV examen.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 17:25:53
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 17:25:53
+0 @794@ OBJE
+1 TITL Capture d’écran 2025-01-03 à 09.36.54.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-03 à 09.36.54.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 09:37:31
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 09:37:31
+0 @7920@ OBJE
+1 TITL image_berroux_charles_remorqueur_entr_ph38780_987707.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/image_berroux_charles_remorqueur_entr_ph38780_987707.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:56:33
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:56:33
+0 @7933@ OBJE
+1 TITL N Jeannine Hrysio.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/N Jeannine Hrysio.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 14 JAN 2025
+3 TIME 10:32:54
+1 CHAN
+2 DATE 14 JAN 2025
+3 TIME 10:32:54
+0 @7939@ OBJE
+1 TITL Extrait de Naissance M. BEDER.pdf
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Extrait de Naissance M. BEDER.pdf
+2 FORM pdf
+1 _CREA
+2 DATE 2 JUN 2025
+3 TIME 12:17:36
+1 CHAN
+2 DATE 2 JUN 2025
+3 TIME 12:17:36
+0 @791@ OBJE
+1 RESN privacy
+1 TITL Registres paroissiaux et d'état-civil 2025-01-02 15:54:34.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 15:54:35
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 15:54:49
+0 @7942@ OBJE
+1 TITL D BEDER Charles Arsène.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/D BEDER Charles Arsène.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 11 JUN 2025
+3 TIME 15:48:07
+1 CHAN
+2 DATE 11 JUN 2025
+3 TIME 15:48:07
+0 @792@ OBJE
+1 RESN privacy
+1 TITL  N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:09:48.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:09:48
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 16:10:44
+0 @793@ OBJE
+1 RESN privacy
+1 TITL  N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:10:19.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 2 JAN 2025
+3 TIME 16:10:19
+1 CHAN
+2 DATE 2 JAN 2025
+3 TIME 16:10:28
+0 @7940@ OBJE
+1 TITL D Yolande Desjardins.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/D Yolande Desjardins.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 4 JUN 2025
+3 TIME 16:34:42
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:34:42
+0 @795@ OBJE
+1 TITL  N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17:24:19.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:24:19
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:24:50
+0 @7919@ OBJE
+1 TITL Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18:45:46.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:45:46
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:46:13
+0 @7911@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:24:50.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:24:50
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:25:03
+0 @7912@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:12.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:25:12
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:25:20
+0 @7913@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:25.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:25:25
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:25:38
+0 @7914@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:27.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:28:27
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:28:38
+0 @7915@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:45.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:28:45
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:28:57
+0 @7916@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:29:09.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:29:09
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:29:20
+0 @7917@ OBJE
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:11.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:32:11
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:32:53
+0 @7918@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:27.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:32:27
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:32:37
+0 @7931@ OBJE
+1 TITL D Alfred Beder.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/D Alfred Beder.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:24:32
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:24:32
+0 @7926@ OBJE
+1 TITL N Marie Boegler.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/N Marie Boegler.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:38:14
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 16:38:14
+0 @799@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:10.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:15:10
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:15:32
+0 @7910@ OBJE
+1 RESN privacy
+1 TITL Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:46.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 18:15:46
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 18:15:57
+0 @7921@ OBJE
+1 TITL  N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16:30:43.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 4 JAN 2025
+3 TIME 16:30:43
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 10:40:05
+0 @7936@ OBJE
+1 TITL Capture d’écran 2025-01-16 à 15.16.27.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-16 à 15.16.27.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 16 JAN 2025
+3 TIME 15:17:08
+1 CHAN
+2 DATE 16 JAN 2025
+3 TIME 15:17:08
+0 @7937@ OBJE
+1 TITL Capture d’écran 2025-01-16 à 15.16.51.png
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/Capture d_écran 2025-01-16 à 15.16.51.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 16 JAN 2025
+3 TIME 15:17:12
+1 CHAN
+2 DATE 16 JAN 2025
+3 TIME 15:17:12
+0 @7930@ OBJE
+1 TITL D Arthur Desjardins.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/D Arthur Desjardins.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:11:50
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:11:50
+0 @7927@ OBJE
+1 TITL  NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16:53:26.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 16:53:26
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 16:53:50
+0 @7941@ OBJE
+1 TITL D Camille VINOT.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/D Camille VINOT.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 4 JUN 2025
+3 TIME 16:49:53
+1 CHAN
+2 DATE 4 JUN 2025
+3 TIME 16:49:53
+0 @7932@ OBJE
+1 TITL M Beder & DESJARDINS.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/M Beder _ DESJARDINS.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 8 JAN 2025
+3 TIME 16:27:25
+1 CHAN
+2 DATE 8 JAN 2025
+3 TIME 16:27:25
+0 @796@ OBJE
+1 RESN privacy
+1 TITL E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:30:17.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_30_17.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:30:17
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:30:29
+0 @797@ OBJE
+1 RESN privacy
+1 TITL E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:31:28.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_31_28.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:31:28
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:31:41
+0 @798@ OBJE
+1 RESN privacy
+1 TITL E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:32:11.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_32_11.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 3 JAN 2025
+3 TIME 17:32:12
+1 CHAN
+2 DATE 3 JAN 2025
+3 TIME 17:32:24
+0 @7922@ OBJE
+1 TITL 1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:37:40.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_37_40.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 10:37:40
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 10:39:35
+0 @7923@ OBJE
+1 RESN privacy
+1 TITL 1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:38:20.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_38_20.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 10:38:20
+1 CHAN
+2 DATE 5 JAN 2025
+3 TIME 10:38:41
+0 @7924@ OBJE
+1 TITL 1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:38:56.jpg
+1 FILE /Users/charton78/Desktop/Hrysio-GEDCOM/Hrysio-Export-Medias/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_38_56.jpg
+2 FORM jpg
+1 _CREA
+2 DATE 5 JAN 2025
+3 TIME 10:38:56
+1 CHAN
+2 DATE 23 APR 2026
+3 TIME 16:47:56
+0 TRLR
