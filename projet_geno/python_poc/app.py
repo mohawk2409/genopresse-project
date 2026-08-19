@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton, QLabel,
-    QFileDialog, QLineEdit, QHBoxLayout
+    QFileDialog, QLineEdit, QHBoxLayout, QRadioButton
 )
 
 from generator import generate_docx
@@ -33,10 +33,16 @@ class MainWindow(QWidget):
         h_out.addWidget(btn_out)
         layout.addLayout(h_out)
 
+
         # Generate button
         self.btn_generate = QPushButton('Generate')
         self.btn_generate.clicked.connect(self.generate)
         layout.addWidget(self.btn_generate)
+        self.btn_test1 = QRadioButton("test1")
+        # self.btn_test2 = QRadioButton("test2")
+        self.btn_test1.clicked.connect(self.test)
+        layout.addWidget(self.btn_test1)
+        # layout.addWidget(self.btn_test2)
 
         # Status
         self.status = QLabel('')
@@ -62,6 +68,10 @@ class MainWindow(QWidget):
             self.status.setText(f'Done: {self.out_input.text()}')
         except Exception as e:
             self.status.setText(f'Error: {e}')
+
+    def test(self):
+        if(self.btn_test1.isChecked() == True):
+            print("test")
 
 
 if __name__ == '__main__':

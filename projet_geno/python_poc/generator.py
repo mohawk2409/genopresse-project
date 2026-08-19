@@ -1101,6 +1101,10 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 # Récupérer chaque personne l'ajouter dans un tableau et rajouter à cette personne l'index associé 
 # (si c'est la profession alors on ajoute la profession). 
 # Pour afficher l'index il suffira de filtrer par soit la profession ou autre et de l'afficher avec le nom de la personne
+# Ajouter les références
+
+# Pour afficher les noms en gras, peut-être faire en sorte que c'est un autre "paragraphe" (avec le add_paragraphe) et tous les add_paragraphe des noms sont en gras. 
+
 
 def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> str:
     """
@@ -1442,7 +1446,7 @@ def _create_cover_page(document: Document, first_person_name: str):
     document.add_page_break()
 
 
-def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] = None, json_path: Optional[str] = None) -> Path:
+def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] = None, json_path: Optional[str] = None, index: Optional[bool] = None) -> Path:
     """
     Orchestre la deuxième étape : la génération du document Word (.docx).
     1. S'assure que le rapport intermédiaire existe (le génère si besoin).
@@ -1466,6 +1470,10 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
     document = Document()
 
     # --- Création de la page de garde ---
+    
+    # if index == True:
+        # do smthg
+
     first_person_name = "Inconnu"
     if report.get('people'):
         first_person_name = report['people'][0].get('title', 'Inconnu')
