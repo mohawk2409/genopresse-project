@@ -17,15 +17,26 @@ import json
 import re
 import os
 from pathlib import Path
+import unicodedata
+import sys
+import string
+sys.stdout.reconfigure(encoding='utf-8')
 from typing import Any, Dict, List, Optional, Tuple
 from datetime import date
-
+import copy 
 from docx import Document
+from docx.text.paragraph import Paragraph
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt
-
+from docx.shared import Inches, Pt, Cm
+from docx.enum.style import WD_STYLE_TYPE
+from docx.oxml.ns import qn
+from docx.shared import RGBColor
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+from docx.enum.text import WD_BREAK
+from docx.enum.section import WD_SECTION
 # --- Constantes ---
 # Ces constantes définissent les chemins par défaut pour les fichiers d'entrée,
 # de rapport intermédiaire et de sortie.
@@ -41,6 +52,112 @@ SKIP_KEYS = {'MAP', 'CHAN', '_CREA', '_QUAL', 'QUAY', '_FNA'}
 IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.tif'}
 _FILE_SENTINEL = '__FILE__'
 date_value = ""
+people_by_id: Dict[str, "people"] = {}
+# mentions_by_person[X] = ensemble des id de personnes dont la fiche mentionne X
+# (comme conjoint, comme frère/sœur, comme parent) — sert à lister, dans l'index,
+# toutes les pages où X apparaît, pas seulement sa propre fiche.
+mentions_by_person: Dict[str, set] = {}
+class people:
+
+    def __init__(self):
+        self.id = ""
+        self.nom = []
+        self.prenom = ""
+        self.profession = ""
+        self.lieu: Optional[List[tuple]] = None
+        self.date = []
+        self.paragraphe: Optional[Paragraph] = None
+        self.generation: Optional[int]
+
+    def setNom(self,nom):
+        if nom and nom not in self.nom:
+            self.nom.append(nom)
+
+    def setPrenom(self,prenom):
+        self.prenom = prenom
+
+    def setProfession(self,profession):
+        self.profession = profession
+
+    def setLieu(self,lieu, raison, year):
+        entry = (lieu, raison, year)
+        if self.lieu == None:
+            self.lieu = [entry]
+        elif entry not in self.lieu:
+            self.lieu.append(entry)
+
+    def setDate(self,date):
+        if date not in self.date:
+            self.date.append(date)
+
+    def setId(self,id):
+        self.id = id
+
+    def setParagraphe(self,paragraphe):
+        self.paragraphe = paragraphe
+
+    def getNom(self):
+        return self.nom
+    
+    def getParagraphe(self):
+        return self.paragraphe
+    
+    def __str__(self):
+        return f"Nom: {self.nom}, Prenom: {self.prenom}, Lieu: {self.lieu}"
+
+
+def _get_or_create_person(node: Dict[str, Any]) -> "people":
+    """
+    Point d'entrée unique pour créer/retrouver l'objet `people` d'un nœud JSON
+    et y enregistrer son identité (id, prénom, nom, profession). Toujours le
+    même objet pour un même '@id' (people_by_id.setdefault) : remplace les deux
+    copies de cette logique qui existaient dans _display_name et
+    _resolve_reference.
+    """
+    node_id = node.get('@id')
+    p = people_by_id.setdefault(node_id, people())
+    p.setId(node_id)
+    name_value = node.get('foaf:name')
+    if isinstance(name_value, dict):
+        p.setPrenom(str(name_value.get('GIVN') or '').strip())
+        p.setNom(str(name_value.get('SURN') or '').strip())
+        p.setProfession(node.get('OCCU'))
+    return p
+
+
+def _record_lieu(person_id: Optional[str], event: Optional[Dict[str, Any]], raison: str, annee_suffixe: str = "") -> None:
+    """
+    Point d'entrée unique pour enregistrer le lieu d'un événement (Naissance,
+    Mariage, Décès) sur l'objet `people` d'une personne. Calcule le lieu et
+    l'année (repli sur "DNF" si la date est vide) de la même façon partout, au
+    lieu de dupliquer ce calcul dans _resolve_reference, _person_biography et
+    _build_person_summary.
+    """
+    if not person_id or not isinstance(event, dict):
+        return
+    place = _event_place(event)
+    if not place:
+        return
+    date_str = str(event.get('dc:date', '')).strip()
+    year = date_str.split()[-1] if date_str else "DNF"
+    if annee_suffixe:
+        year = f"{annee_suffixe} {year}"
+    people_by_id.setdefault(person_id, people()).setLieu(place, raison, year)
+
+# class dictionnaire_alphabet:
+#     def __init__(self):
+#         self.paragraphe: Optional[Paragraph] = None
+#         self.letter_paragraphe: Optional[Paragraph] = None
+# Cette variable prend les valeurs suivantes :
+# 1 : le paragraphe de la lettre
+# 2 : le paragraphe sous la lettre
+# 3 : le paragraphe associé à un nom
+
+dictionnaire_alphabet = {"A":[None,[],None,[]],"B":[None,[],None,[]],"C":[None,[],None,[]],"D":[None,[],None,[]],"E":[None,[],None,[]],"F":[None,[],None,[]],"G":[None,[],None,[]],
+                         "H":[None,[],None,[]],"I":[None,[],None,[]],"J":[None,[],None,[]],"K":[None,[],None,[]],"L":[None,[],None,[]],"M":[None,[],None,[]],"N":[None,[],None,[]],"O":[None,[],None,[]],
+                         "P":[None,[],None,[]],"Q":[None,[],None,[]],"R":[None,[],None,[]],"S":[None,[],None,[]],"T":[None,[],None,[]],"U":[None,[],None,[]],"V":[None,[],None,[]],"W":[None,[],None,[]],
+                         "X":[None,[],None,[]],"Y":[None,[],None,[]],"Z":[None,[],None,[]]}
+
 # --- Fonctions Utilitaires ("Helpers") ---
 # Ces fonctions sont des "aides" internes au script, préfixées par `_`.
 
@@ -54,6 +171,124 @@ def _add_page_number(paragraph):
     fld2 = OxmlElement('w:fldSimple')
     fld2.set(qn('w:instr'), 'NUMPAGES \\* MERGEFORMAT')
     paragraph._p.append(fld2)
+
+
+_bookmark_id_counter = 0
+
+
+def _bookmark_name(identifiant: str) -> str:
+    """
+    Convertit un id JSON (ex: '_:731') en nom de signet Word valide : Word exige
+    que ça commence par une lettre et ne contienne que lettres/chiffres/underscore
+    (40 caractères max).
+    """
+    safe = re.sub(r'[^A-Za-z0-9_]', '_', str(identifiant))
+    if not safe or not safe[0].isalpha():
+        safe = 'bm_' + safe
+    return safe[:40]
+
+
+def _add_bookmark(paragraph, name: str) -> None:
+    """
+    Pose un signet sur ce paragraphe (sans texte visible), pour pouvoir y
+    renvoyer ailleurs dans le document avec _add_page_ref.
+    """
+    global _bookmark_id_counter
+    _bookmark_id_counter += 1
+    start = OxmlElement('w:bookmarkStart')
+    start.set(qn('w:id'), str(_bookmark_id_counter))
+    start.set(qn('w:name'), name)
+    end = OxmlElement('w:bookmarkEnd')
+    end.set(qn('w:id'), str(_bookmark_id_counter))
+    # w:pPr (propriétés du paragraphe), s'il existe, doit rester le tout premier
+    # enfant de w:p : on insère le signet juste après, jamais avant.
+    p = paragraph._p
+    insert_at = 1 if len(p) and p[0].tag == qn('w:pPr') else 0
+    p.insert(insert_at, start)
+    p.append(end)
+
+
+def _add_page_ref(paragraph, bookmark_name: str) -> None:
+    """
+    Insère un champ Word affichant le numéro de page du signet `bookmark_name`.
+    Utilise la forme "complexe" (fldChar begin/separate/end) que Word génère
+    lui-même pour ce type de champ — plus fiable que w:fldSimple pour PAGEREF.
+    Un "?" de repli est affiché tant que le champ n'a pas été mis à jour par Word
+    (à l'ouverture, ou via Ctrl+A puis F9).
+    """
+    run_begin = paragraph.add_run()
+    fld_begin = OxmlElement('w:fldChar')
+    fld_begin.set(qn('w:fldCharType'), 'begin')
+    run_begin._r.append(fld_begin)
+
+    run_instr = paragraph.add_run()
+    instr = OxmlElement('w:instrText')
+    instr.set(qn('xml:space'), 'preserve')
+    instr.text = f' PAGEREF {bookmark_name} \\h '
+    run_instr._r.append(instr)
+
+    run_sep = paragraph.add_run()
+    fld_sep = OxmlElement('w:fldChar')
+    fld_sep.set(qn('w:fldCharType'), 'separate')
+    run_sep._r.append(fld_sep)
+
+    paragraph.add_run('?')
+
+    run_end = paragraph.add_run()
+    fld_end = OxmlElement('w:fldChar')
+    fld_end.set(qn('w:fldCharType'), 'end')
+    run_end._r.append(fld_end)
+
+
+def _add_page_ref_if_different(paragraph, bookmark_name: str, previous_bookmark_name: str) -> None:
+    """
+    Insère ", <page de bookmark_name>" uniquement si cette page diffère de celle
+    de `previous_bookmark_name`. Python ne connaît jamais le numéro de page réel
+    (seul Word le calcule) : la comparaison se fait donc via un champ Word IF
+    imbriquant deux PAGEREF, résolu par Word lui-même au moment du calcul des
+    champs — pour éviter de répéter le même numéro deux fois de suite dans une
+    liste de renvois (ex: "2, 2, 3" devient "2, 3").
+    """
+    def _instr(text):
+        run = paragraph.add_run()
+        node = OxmlElement('w:instrText')
+        node.set(qn('xml:space'), 'preserve')
+        node.text = text
+        run._r.append(node)
+
+    def _fld_char(char_type):
+        run = paragraph.add_run()
+        node = OxmlElement('w:fldChar')
+        node.set(qn('w:fldCharType'), char_type)
+        run._r.append(node)
+
+    _fld_char('begin')  # champ IF englobant
+    _instr(' IF ')
+    _add_page_ref(paragraph, bookmark_name)
+    _instr(' <> ')
+    _add_page_ref(paragraph, previous_bookmark_name)
+    _instr(' ", ')
+    _add_page_ref(paragraph, bookmark_name)
+    _instr('" "" ')
+    _fld_char('separate')
+    paragraph.add_run('')
+    _fld_char('end')
+
+
+def _add_page_refs(paragraph, owner_ids, order_by_id: Dict[str, int]) -> None:
+    """
+    Insère un renvoi de page pour chaque id de `owner_ids` : la propre fiche de
+    la personne, plus chaque endroit où elle est mentionnée ailleurs (conjoint,
+    fratrie, parent). Triés par ordre d'apparition dans le document
+    (order_by_id). Deux pages consécutives identiques dans la liste ne sont
+    affichées qu'une fois (voir _add_page_ref_if_different).
+    """
+    ids_sorted = sorted(owner_ids, key=lambda oid: order_by_id.get(oid, 0))
+    if not ids_sorted:
+        return
+    _add_page_ref(paragraph, _bookmark_name(ids_sorted[0]))
+    for previous_id, current_id in zip(ids_sorted, ids_sorted[1:]):
+        _add_page_ref_if_different(paragraph, _bookmark_name(current_id), _bookmark_name(previous_id))
 
 
 def _load_json(path: Path) -> Dict[str, Any]:
@@ -99,6 +334,8 @@ def _display_name(node: Dict[str, Any]) -> str:
     if isinstance(name_value, dict):
         given = str(name_value.get('GIVN') or '').strip()
         surname = str(name_value.get('SURN') or '').strip()
+        if node.get('@id'):
+            _get_or_create_person(node)
         gedvalue = str(name_value.get('GEDVALUE') or '').strip()
         if given and surname:
             return f"{given} {surname}"
@@ -117,24 +354,6 @@ def _display_work(node: Dict[str, Any]) -> str:
     if work_value:
         sentence = " " + _display_name(node) + " a été " + work_value + "."
         return sentence
-
-def _display_name(node: Dict[str, Any]) -> str:
-    """
-    Extrait et formate un nom complet et lisible pour une personne (nœud).
-    Combine le prénom (GIVN) et le nom (SURN) ou utilise d'autres champs si indisponibles.
-    """
-    name_value = node.get('foaf:name')
-    if isinstance(name_value, dict):
-        given = str(name_value.get('GIVN') or '').strip()
-        surname = str(name_value.get('SURN') or '').strip()
-        gedvalue = str(name_value.get('GEDVALUE') or '').strip()
-        if given and surname:
-            return f"{given} {surname}"
-        if gedvalue:
-            return gedvalue.replace('/', ' ').replace('  ', ' ').strip()
-    if isinstance(name_value, str) and name_value.strip():
-        return name_value.strip().replace('/', ' ').replace('  ', ' ')
-    return str(node.get('@id', 'Person'))
 
 
 def _gender_prefix(node: Dict[str, Any]) -> str:
@@ -156,11 +375,10 @@ def _gender_role(node: Dict[str, Any]) -> str:
         return 'l\'époux'
     return 'le conjoint'
 
-def _gender_d(node: Dict[str, Any]) -> str:
+def _gender_d(name: str) -> str:
     """Retourne un rôle accordé en genre ("l'époux", "l'épouse")."""
-    gender = node.get('foaf:name', '')
-    prefixe = str(gender.get('SURN', '')).upper()
-    if prefixe[0] == 'A' or prefixe[0] == 'E' or prefixe[0] == 'I' or prefixe[0] == 'O' or prefixe[0] == 'U' or prefixe[0] == 'Y':
+    if name[0] in ['A','E','I','O','U','Y']:
+    # if name[0] == 'A' or name[0] == 'E' or name[0] == 'I' or name[0] == 'O' or name[0] == 'U' or name[0] == 'Y':
         return "d'"
     else:
         return 'de '
@@ -209,8 +427,11 @@ def _gender_pronoun(node: Dict[str, Any], majuscule=False) -> str:
     return 'l\'enfant'
 
 
+def indexationByName(tab):
+    # indexation["nom"].sort()
+    return tab
 
-def _family_label(family_id: str, index: Dict[str, Dict[str, Any]]) -> str:
+def _family_label(family_id: str, index: Dict[str, Dict[str, Any]], p) -> str:
     """
     Crée une étiquette lisible pour une famille, généralement en listant les conjoints.
     Par exemple : "Jean Dupont et Jeanne Durand".
@@ -228,7 +449,12 @@ def _family_label(family_id: str, index: Dict[str, Dict[str, Any]]) -> str:
         if isinstance(participant, dict):
             participant_id = participant.get('@id')
             if participant_id and participant_id in index:
-                names.append(_display_name(index[participant_id]))
+                display_name = _display_name(index[participant_id])
+                names.append(display_name)
+
+                parts = display_name.split()
+                nom = parts[-1]
+                prenom = " ".join(parts[:-1])
 
     if names:
         return ' et '.join(names)
@@ -247,44 +473,40 @@ def _note_label(note: str, index: Dict[str, Dict[str, Any]]) -> str:
     return note
 
 
-def _reference_summary(reference_id: str, index: Dict[str, Dict[str, Any]]) -> str:
+def _reference_summary(reference_id: str, index: Dict[str, Dict[str, Any]],p) -> str:
     """
     Génère un résumé textuel pour un objet référencé par son ID.
     Par exemple, pour l'ID d'une personne, retourne son nom ; pour une famille, son label.
     """
-    target = index.get(str(reference_id), {})
-    if not target:
-        return str(reference_id)
+    # target = index.get(str(reference_id), {})
+    # if not target:
+    #     return str(reference_id)
 
-    target_type = str(target.get('@type', ''))
-    if target_type == 'foaf:Person':
-        final_texte = _display_name(target)
-        marriage_phrase = _marriage_phrase(target, index)
-        if marriage_phrase:
-            final_texte += f", {marriage_phrase}"
-        return final_texte
-    if target_type == 'bio:Relationship':
-        return _family_label(str(reference_id), index)
-        # if target_type == 'bio:IndividualEvent':
-        #     final_texte += _note_label(str(reference_id), index)
-        # return final_texte
+    # target_type = str(target.get('@type', ''))
+    # if target_type == 'foaf:Person':
+    #     final_texte = _display_name(target)
+    #     marriage_phrase = _marriage_phrase(target, index)
+    #     if marriage_phrase:
+    #         final_texte += f", {marriage_phrase}"
+    #     return final_texte
+    # if target_type == 'bio:Relationship':
+    #     return _family_label(str(reference_id), index,p)
 
+    # title = target.get('TITL') or target.get('ABBR')
+    # if title:
+    #     return str(title)
 
-    title = target.get('TITL') or target.get('ABBR')
-    if title:
-        return str(title)
+    # name_value = target.get('foaf:name')
+    # if isinstance(name_value, str):
+    #     return name_value
 
-    name_value = target.get('foaf:name')
-    if isinstance(name_value, str):
-        return name_value
-
-    if isinstance(name_value, dict):
-        return _display_name(target)
+    # if isinstance(name_value, dict):
+    #     return _display_name(target)
 
     return str(reference_id)
 
 
-def _person_marriages_in_order(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> List[str]:
+def _person_marriages_in_order(person: Dict[str, Any], index: Dict[str, Dict[str, Any]],p) -> List[str]:
     """
     Retourne les ID des familles (bio:Relationship) où la personne est conjoint,
     triées par date de mariage croissante. Boucle sur 'bio:relationship' pour
@@ -303,6 +525,28 @@ def _person_marriages_in_order(person: Dict[str, Any], index: Dict[str, Dict[str
         family = index[fid]
         if family.get('@type') != 'bio:Relationship':
             continue
+
+        # Les deux conjoints (participants) de cette famille : on ajoute leurs noms
+        # de famille à l'index de la personne (utile pour retrouver, par ex., le nom
+        # de jeune fille et le(s) nom(s) pris par mariage).
+        participants = family.get('bio:participant', [])
+        if isinstance(participants, dict):
+            participants = [participants]
+        for participant in participants[:2]:
+            if not isinstance(participant, dict):
+                continue
+            participant_node = index.get(participant.get('@id'))
+            if not participant_node:
+                continue
+            participant_name = participant_node.get('foaf:name')
+            surname = str(participant_name.get('SURN') or '').strip() if isinstance(participant_name, dict) else ''
+            gender = family.get("foaf:gender","")
+            real_gender = participant_node.get('foaf:gender')
+            print(real_gender)
+
+            if surname and real_gender == "M":
+                p.setNom(surname)
+
         marriage_event = family.get('bio:event')
         if isinstance(marriage_event, list):
             marriage_event = next(
@@ -321,7 +565,8 @@ def _marriage_phrase(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -
     Construit une courte phrase indiquant que la personne s'est mariée, avec le nom
     du conjoint et, si connue, la date et le lieu du mariage (premier mariage connu).
     """
-    family_ids = _person_marriages_in_order(person, index)
+    p = people_by_id.setdefault(person.get('@id'), people())
+    family_ids = _person_marriages_in_order(person, index, p)
     if not family_ids:
         return ''
 
@@ -331,8 +576,8 @@ def _marriage_phrase(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -
         participants = [participants]
     person_id = person.get('@id')
     spouse_id = next(
-        (p.get('@id') for p in participants
-         if isinstance(p, dict) and p.get('@id') != person_id and p.get('@id') in index),
+        (pa.get('@id') for pa in participants
+         if isinstance(pa, dict) and pa.get('@id') != person_id and pa.get('@id') in index),
         None,
     )
     if not spouse_id:
@@ -348,7 +593,7 @@ def _marriage_phrase(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -
     marriage_phrase = ''
     if isinstance(marriage_event, dict):
         date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
-        place_value = _event_place(marriage_event)
+        place_value = normaliser_adresse(_event_place(marriage_event))
         bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
         marriage_phrase = ' '.join(bits)
 
@@ -359,15 +604,16 @@ def _marriage_phrase(person: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -
     return f"{verb_phrase} avec {spouse_name}"
 
 
-def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], current_node: Dict[str, Any]) -> Dict[str, Any]:
+def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], current_node: Dict[str, Any],p) -> Dict[str, Any]:
     """
     Résout une référence ID en un objet structuré contenant des informations clés.
     Va chercher l'objet correspondant à l'ID dans l'index et retourne un dictionnaire
     avec son nom, son type (personne, famille), etc.
     """
     target = index.get(str(reference_id), {})
-    resolved: Dict[str, Any] = {'@id': reference_id, 'display': _reference_summary(reference_id, index)}
-    # work_value = _display_work(current_node)
+    resolved: Dict[str, Any] = {'@id': reference_id, 'display': _reference_summary(reference_id, index,p)}
+    if isinstance(target.get('foaf:name'), dict):
+        _get_or_create_person(target)
 
     if target.get('@type') == 'foaf:Person':
         resolved['type'] = 'person'
@@ -377,15 +623,32 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
             resolved['gender'] = gender
     elif target.get('@type') == 'bio:Relationship':
         resolved['type'] = 'family'
-        resolved['name'] = _family_label(str(reference_id), index)
+        resolved['name'] = _family_label(str(reference_id), index, p)
         participants = target.get('bio:participant', [])
         if isinstance(participants, dict):
             participants = [participants]
         participant_ids = [
-            p.get('@id') for p in participants
-            if isinstance(p, dict) and p.get('@id') in index
+            pa.get('@id') for pa in participants
+            if isinstance(pa, dict) and pa.get('@id') in index
         ]
         resolved['participants'] = [_display_name(index[pid]) for pid in participant_ids]
+
+        # Attributs 'date' et 'lieu' du mariage directement sur l'entrée bio:relationship,
+        # pour un accès facile sans avoir à reparser le texte de 'display'.
+        family_marriage_event = target.get('bio:event')
+        if isinstance(family_marriage_event, list):
+            family_marriage_event = next(
+                (e for e in family_marriage_event if isinstance(e, dict) and e.get('@type') == 'bio:Marriage'),
+                None,
+            )
+        if isinstance(family_marriage_event, dict):
+            resolved['date'] = _pretty_date(str(family_marriage_event.get('dc:date', '')).strip())
+            # p.setDate(resolved['date'])
+            resolved['lieu'] = _event_place(family_marriage_event)
+            # p.setLieu(resolved['lieu'])
+        else:
+            resolved['date'] = ''
+            resolved['lieu'] = ''
 
         # Si la personne courante est l'un des conjoints de cette famille, on construit
         # une description de cette union précise : phrase de mariage (ou remariage selon
@@ -397,11 +660,12 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
         if current_id in participant_ids:
             description_parts = []
 
-            ordered_family_ids = _person_marriages_in_order(current_node, index)
+            ordered_family_ids = _person_marriages_in_order(current_node, index,p)
             family_id = str(reference_id)
             rank = ordered_family_ids.index(family_id) if family_id in ordered_family_ids else 0
 
             spouse_id = next((pid for pid in participant_ids if pid != current_id), None)
+            marriage_event = None
             if spouse_id:
                 marriage_event = target.get('bio:event')
                 if isinstance(marriage_event, list):
@@ -411,18 +675,19 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
                     )
                 marriage_phrase = ''
                 age = None
+                spouse_name = _display_name(index[spouse_id])
                 if isinstance(marriage_event, dict):
                     date_phrase = _event_date_phrase(str(marriage_event.get('dc:date', '')).strip())
                     place_value = _event_place(marriage_event)
+                    current_person = people_by_id.setdefault(current_id, people())
+                    current_person.setId(current_id)
+                    _record_lieu(current_id, marriage_event, "Mariage", spouse_name)
+                    current_person.setDate(_pretty_date(str(marriage_event.get('dc:date', '')).strip()))
                     bits = [b for b in [date_phrase, f"à {place_value}" if place_value else ''] if b]
                     marriage_phrase = ' '.join(bits)
-                    birth_event = _find_event(current_node, 'bio:Birth')
-                    age = _compute_age(
-                        str(birth_event.get('dc:date', '')).strip() if birth_event else '',
-                        str(marriage_event.get('dc:date', '')).strip(),
-                    )
+                    
 
-                spouse_name = _display_name(index[spouse_id])
+
                 pronoun = _gender_pronoun(current_node, True)
                 verb_phrase = _gender_marriage(current_node) if rank == 0 else f"re{_gender_marriage(current_node)}"
                 age_phrase = f" à l'âge de {age} ans" if age is not None else ""
@@ -450,7 +715,17 @@ def _resolve_reference(reference_id: str, index: Dict[str, Dict[str, Any]], curr
                         description_parts.extend(_person_biography(cid, index) for cid in child_ids)
 
             resolved['display'] = ' '.join(part for part in description_parts if part)
+            birth_event = _find_event(current_node, 'bio:Birth')
 
+            if isinstance(birth_event,dict):
+                _record_lieu(current_id, birth_event, "Naissance")
+                age = _compute_age(
+                        str(birth_event.get('dc:date', '')).strip() if birth_event else '',
+                        str(marriage_event.get('dc:date', '')).strip() if marriage_event else '',
+                    )
+
+            death_event = _find_event(current_node, 'bio:Death')
+            _record_lieu(current_id, death_event, "Décès")
 
     elif target.get('@type') == '_:SOUR':
         # Gestion des sources (sources bibliographiques)
@@ -745,9 +1020,9 @@ def _event_place(event: Dict[str, Any]) -> str:
     """Extrait la valeur de lieu d'un événement (gère les formats objet et chaîne)."""
     place_info = event.get('bio:place')
     if isinstance(place_info, dict):
-        return _format_place(str(place_info.get('GEDVALUE', '')).strip())
+        return normaliser_adresse(_format_place(str(place_info.get('GEDVALUE', '')).strip()))
     if place_info:
-        return _format_place(str(place_info).strip())
+        return normaliser_adresse(_format_place(str(place_info).strip()))
     return ''
 
 
@@ -789,6 +1064,7 @@ def _person_biography(person_id: str, index: Dict[str, Dict[str, Any]]) -> str:
         death_verb = "est " + _gender_death(person)
         death_bits = [_gender_pronoun(person, True), death_verb]
         date_phrase = _event_date_phrase(str(death_event.get('dc:date', '')).strip())
+        year = str(_event_year(death_event)) if str(_event_year(death_event)) != "" else "DNF"
         if date_phrase:
             death_bits.append(date_phrase)
         place_value = _event_place(death_event)
@@ -798,7 +1074,9 @@ def _person_biography(person_id: str, index: Dict[str, Dict[str, Any]]) -> str:
         if age is not None:
             death_sentence += f", à l'âge de {age} ans"
         sentence += f" {death_sentence}."
-        
+
+        _record_lieu(str(person_id),death_event,"Décès", "")
+
     return sentence
 
 
@@ -812,7 +1090,8 @@ def _marriages_text(node: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> L
     """
     parts: List[str] = []
     person_id = node.get('@id')
-    family_ids = _person_marriages_in_order(node, index)
+    p = people_by_id.setdefault(person_id, people())
+    family_ids = _person_marriages_in_order(node, index, p)
 
     for rank, fid in enumerate(family_ids):
         family = index.get(fid, {})
@@ -826,6 +1105,7 @@ def _marriages_text(node: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> L
         )
         if not spouse_id:
             continue
+        mentions_by_person.setdefault(spouse_id, set()).add(person_id)
 
         marriage_event = family.get('bio:event')
         if isinstance(marriage_event, list):
@@ -871,12 +1151,17 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
     - Formate les événements (naissance, mariage) en phrases descriptives.
     - Ajoute des labels 'display' pour un affichage direct.
     """
+    p = people_by_id.setdefault(current_node.get('@id'), people())
+
     # Skip unwanted metadata keys globally
     if key in SKIP_KEYS:
         return None
 
     if key == 'foaf:name' and isinstance(value, dict):
         display_name = _display_name(current_node)
+        target = current_node.get("GIVN")
+        target = current_node.get("SURN")
+
         return {
             'display': display_name,
             **{sub_key: _pretty_nested_value(sub_key, sub_value, index, current_node) for sub_key, sub_value in value.items()},
@@ -890,13 +1175,13 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
         family_id = None
         if isinstance(value, dict):
             family_id = value.get('ofFamily')
+
         elif isinstance(value, str):
             family_id = value
 
         if isinstance(family_id, dict) and '@id' in family_id:
             family_id = family_id.get('@id')
-
-        family_name = _family_label(str(family_id), index) if family_id else 'inconnue'
+        family_name = _family_label(str(family_id), index, p) if family_id else 'inconnue'
         role1 = _gender(current_node)
         pronoun = _gender_pronoun(current_node, True)
         prefix = _gender_prefix(current_node)
@@ -912,14 +1197,14 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
             if isinstance(event, dict) and 'dc:date' in event:
                 date_value = str(event.get('dc:date', '')).strip()
                 place_info = event.get('bio:place')
-                print("bio:place", place_info)
+                # print("bio:place", place_info)
                 place_value = ''
                 if isinstance(place_info, dict):
                     # Si le lieu est un objet, on cherche la valeur dans 'GEDVALUE'
-                    place_value = _format_place(str(place_info.get('GEDVALUE', '')).strip())
+                    place_value = normaliser_adresse(_format_place(str(place_info.get('GEDVALUE', '')).strip()))
                 elif place_info:
                     # Sinon, on utilise la valeur directement
-                    place_value = _format_place(str(place_info).strip())
+                    place_value = normaliser_adresse(_format_place(str(place_info).strip()))
                 break
         
         pretty_date = _pretty_date(date_value).lower() if date_value else ''
@@ -933,13 +1218,11 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
         else:
             date_info = ''
         
-        display = f"{_display_name(current_node)}, {role1} {_gender_d(current_node)}{family_name}. {pronoun} est {prefix} le {date_info} à {place_value}."
-
-        # display = f"{_format_birth_event(event, _display_name(current_node), _gender_prefix(current_node))}"
+        display = f"{_display_name(current_node)}, {role1} {_gender_d(family_name)}{family_name}. {pronoun} est {prefix} le {date_info} à {place_value}."
 
         result: Dict[str, Any] = {'display': display}
         if family_id is not None:
-            result['ofFamily'] = _resolve_reference(str(family_id), index, current_node)['display']
+            result['ofFamily'] = _resolve_reference(str(family_id), index, current_node,p)['display']
         if isinstance(value, dict):
             for sub_key, sub_value in value.items():
                 if sub_key != 'ofFamily':
@@ -961,7 +1244,7 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
             place_value = ''
             if isinstance(place_info, dict):
                 # Si le lieu est un objet, on cherche la valeur dans 'GEDVALUE'
-                place_value = _format_place(str(place_info.get('GEDVALUE', '')).strip())
+                place_value = normaliser_adresse(_format_place(str(place_info.get('GEDVALUE', '')).strip()))
             pretty_date_val = _pretty_date(date_value).lower() if date_value else ''
             weekday_val = _get_weekday(date_value) if date_value else ''
             
@@ -1006,7 +1289,7 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
                 if sub_key not in {'display', 'MAP', '_QUAL', 'QUAY', '_FNA'}:
                     pretty_event[sub_key] = _pretty_nested_value(sub_key, sub_value, index, current_node)
             pretty_events.append(pretty_event)
-            print(pretty_event)
+            # print(pretty_event)
 
         return pretty_events if isinstance(value, list) else pretty_events[0]
 
@@ -1069,7 +1352,7 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
         if isinstance(ref_id, str) and ref_id in index:
             # Résout la référence (personne, famille ou source) en son résumé
             # structuré (nom, description, pièces jointes OBJE...).
-            return _resolve_reference(ref_id, index, current_node)
+            return _resolve_reference(ref_id, index, current_node,p)
         result: Dict[str, Any] = {}
         for sub_key, sub_value in value.items():
             if sub_key in SKIP_KEYS:
@@ -1106,6 +1389,52 @@ def _pretty_nested_value(key: str, value: Any, index: Dict[str, Dict[str, Any]],
 # Pour afficher les noms en gras, peut-être faire en sorte que c'est un autre "paragraphe" (avec le add_paragraphe) et tous les add_paragraphe des noms sont en gras. 
 
 
+def _famc_parent_ids(node: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> List[str]:
+    """
+    Retourne les id des parents d'une personne, en remontant FAMC → famille →
+    participants directement depuis les données brutes (indépendant du texte de
+    filiation déjà généré).
+    """
+    person_id = node.get('@id')
+    famc = node.get('FAMC')
+    if famc is None:
+        return []
+    if not isinstance(famc, list):
+        famc = [famc]
+
+    parent_ids: List[str] = []
+    for famc_entry in famc:
+        family_id = None
+        if isinstance(famc_entry, dict):
+            of_family = famc_entry.get('ofFamily')
+            if isinstance(of_family, dict):
+                family_id = of_family.get('@id')
+            elif isinstance(of_family, str):
+                family_id = of_family
+            elif isinstance(famc_entry.get('@id'), str):
+                family_id = famc_entry.get('@id')
+        elif isinstance(famc_entry, str):
+            family_id = famc_entry
+
+        if not family_id:
+            continue
+
+        family = index.get(str(family_id), {})
+        participants = family.get('bio:participant', [])
+        if isinstance(participants, dict):
+            participants = [participants]
+
+        for participant in participants:
+            if not isinstance(participant, dict):
+                continue
+            parent_id = participant.get('@id')
+            if not parent_id or parent_id == person_id or parent_id not in index:
+                continue
+            parent_ids.append(parent_id)
+
+    return parent_ids
+
+
 def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> str:
     """
     Rassemble en un seul texte continu les informations d'une personne qui, sinon,
@@ -1121,6 +1450,7 @@ def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], ind
     7. Fratrie
     """
     parts: List[str] = []
+    node_id = node.get('@id')
 
     # 1. Filiation — inchangé
     famc = person_dict.get('FAMC')
@@ -1128,6 +1458,9 @@ def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], ind
         filiation = str(famc['display']).split('.', 1)[0].strip()
         if filiation:
             parts.append(filiation + '.')
+    if node_id:
+        for parent_id in _famc_parent_ids(node, index):
+            mentions_by_person.setdefault(parent_id, set()).add(node_id)
 
     events = person_dict.get('bio:event', [])
     if isinstance(events, dict):
@@ -1135,8 +1468,13 @@ def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], ind
     events = [e for e in events if isinstance(e, dict) and e.get('display')]
 
     birth_display = next((e['display'] for e in events if e.get('eventType') == 'bio:Birth'), None)
-    death_display = next((e['display'] for e in events if e.get('eventType') == 'bio:Death'), None)
-    other_displays = [e['display'] for e in events if e.get('eventType') not in {'bio:Birth', 'bio:Death'}]
+    death_event = next((e for e in events if e.get('eventType') == 'bio:Death'), None)
+    death_display = death_event.get('display') if death_event else None
+    death_date = death_event.get('dc:date') if death_event else None
+    death_place_info = death_event.get('bio:place') if death_event else None
+    death_place = normaliser_adresse(death_place_info.get('GEDVALUE')) if isinstance(death_place_info, dict) else death_place_info
+    _record_lieu(node.get('@id'), death_event, "Décès")
+    other_displays = [e['display'] for e in events if e.get('eventType') not in {'bio:Birth', 'bio:Death','bio:relationship'}]
 
     # 2. Naissance de la personne — inchangé
     if birth_display:
@@ -1155,21 +1493,78 @@ def _build_person_summary(node: Dict[str, Any], person_dict: Dict[str, Any], ind
 
     # 6. Décès de la personne — toujours en dernier
     if death_display:
+        # parts.append("[")
         parts.append(str(death_display).strip())
+        # parts.append(str(death_place).strip())
+        # parts.append(str(death_date).strip())
+        # parts.append("]")
 
     # 7. Fratrie
     siblings = person_dict.get('rel:siblingOf')
     if siblings:
         siblings_list = siblings if isinstance(siblings, list) else [siblings]
+        # 'name' d'abord : _reference_summary ne renvoyant que l'identifiant,
+        # 'display' vaut "_:7311" alors que 'name' porte le vrai nom affichable.
         names = [
-            s.get('display') or s.get('name') for s in siblings_list
-            if isinstance(s, dict) and (s.get('display') or s.get('name'))
+            s.get('name') or s.get('display') for s in siblings_list
+            if isinstance(s, dict) and (s.get('name') or s.get('display'))
         ]
         if names:
             intro = "Frère ou sœur :" if len(names) == 1 else "Frères et sœurs :"
             parts.append(f"{intro} {', '.join(str(n) for n in names)}.")
+        if node_id:
+            for s in siblings_list:
+                sibling_id = s.get('@id') if isinstance(s, dict) else None
+                if sibling_id:
+                    mentions_by_person.setdefault(sibling_id, set()).add(node_id)
 
-    return ' '.join(p for p in parts if p)
+    return ' '.join(pa for pa in parts if pa)
+
+
+def _all_person_names(index: Dict[str, Dict[str, Any]]) -> List[str]:
+    """
+    Tous les noms affichables des personnes du fichier, du plus long au plus
+    court. L'ordre importe pour le découpage des résumés : on veut reconnaître
+    "Jeannine HRYSIO" en entier plutôt que le seul "HRYSIO" qu'il contient.
+    """
+    noms = set()
+    for node in index.values():
+        if not isinstance(node, dict) or node.get('@type') != 'foaf:Person':
+            continue
+        nom = _display_name(node)
+        # _display_name retombe sur l'@id quand la personne n'a pas de nom :
+        # ces identifiants n'ont rien à faire en gras dans le texte.
+        if nom and not ID_PATTERN.match(nom):
+            noms.add(nom)
+    return sorted(noms, key=len, reverse=True)
+
+
+def _split_summary_by_names(summary: str, noms: List[str]) -> Tuple[List[str], List[str]]:
+    """
+    Scinde le résumé à chaque nom de personne rencontré, pour pouvoir mettre les
+    noms en gras à l'affichage (la mise en forme dans un .docx s'applique à un
+    "run", donc un nom en gras doit être un morceau de texte séparé).
+
+    Retourne (morceaux, noms_trouvés) tels que
+    morceaux[0] + noms_trouvés[0] + morceaux[1] + noms_trouvés[1] + ...
+    reconstitue exactement `summary`. Il y a toujours un morceau de plus que de
+    noms (le dernier morceau peut être vide).
+    """
+    if not summary:
+        return [''], []
+    if not noms:
+        return [summary], []
+
+    motif = re.compile('|'.join(re.escape(nom) for nom in noms))
+    morceaux: List[str] = []
+    noms_trouves: List[str] = []
+    position = 0
+    for trouve in motif.finditer(summary):
+        morceaux.append(summary[position:trouve.start()])
+        noms_trouves.append(trouve.group())
+        position = trouve.end()
+    morceaux.append(summary[position:])
+    return morceaux, noms_trouves
 
 
 def extract_report(json_path: Optional[str] = None, report_path: Optional[str] = None) -> Dict[str, Any]:
@@ -1186,7 +1581,7 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
     root = _load_json(json_file)
     index = _node_index(root)
 
-    generation_map = _compute_generations(root, index)
+    generation_map, bounds_by_gen = _compute_generations(root, index)
 
     report: Dict[str, Any] = {
         'sourceFile': str(json_file),
@@ -1197,6 +1592,9 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
     graph = root.get('@graph', [])
     print(f"Nombre total d'éléments dans '@graph': {len(graph)}")
 
+    # Calculés une seule fois : servent à scinder chaque résumé à chaque nom.
+    noms_personnes = _all_person_names(index)
+
     for order, node in enumerate(graph, start=1):
         try:
             if not isinstance(node, dict) or node.get('@type') != 'foaf:Person':
@@ -1204,8 +1602,10 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
 
             node_id = node.get('@id', 'ID inconnu')
             generation = generation_map.get(str(node_id))
+            generation_number = generation[0] if isinstance(generation, tuple) else generation
+            bound = bounds_by_gen.get(generation_number)
 
-            print(f"Traitement de la personne {order}/{len(graph)} : {node_id} - {_display_name(node)}" 
+            print(f"Traitement de la personne {order}/{len(graph)} : {node_id} - {_display_name(node)}"
                   + (f" [Génération {generation}]" if generation else ""))
 
             heading = _display_name(node)
@@ -1218,6 +1618,10 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
                 person_dict[key] = _pretty_nested_value(key, value, index, node)
 
             summary = _build_person_summary(node, person_dict, index)
+            # 'summary' est découpé à chaque nom, et 'nom' contient ces noms dans
+            # le même ordre : à l'affichage, on alterne un morceau puis un nom en
+            # gras (voir generate_docx).
+            morceaux_summary, noms_summary = _split_summary_by_names(summary, noms_personnes)
 
             report['people'].append(
                 {
@@ -1226,7 +1630,9 @@ def extract_report(json_path: Optional[str] = None, report_path: Optional[str] =
                     'type': node.get('@type'),
                     'title': str(heading),
                     'generation': generation,
-                    'summary': summary,
+                    'bound': bound,
+                    'summary': morceaux_summary,
+                    'nom': noms_summary,
                     'lines': person_dict,
                 }
             )
@@ -1260,7 +1666,7 @@ def _set_header_footer(document: Document, title: str) -> None:
     footer_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     _add_page_number(footer_paragraph)
 
-def _compute_generations(root: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> Dict[str, int]:
+def _compute_generations(root: Dict[str, Any], index: Dict[str, Dict[str, Any]]) -> Tuple[Dict[str, Any], Dict[int, List[int]]]:
     """
     Calcule la génération de chaque personne à partir du premier foaf:Person du graph.
     La personne de référence est génération 1, ses parents génération 2, etc.
@@ -1274,14 +1680,32 @@ def _compute_generations(root: Dict[str, Any], index: Dict[str, Dict[str, Any]])
             break
 
     if not ref_id:
-        return {}
+        return {}, {}
 
-    generations: Dict[str, int] = {ref_id: 1}
+    generations: Dict[str, (int, int)] = {ref_id: 1}
     queue = [(ref_id, 1)]
+    # Plage [année min, année max] des naissances/décès connus, par génération
+    # (et non toutes générations confondues) : bounds_by_gen[3] couvre uniquement
+    # les personnes de génération 3.
+    bounds_by_gen: Dict[int, List[int]] = {}
+
+    def _record_year(gen: int, year: Optional[int]) -> None:
+        if year is None:
+            return
+        if gen not in bounds_by_gen:
+            bounds_by_gen[gen] = [year, year]
+        else:
+            bounds_by_gen[gen][0] = min(bounds_by_gen[gen][0], year)
+            bounds_by_gen[gen][1] = max(bounds_by_gen[gen][1], year)
 
     while queue:
         person_id, gen = queue.pop(0)
         person = index.get(person_id, {})
+
+        birth_year = _event_year(_find_event(person, 'bio:Birth'))
+        death_year = _event_year(_find_event(person, 'bio:Death'))
+        _record_year(gen, birth_year)
+        _record_year(gen, death_year)
 
         # Remonter vers les parents via FAMC (famille où la personne est enfant)
         famc = person.get('FAMC')
@@ -1322,10 +1746,11 @@ def _compute_generations(root: Dict[str, Any], index: Dict[str, Dict[str, Any]])
                 if parent.get('@type') != 'foaf:Person':
                     continue
                 if parent_id not in generations:
-                    generations[parent_id] = gen + 1
+                    generations[parent_id] = (gen+1,len(participants))
+                    # generations[parent_id] = gen + 1
                     queue.append((parent_id, gen + 1))
 
-    return generations
+    return generations, bounds_by_gen
 
 
 def _dict_to_text_lines(data: Any, indent: int = 0) -> List[str]:
@@ -1446,7 +1871,7 @@ def _create_cover_page(document: Document, first_person_name: str):
     document.add_page_break()
 
 
-def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] = None, json_path: Optional[str] = None, index: Optional[bool] = None) -> Path:
+def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] = None, json_path: Optional[str] = None, indexNoms: Optional[bool] = False,indexLieux: Optional[bool] = False,indexProfessions: Optional[bool] = False) -> Path:
     """
     Orchestre la deuxième étape : la génération du document Word (.docx).
     1. S'assure que le rapport intermédiaire existe (le génère si besoin).
@@ -1469,37 +1894,101 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
 
     document = Document()
 
-    # --- Création de la page de garde ---
-    
-    # if index == True:
-        # do smthg
+    # Création des différents styles de Titre
+    style = document.styles.add_style('Titre 1', WD_STYLE_TYPE.PARAGRAPH)
+    font = style.font
+    font.name = 'Garamond'
+    font.size = Pt(20)
+    font.bold = True
+
+    # font.bold = True
+    # if indexB == True:
+    #     index = {}        
 
     first_person_name = "Inconnu"
     if report.get('people'):
         first_person_name = report['people'][0].get('title', 'Inconnu')
+    # Ordre d'apparition de chaque personne dans le document (utilisé pour trier
+    # les renvois de page multiples dans le bon ordre).
+    order_by_id = {
+        p.get('id'): p.get('order', 0)
+        for p in report.get('people', [])
+        if p.get('id')
+    }
     _create_cover_page(document, first_person_name)
     # ------------------------------------
 
     _set_header_footer(document, 'GEDCOM JSON report')
 
+    title_paragraph = document.add_paragraph()
+    title_paragraph.add_run(f"\n\n\n\n\n")
+    title_run = document.add_heading_with_level(f"Ancêtres de \n{first_person_name}", level=1)
+
+    title_run.runs[0].font.size = Pt(44)
+    title_run.runs[0].font.name = "Garamond"
+    title_paragraph.paragraph_format.alignment =  WD_ALIGN_PARAGRAPH.RIGHT
+    add_horizontal_line(title_paragraph)
+    p = document.add_paragraph()
+    p.add_run("\n")
+
+
+    generation_paragraph = document.add_paragraph()
+    genration_run = generation_paragraph.add_run(f"... générations sur plus de ... ans")
+    add_horizontal_line(generation_paragraph)
+    genration_run.font.name = "Garamond"
+    genration_run.font.size = Pt(19)
+    genration_run.italic = True
+    generation_paragraph.paragraph_format.alignment =  WD_ALIGN_PARAGRAPH.RIGHT
+    p = document.add_paragraph()
+    p.add_run("\n")
+
+
+
+
     for person in report.get('people', []):
+
+        if person.get('generation') == 1:
+            meta_paragraph = document.add_paragraph()
+            generation = 1
+            last_gen = 1
+            generation_str = f"Génération {generation}" if generation is not None else "    Génération: non reliée"
+            meta_run = meta_paragraph.add_run(f"{generation_str}")
+            meta_run.font.size = Pt(20)
+        elif person.get('generation') != None and person.get('generation')[0] != last_gen and person.get('generation')[0] != 2:
+            document.add_page_break()
+            meta_paragraph = document.add_paragraph()
+            generation = person.get('generation')[0]
+            last_gen = generation
+            generation_str = f"Génération: {generation}" if generation is not None else "    Génération: non reliée"
+            meta_run = meta_paragraph.add_run(f"{generation_str}")
+            meta_run.font.size = Pt(20)
+
+            bound = person.get('bound')
+            generation_number = person.get('generation')[1]
+            generation_paragraph = document.add_paragraph()
+            periode = f" Ces personnes ont vécu entre les années {bound[0]} et {bound[1]}." if bound else ""
+            generation_paragraph.add_run(f"Cette section présente {generation_number} ancêtres de Didier Michel connus à la {generation}ème génération.{periode} ")
+
         title_paragraph = document.add_paragraph()
         title_paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
         title_run = title_paragraph.add_run(f"{person.get('order', '')}. {person.get('title', person.get('id', 'Unknown person'))}")
         title_run.bold = True
         title_run.font.size = Pt(14)
+        if person.get('id'):
+            _add_bookmark(title_paragraph, _bookmark_name(person['id']))
 
-        meta_paragraph = document.add_paragraph()
-        generation = person.get('generation')
-        generation_str = f"    Génération: {generation}" if generation is not None else "    Génération: non reliée"
-        meta_run = meta_paragraph.add_run(f"@id: {person.get('id', '')}    @type: {person.get('type', '')}{generation_str}")
-        meta_run.italic = True
-        meta_run.font.size = Pt(9)
+
 
         # Toutes les informations de la personne rassemblées en un seul texte,
         # plutôt qu'éclatées entre plusieurs champs/paragraphes.
         summary_paragraph = document.add_paragraph()
-        summary_paragraph.add_run(person.get('summary', ''))
+        morceaux = person.get('summary', [])
+        noms = person.get('nom', [])
+        for position, morceau in enumerate(morceaux):
+            if morceau:
+                summary_paragraph.add_run(morceau)
+            if position < len(noms):
+                summary_paragraph.add_run(noms[position]).bold = True
 
         # Les pièces jointes (images, documents) restent affichées à part,
         # car elles ne peuvent pas être fondues dans le texte.
@@ -1523,11 +2012,315 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
                 p.add_run(f"📄 {Path(file_path).name}")
 
         document.add_paragraph('')
+    document.add_page_break()
+
+
+    p = document.add_heading_with_level("Statistiques",1)
+    setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
+    p.runs[0].bold = False
+    document.add_page_break()
+
+    p = document.add_heading_with_level("Origine du patronyme paternel",1)
+    setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
+    p.runs[0].bold = False
+    document.add_page_break()
+
+    p = document.add_heading_with_level("Origine du patronyme maternel",1)
+    setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
+    p.runs[0].bold = False
+    document.add_page_break()
+    
+    # -----------------------------------------
+    #                 Index 
+    # -----------------------------------------
+    if indexNoms:
+        document.add_page_break()
+        p = document.add_paragraph()
+        text_unit = document.add_heading_with_level('Index des noms', level=1)
+        setStyle(text_unit,"Titre")
+        new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
+        set_columns(new_section, num_columns=2)
+
+        # text_unit.style.element.rPr.rFonts.set(qn("w:asciiTheme"), "Times New Roman")
+        # text_unit.runs[0].font.name = "Times New Roman"
+        # text_unit.runs[0].font.name 
+        p.add_run("\n")
+        # Penser à ajouter les références pour pouvoir remettre les numéros associés
+        # On aplatit d'abord la liste en (nom, id, objet) — une personne peut avoir
+        # plusieurs noms (nom de naissance + nom d'épouse, etc.) — puis on trie sur
+        # ce nom individuel, et non sur le seul premier nom de chaque personne.
+        # Sinon les noms "secondaires" ne sont pas insérés dans l'ordre alphabétique.
+        entries = sorted(
+            (
+                (nom, id_cle, objet)
+                for id_cle, objet in people_by_id.items()
+                for nom in objet.nom
+            ),
+            key=lambda entry: entry[0].upper(),
+        )
+        dictionnaire_alphabet = {"A":[None,[],None,[]],"B":[None,[],None,[]],"C":[None,[],None,[]],"D":[None,[],None,[]],"E":[None,[],None,[]],"F":[None,[],None,[]],"G":[None,[],None,[]],
+                            "H":[None,[],None,[]],"I":[None,[],None,[]],"J":[None,[],None,[]],"K":[None,[],None,[]],"L":[None,[],None,[]],"M":[None,[],None,[]],"N":[None,[],None,[]],"O":[None,[],None,[]],
+                            "P":[None,[],None,[]],"Q":[None,[],None,[]],"R":[None,[],None,[]],"S":[None,[],None,[]],"T":[None,[],None,[]],"U":[None,[],None,[]],"V":[None,[],None,[]],"W":[None,[],None,[]],
+                            "X":[None,[],None,[]],"Y":[None,[],None,[]],"Z":[None,[],None,[]]}
+
+        i = 0
+        q = None
+        last_name = ""
+        # ---- Index des noms -----
+        for nom, id_cle, objet in entries:
+            lettre = nom[0].upper()
+            if dictionnaire_alphabet[lettre][0] == None:
+                letter_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][0] = letter_paragraph
+                letter_run = dictionnaire_alphabet[lettre][0].add_run(f"\n  {lettre}")
+                # letter_paragraph.add_run("\n")
+                letter_run.bold = True
+                letter_run.font.size = Pt(20)
+            if nom not in dictionnaire_alphabet[lettre][1]:
+                dictionnaire_alphabet[lettre][1].append(nom)
+                name_paragraphe = document.add_paragraph()
+                dictionnaire_alphabet[lettre][2] = name_paragraphe
+
+                name_run = dictionnaire_alphabet[lettre][2].add_run(f"{nom}")
+                new_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][3].append(new_paragraph)
+                # name_run.bold = True
+                contenu = dictionnaire_alphabet[lettre][3][-1]
+                contenu.add_run(f"{objet.prenom} {objet.nom[objet.nom.index(nom)]} — p. ")
+                if id_cle:
+                    _add_page_refs(contenu, {id_cle} | mentions_by_person.get(id_cle, set()), order_by_id)
+                contenu.add_run("\n")
+            else:
+                contenu = dictionnaire_alphabet[lettre][3][dictionnaire_alphabet[lettre][1].index(nom)]
+                contenu.add_run(f"{objet.prenom} {objet.nom[objet.nom.index(nom)]} — p. ")
+                if id_cle:
+                    _add_page_refs(contenu, {id_cle} | mentions_by_person.get(id_cle, set()), order_by_id)
+                contenu.add_run("\n")
+
+            contenu.paragraph_format.left_indent = Pt(10)
+            contenu.paragraph_format.space_after = Pt(0.0)
+            # print(f"ID : {id_cle}")
+            i+=1
+        new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
+        set_columns(new_section, num_columns=1)
+    # Même principe que pour l'index des noms : on aplatit en (lieu, id, objet)
+    # avant de trier, car une personne peut avoir plusieurs lieux associés.
+    if indexLieux:
+        document.add_page_break()
+        indexLieu = document.add_heading_with_level("Index des lieux", level=1)
+        p = document.add_paragraph()
+        new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
+        set_columns(new_section, num_columns=2)
+        entries = sorted(
+            (
+                (enlever_accents(lieu[0]), lieu, id_cle, objet)
+                for id_cle, objet in people_by_id.items()
+                for lieu in (objet.lieu or [])
+            ),
+            key=lambda entry: entry[0].upper(),
+        )
+        dictionnaire_alphabet = {"A":[None,[],None,[]],"B":[None,[],None,[]],"C":[None,[],None,[]],"D":[None,[],None,[]],"E":[None,[],None,[]],"F":[None,[],None,[]],"G":[None,[],None,[]],
+                            "H":[None,[],None,[]],"I":[None,[],None,[]],"J":[None,[],None,[]],"K":[None,[],None,[]],"L":[None,[],None,[]],"M":[None,[],None,[]],"N":[None,[],None,[]],"O":[None,[],None,[]],
+                            "P":[None,[],None,[]],"Q":[None,[],None,[]],"R":[None,[],None,[]],"S":[None,[],None,[]],"T":[None,[],None,[]],"U":[None,[],None,[]],"V":[None,[],None,[]],"W":[None,[],None,[]],
+                            "X":[None,[],None,[]],"Y":[None,[],None,[]],"Z":[None,[],None,[]]}
+        for lieu_nom, lieu_tuple, id_cle, objet in entries:
+            _, raison, annee = lieu_tuple
+            lettre = enlever_accents(lieu_nom[0].upper())
+            if ord(lettre) >= 91 or ord(lettre) <= 64:
+                print(f"Erreur de chargement de cette lettre : {lettre}")
+                lettre = "Z"
+            if dictionnaire_alphabet[lettre][0] == None:
+                letter_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][0] = letter_paragraph
+                letter_run = dictionnaire_alphabet[lettre][0].add_run(f"  {lettre}")
+                letter_run.bold = True
+                letter_run.font.size = Pt(20)
+
+            adresse_normalisee = normaliser_adresse(lieu_nom)
+            nom_personne = objet.nom[0] if objet.nom else ''
+            if adresse_normalisee not in dictionnaire_alphabet[lettre][1]:
+                dictionnaire_alphabet[lettre][1].append(adresse_normalisee)
+                name_paragraphe = document.add_paragraph()
+                dictionnaire_alphabet[lettre][2] = name_paragraphe
+                name_run = dictionnaire_alphabet[lettre][2].add_run(f"{lieu_nom}")
+                # ----- Styles -----
+                name_paragraphe.paragraph_format.line_spacing = 1.1
+                name_paragraphe.paragraph_format.space_after = Pt(0.0)
+                name_run.font.size = Pt(12)
+                # ------------------
+                new_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][3].append(new_paragraph)
+
+
+            # Toujours ajouter cette ligne au paragraphe du lieu (nouveau ou déjà connu),
+            # pour lister tous les événements survenus à cet endroit, pas seulement le premier.
+            contenu = dictionnaire_alphabet[lettre][3][dictionnaire_alphabet[lettre][1].index(adresse_normalisee)]
+            contenu.paragraph_format.left_indent = Pt(10)
+            contenu.paragraph_format.space_after = Pt(0.0)
+            if raison == "Mariage":
+                parts = annee.split()
+                annee_seule = parts[-1] if parts else ""
+                conjoint = ' '.join(parts[:-1])
+                contenu.add_run(f"{annee_seule} - Mariage de {objet.prenom} {nom_personne} et {conjoint}")
+            elif raison == "Naissance":
+                contenu.add_run(f"{annee} - Naissance {_gender_d(objet.prenom)}{objet.prenom} {nom_personne}")
+            elif raison == "Décès":
+                contenu.add_run(f"{annee} - Décès {_gender_d(objet.prenom)}{objet.prenom} {nom_personne}")
+            else:
+                contenu.add_run("DNF")
+            contenu.add_run(" — p. ")
+            if id_cle:
+                _add_page_refs(contenu, {id_cle} | mentions_by_person.get(id_cle, set()), order_by_id)
+            contenu.add_run("\n")
+        
+        setStyle(indexLieu, "Titre")
+
+    if indexProfessions:
+        document.add_page_break()
+        new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
+        set_columns(new_section, num_columns=1)
+        indexProfession = document.add_heading_with_level("Index des professions", level=1)
+        setStyle(indexProfession, "Titre")
+
+        p = document.add_paragraph()
+        # p.paragraph_format.line_spacing = 0.15
+        # p.paragraph_format.space_after = Pt(0.15)
+        new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
+        set_columns(new_section, num_columns=2)
+        dictionnaire_alphabet = {"A":[None,[],None,[]],"B":[None,[],None,[]],"C":[None,[],None,[]],"D":[None,[],None,[]],"E":[None,[],None,[]],"F":[None,[],None,[]],"G":[None,[],None,[]],
+                            "H":[None,[],None,[]],"I":[None,[],None,[]],"J":[None,[],None,[]],"K":[None,[],None,[]],"L":[None,[],None,[]],"M":[None,[],None,[]],"N":[None,[],None,[]],"O":[None,[],None,[]],
+                            "P":[None,[],None,[]],"Q":[None,[],None,[]],"R":[None,[],None,[]],"S":[None,[],None,[]],"T":[None,[],None,[]],"U":[None,[],None,[]],"V":[None,[],None,[]],"W":[None,[],None,[]],
+                            "X":[None,[],None,[]],"Y":[None,[],None,[]],"Z":[None,[],None,[]]}
+        entries = sorted(
+            (
+                (objet.profession, id_cle, objet)
+                for id_cle, objet in people_by_id.items()
+                if objet.profession
+            ),
+            key=lambda entry: entry[0].upper(),
+        )
+
+        for profession, id_cle, objet in entries:
+            lettre = enlever_accents(profession[0].upper())
+            if ord(lettre) >= 91 or ord(lettre) <= 64:
+                continue
+            if dictionnaire_alphabet[lettre][0] == None:
+                letter_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][0] = letter_paragraph
+                letter_run = dictionnaire_alphabet[lettre][0].add_run(f"\n  {lettre}")
+                letter_run.bold = True
+                letter_run.font.size = Pt(20)
+
+            nom_personne = objet.nom[0] if objet.nom else ''
+            if profession not in dictionnaire_alphabet[lettre][1]:
+                dictionnaire_alphabet[lettre][1].append(profession)
+                name_paragraphe = document.add_paragraph()
+                dictionnaire_alphabet[lettre][2] = name_paragraphe
+                # ----- Styles -----
+                name_paragraphe.paragraph_format.line_spacing = 1.1
+                name_paragraphe.paragraph_format.space_after = Pt(0.0)
+                name_run.font.size = Pt(12)
+                # ------------------
+                name_run = dictionnaire_alphabet[lettre][2].add_run(f"{profession.capitalize()}")
+                new_paragraph = document.add_paragraph()
+                dictionnaire_alphabet[lettre][3].append(new_paragraph)
+
+            # Toujours ajouter cette ligne au paragraphe de la profession (nouvelle ou déjà
+            # connue), pour lister toutes les personnes ayant exercé cette profession.
+            contenu = dictionnaire_alphabet[lettre][3][dictionnaire_alphabet[lettre][1].index(profession)]
+            contenu.paragraph_format.left_indent = Pt(10)
+            contenu.paragraph_format.space_after = Pt(0.0)
+            contenu.add_run(f"{objet.prenom} {nom_personne}").font.size = Pt(10)
+
+    # -------------------------------------
+    # Ajuste les MARGES pour un livre
+    # -------------------------------------
+    sections = document.sections
+    for section in sections:
+        section.top_margin = Inches(1.18)
+        section.bottom_margin = Inches(0.99)
+        section.left_margin = Inches(1.62)
+        section.right_margin = Inches(0.79)
+    document.add_heading_with_level("test",level=8)
+
+    # Force Word à recalculer tous les champs (PAGE, PAGEREF, ...) à l'ouverture,
+    # sans quoi les renvois de page restent affichés avec leur valeur de repli
+    # tant que l'utilisateur ne fait pas Ctrl+A puis F9.
+    settings_el = document.settings.element
+    update_fields = OxmlElement('w:updateFields')
+    update_fields.set(qn('w:val'), 'true')
+    settings_el.append(update_fields)
 
     document.save(str(output_file))
     print(f"Intermediate report: {report_file}")
     print(f"Document generated: {output_file}")
     return output_file
+
+def setStyle(paragraph, style: str, alignment=WD_ALIGN_PARAGRAPH.LEFT):
+    paragraph.runs[0].font.name = "Garamond"
+    paragraph.runs[0].font.color.rgb = RGBColor(0,0,0)
+    if style == "Titre":
+        if alignment != None:
+            paragraph.paragraph_format.alignment = alignment
+        else:
+            paragraph.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        paragraph.runs[0].font.size = Pt(20)
+        paragraph.runs[0].bold = True
+        add_horizontal_line(paragraph)
+    if style == "Titre 1":
+        paragraph.runs[0].font.size = Pt(16)
+        paragraph.runs[0].bold = True
+    elif style == "Titre 2":
+        paragraph.runs[0].font.size = Pt(16)
+    elif style == "Titre 3":
+        paragraph.runs[0].font.size = Pt(14)
+        
+def add_horizontal_line(paragraph):
+    p = paragraph._p
+    pPr = p.get_or_add_pPr()
+    pBdr = OxmlElement('w:pBdr')
+    pPr.append(pBdr)
+
+    bottom = OxmlElement('w:bottom')
+    bottom.set(qn('w:val'), 'single')
+    bottom.set(qn('w:sz'), '6')      # épaisseur (en 1/8 pt)
+    bottom.set(qn('w:space'), '1')
+    bottom.set(qn('w:color'), '000000')  # couleur (noir ici)
+    pBdr.append(bottom)
+
+    return paragraph
+
+
+def enlever_accents(texte):
+    """Enlève l'accent de la première lettre de `texte` uniquement, le reste est inchangé."""
+    if not texte:
+        return texte
+    nfkd = unicodedata.normalize('NFKD', texte[0])
+    premiere_lettre = ''.join(c for c in nfkd if not unicodedata.combining(c))
+    return premiere_lettre + texte[1:]
+
+
+def normaliser_adresse(adresse):
+    """Normalise une adresse pour permettre la comparaison entre deux adresses
+    (espaces retirés, virgule finale retirée). Ne modifie pas l'adresse d'origine :
+    à utiliser uniquement pour comparer, jamais pour l'affichage."""
+    if not adresse:
+        return adresse
+    normalisee = adresse.replace(", ", ",")
+    normalisee = adresse.replace(" ,", ",")
+    normalisee = normalisee.rstrip(",")
+    return normalisee
+
+def set_columns(section, num_columns=2, space=720, equal_width=True):
+    sectPr = section._sectPr
+    cols = sectPr.find(qn('w:cols'))
+    if cols is None:
+        cols = OxmlElement('w:cols')
+        sectPr.append(cols)
+    cols.set(qn('w:num'), str(num_columns))
+    cols.set(qn('w:space'), str(space))  # espace entre colonnes, en twips (720 = 0,5 cm... en fait 1/1440 pouce, donc 720 = 0.5 inch)
+    if equal_width:
+        cols.set(qn('w:equalWidth'), '1')
 
 if __name__ == '__main__':
     # --- Point d'entrée du script ---

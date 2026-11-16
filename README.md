@@ -50,7 +50,7 @@ This installs:
 Generate a report and DOCX in one command:
 
 ```bash
-python generator.py --json path/to/input.json --report path/to/report.json --out path/to/output.docx
+python python_poc/generator.py --json sources_files/Hrysio.json --report report/report.json --out target/new_output.docx
 ```
 
 **Parameters:**

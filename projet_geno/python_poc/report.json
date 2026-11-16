@@ -7,7 +7,21 @@
       "type": "foaf:Person",
       "title": "Didier Michel BEDER",
       "generation": 1,
-      "summary": "Didier Michel BEDER, fils de Michel Charles BEDER et Jeannine HRYSIO. Il né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
+      "bound": [
+        1962,
+        1962
+      ],
+      "summary": [
+        "",
+        ", fils de ",
+        " et ",
+        ". Il né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Didier Michel BEDER",
+        "Michel Charles BEDER",
+        "Jeannine HRYSIO"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
@@ -15,7 +29,7 @@
         },
         "FAMC": {
           "display": "Didier Michel BEDER, fils de Michel Charles BEDER et Jeannine HRYSIO. Il est né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
-          "ofFamily": "Michel Charles BEDER et Jeannine HRYSIO"
+          "ofFamily": "_:702"
         },
         "foaf:name": {
           "display": "Didier Michel BEDER",
@@ -30,7 +44,7 @@
           "dc:date": "31 AUG 1962",
           "bio:principal": {
             "@id": "_:731",
-            "display": "Didier Michel BEDER",
+            "display": "_:731",
             "type": "person",
             "name": "Didier Michel BEDER",
             "gender": "M",
@@ -48,16 +62,35 @@
       "id": "_:732",
       "type": "foaf:Person",
       "title": "Jeannine HRYSIO",
-      "generation": 2,
-      "summary": "Jeannine HRYSIO, fille de Anna HRYSIO. Elle née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle s'est mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe, à l'âge de 22 ans. Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE.",
+      "generation": [
+        2,
+        2
+      ],
+      "bound": [
+        1937,
+        1999
+      ],
+      "summary": [
+        "",
+        ", fille d'",
+        ". Elle née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle s'est mariée avec ",
+        " le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe, à l'âge de 22 ans. ",
+        " né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Jeannine HRYSIO",
+        "Anna HRYSIO",
+        "Michel Charles BEDER",
+        "Michel Charles BEDER"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Jeannine HRYSIO, fille de Anna HRYSIO. Elle est née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès.",
-          "ofFamily": "Anna HRYSIO"
+          "display": "Jeannine HRYSIO, fille d'Anna HRYSIO. Elle est née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès.",
+          "ofFamily": "_:705"
         },
         "foaf:name": {
           "display": "Jeannine HRYSIO",
@@ -72,21 +105,21 @@
             "display": "Elle née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès.",
             "SOUR": {
               "@id": "_:8317",
-              "display": "Naissance - HRYSIO Jeannine",
+              "display": "_:8317",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7933",
-                "display": "Pièce jointe 1/1 | Titre: N_Jeannine_Hrysio.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\N_Jeannine_Hrysio.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: N_Jeannine_Hrysio.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\N_Jeannine_Hrysio.jpg | [PRIMAIRE]",
                 "title": "N_Jeannine_Hrysio.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\N_Jeannine_Hrysio.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\N_Jeannine_Hrysio.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "9 DEC 1937",
             "bio:principal": {
               "@id": "_:732",
-              "display": "Jeannine HRYSIO, mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+              "display": "_:732",
               "type": "person",
               "name": "Jeannine HRYSIO",
               "gender": "F",
@@ -103,7 +136,7 @@
             "dc:date": "25 NOV 1973",
             "bio:principal": {
               "@id": "_:732",
-              "display": "Jeannine HRYSIO, mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+              "display": "_:732",
               "type": "person",
               "name": "Jeannine HRYSIO",
               "gender": "F",
@@ -117,17 +150,19 @@
         ],
         "bio:relationship": {
           "@id": "_:702",
-          "display": "Elle s'est mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe à l'âge de 22 ans. Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans. De cette union est né un enfant : Didier Michel BEDER né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
+          "display": "Elle s'est mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe. Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans. De cette union est né un enfant : Didier Michel BEDER né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
           "type": "family",
           "name": "Michel Charles BEDER et Jeannine HRYSIO",
           "participants": [
             "Michel Charles BEDER",
             "Jeannine HRYSIO"
-          ]
+          ],
+          "date": "6 juin 1960",
+          "lieu": "Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe"
         },
         "rel:spouseOf": {
           "@id": "_:733",
-          "display": "Michel Charles BEDER, marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+          "display": "_:733",
           "type": "person",
           "name": "Michel Charles BEDER",
           "gender": "M"
@@ -139,8 +174,35 @@
       "id": "_:733",
       "type": "foaf:Person",
       "title": "Michel Charles BEDER",
-      "generation": 2,
-      "summary": "Michel Charles BEDER, fils de Charles Arsène BEDER et Yolande Aurélienne DESJARDINS. Il né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il s'est marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe, à l'âge de 22 ans. Jeannine HRYSIO née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE, à l'âge de 35 ans. Il s'est remarié avec Maryse Alice Odette LOUSTE le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE, à l'âge de 40 ans. Maryse Alice Odette LOUSTE (née, date de naissance inconnue). Michel Charles BEDER a été menuisier, ingenieur électronicien des arts et métiers. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE.",
+      "generation": [
+        2,
+        2
+      ],
+      "bound": [
+        1937,
+        1999
+      ],
+      "summary": [
+        "",
+        ", fils de ",
+        " et ",
+        ". Il né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il s'est marié avec ",
+        " le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe, à l'âge de 22 ans. ",
+        " née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE, à l'âge de 35 ans. Il s'est remarié avec ",
+        " le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE, à l'âge de 40 ans. ",
+        " (née, date de naissance inconnue). ",
+        " a été menuisier, ingenieur électronicien des arts et métiers. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Michel Charles BEDER",
+        "Charles Arsène BEDER",
+        "Yolande Aurélienne DESJARDINS",
+        "Jeannine HRYSIO",
+        "Jeannine HRYSIO",
+        "Maryse Alice Odette LOUSTE",
+        "Maryse Alice Odette LOUSTE",
+        "Michel Charles BEDER"
+      ],
       "lines": {
         "OCCU": "menuisier, ingenieur électronicien des arts et métiers",
         "SIGN": "YES",
@@ -150,7 +212,7 @@
         },
         "FAMC": {
           "display": "Michel Charles BEDER, fils de Charles Arsène BEDER et Yolande Aurélienne DESJARDINS. Il est né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE.",
-          "ofFamily": "Charles Arsène BEDER et Yolande Aurélienne DESJARDINS"
+          "ofFamily": "_:704"
         },
         "foaf:name": {
           "display": "Michel Charles BEDER",
@@ -165,21 +227,21 @@
             "display": "Il né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE.",
             "SOUR": {
               "@id": "_:8318",
-              "display": "Naissance - BEDER Michel Charles",
+              "display": "_:8318",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7939",
-                "display": "Pièce jointe 1/1 | Titre: Extrait de Naissance M BEDER.pdf | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Extrait de Naissance M BEDER.pdf | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: Extrait de Naissance M BEDER.pdf | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Extrait de Naissance M BEDER.pdf | [PRIMAIRE]",
                 "title": "Extrait de Naissance M BEDER.pdf",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Extrait de Naissance M BEDER.pdf",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Extrait de Naissance M BEDER.pdf",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "3 JAN 1938",
             "bio:principal": {
               "@id": "_:733",
-              "display": "Michel Charles BEDER, marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+              "display": "_:733",
               "type": "person",
               "name": "Michel Charles BEDER",
               "gender": "M",
@@ -196,7 +258,7 @@
             "dc:date": "7 NOV 1999",
             "bio:principal": {
               "@id": "_:733",
-              "display": "Michel Charles BEDER, marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+              "display": "_:733",
               "type": "person",
               "name": "Michel Charles BEDER",
               "gender": "M",
@@ -211,36 +273,40 @@
         "bio:relationship": [
           {
             "@id": "_:702",
-            "display": "Il s'est marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe à l'âge de 22 ans. Jeannine HRYSIO née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE, à l'âge de 35 ans. De cette union est né un enfant : Didier Michel BEDER né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
+            "display": "Il s'est marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe. Jeannine HRYSIO née le jeudi 9 décembre 1937 à Montargis, 45200, Loiret, Centre-Val de Loire, FRANCE, 25 rue Jean Jaurès. Elle est décédée le dimanche 25 novembre 1973 à Évecquemont, 78740, Yvelines, Île-de-France, FRANCE, à l'âge de 35 ans. De cette union est né un enfant : Didier Michel BEDER né le vendredi 31 août 1962 à Saint-Germain-en-Laye, 78100, Yvelines, Île-de-France, FRANCE.",
             "type": "family",
             "name": "Michel Charles BEDER et Jeannine HRYSIO",
             "participants": [
               "Michel Charles BEDER",
               "Jeannine HRYSIO"
-            ]
+            ],
+            "date": "6 juin 1960",
+            "lieu": "Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe"
           },
           {
             "@id": "_:7020",
-            "display": "Il s'est remarié avec Maryse Alice Odette LOUSTE le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE à l'âge de 40 ans. Maryse Alice Odette LOUSTE (née, date de naissance inconnue).",
+            "display": "Il s'est remarié avec Maryse Alice Odette LOUSTE le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE. Maryse Alice Odette LOUSTE (née, date de naissance inconnue).",
             "type": "family",
             "name": "Michel Charles BEDER et Maryse Alice Odette LOUSTE",
             "participants": [
               "Michel Charles BEDER",
               "Maryse Alice Odette LOUSTE"
-            ]
+            ],
+            "date": "24 juin 1978",
+            "lieu": "Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE"
           }
         ],
         "rel:spouseOf": [
           {
             "@id": "_:732",
-            "display": "Jeannine HRYSIO, mariée avec Michel Charles BEDER le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+            "display": "_:732",
             "type": "person",
             "name": "Jeannine HRYSIO",
             "gender": "F"
           },
           {
             "@id": "_:7324",
-            "display": "Maryse Alice Odette LOUSTE, mariée avec Michel Charles BEDER le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE",
+            "display": "_:7324",
             "type": "person",
             "name": "Maryse Alice Odette LOUSTE",
             "gender": "F"
@@ -253,8 +319,37 @@
       "id": "_:734",
       "type": "foaf:Person",
       "title": "Charles Arsène BEDER",
-      "generation": 3,
-      "summary": "Charles Arsène BEDER, fils de Alfred Édouard BEDER et Marie BOEGLER. Il né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il s'est marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, à l'âge de 29 ans. Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans. Événement daté du 1925 (Cote 1R/RM 701) Événement daté du 1954 Charles Arsène BEDER a été batelier, capitaine de remorqueur. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital. (habite au 13 avenue porte de Pontoise à Conflans) Frères et sœurs : Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, Stéphanie Caroline BEDER, Lucienne Raymonde BEDER.",
+      "generation": [
+        3,
+        2
+      ],
+      "bound": [
+        1899,
+        1986
+      ],
+      "summary": [
+        "",
+        ", fils d'",
+        " et ",
+        ". Il né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il s'est marié avec ",
+        " le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, à l'âge de 29 ans. ",
+        " née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans. Événement daté du 1925 (Cote 1R/RM 701) Événement daté du 1954 ",
+        " a été batelier, capitaine de remorqueur. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital. (habite au 13 avenue porte de Pontoise à Conflans) Frères et sœurs : ",
+        ", ",
+        ", ",
+        "."
+      ],
+      "nom": [
+        "Charles Arsène BEDER",
+        "Alfred Édouard BEDER",
+        "Marie BOEGLER",
+        "Yolande Aurélienne DESJARDINS",
+        "Yolande Aurélienne DESJARDINS",
+        "Charles Arsène BEDER",
+        "Kleber Alfred BEDER",
+        "Stéphanie Caroline BEDER",
+        "Lucienne Raymonde BEDER"
+      ],
       "lines": {
         "OCCU": "batelier, capitaine de remorqueur",
         "_FIL": {
@@ -262,8 +357,8 @@
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Charles Arsène BEDER, fils de Alfred Édouard BEDER et Marie BOEGLER. Il est né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
-          "ofFamily": "Alfred Édouard BEDER et Marie BOEGLER"
+          "display": "Charles Arsène BEDER, fils d'Alfred Édouard BEDER et Marie BOEGLER. Il est né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
+          "ofFamily": "_:707"
         },
         "foaf:name": {
           "display": "Charles Arsène BEDER",
@@ -281,22 +376,22 @@
             "display": "Il né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
             "SOUR": {
               "@id": "_:831",
-              "display": "Naissance - BEDER Charles Arsène (1905-1986)",
+              "display": "_:831",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/registres-paroissiaux-et-detat-civil/registres-paroissiaux-et-detat-civil?arko_default_618914e3ee7e4--ficheFocus=&arko_default_618914e3ee7e4--filtreGroupes%5Bmode%5D=simple&arko_default_618914e3ee7e4--filtreGroupes%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=Conflans-Sainte-Honorine%20(Yvelines%2C%20France)%5B%5Barko_fiche_60ddacc735846%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=1905&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bextras%5D%5Bmode%5D=input&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bq%5D%5B%5D=Bapt%C3%AAmes%20et%20naissances%5B%5Barko_fiche_614201ec39f69%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bextras%5D%5Bmode%5D=select&arko_default_618914e3ee7e4--from=0&arko_default_618914e3ee7e4--resultSize=25&arko_default_618914e3ee7e4--contenuIds%5B%5D=1750004&arko_default_618914e3ee7e4--modeRestit=arko_default_6189505357e83#/_recherche-api/visionneuse-infos/arko_default_618914e3ee7e4/arko_fiche_619509edd404b/arko_default_61891b88cb0c3/image/1449203",
               "OBJE": {
                 "@id": "_:791",
-                "display": "Pièce jointe 1/1 | Titre: Registres paroissiaux et d'état-civil 2025-01-02 15:54:34.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: Registres paroissiaux et d'état-civil 2025-01-02 15:54:34.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg | [PRIMAIRE]",
                 "title": "Registres paroissiaux et d'état-civil 2025-01-02 15:54:34.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "18 MAY 1905",
             "bio:principal": {
               "@id": "_:734",
-              "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:734",
               "type": "person",
               "name": "Charles Arsène BEDER",
               "gender": "M",
@@ -312,14 +407,14 @@
             "display": "Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital. (habite au 13 avenue porte de Pontoise à Conflans)",
             "SOUR": {
               "@id": "_:8321",
-              "display": "Décès - BEDER Charles Arsène",
+              "display": "_:8321",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7942",
-                "display": "Pièce jointe 1/1 | Titre: D BEDER Charles Arsène.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D BEDER Charles Arsène.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: D BEDER Charles Arsène.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D BEDER Charles Arsène.jpg | [PRIMAIRE]",
                 "title": "D BEDER Charles Arsène.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D BEDER Charles Arsène.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D BEDER Charles Arsène.jpg",
                 "_PRIM": "YES"
               }
             },
@@ -327,7 +422,7 @@
             "dc:date": "9 DEC 1986",
             "bio:principal": {
               "@id": "_:734",
-              "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:734",
               "type": "person",
               "name": "Charles Arsène BEDER",
               "gender": "M",
@@ -349,7 +444,7 @@
             "dc:date": "1925",
             "bio:principal": {
               "@id": "_:734",
-              "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:734",
               "type": "person",
               "name": "Charles Arsène BEDER",
               "gender": "M",
@@ -370,7 +465,7 @@
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:734",
-              "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:734",
               "type": "person",
               "name": "Charles Arsène BEDER",
               "gender": "M",
@@ -384,17 +479,19 @@
         ],
         "bio:relationship": {
           "@id": "_:704",
-          "display": "Il s'est marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE à l'âge de 29 ans. Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans. De cette union est né un enfant : Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans.",
+          "display": "Il s'est marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans. De cette union est né un enfant : Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans.",
           "type": "family",
           "name": "Charles Arsène BEDER et Yolande Aurélienne DESJARDINS",
           "participants": [
             "Charles Arsène BEDER",
             "Yolande Aurélienne DESJARDINS"
-          ]
+          ],
+          "date": "18 août 1934",
+          "lieu": "Maurecourt, 78780, Yvelines, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:735",
-          "display": "Yolande Aurélienne DESJARDINS, mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+          "display": "_:735",
           "type": "person",
           "name": "Yolande Aurélienne DESJARDINS",
           "gender": "F"
@@ -402,21 +499,21 @@
         "rel:siblingOf": [
           {
             "@id": "_:7311",
-            "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+            "display": "_:7311",
             "type": "person",
             "name": "Kleber Alfred BEDER",
             "gender": "M"
           },
           {
             "@id": "_:7312",
-            "display": "Stéphanie Caroline BEDER",
+            "display": "_:7312",
             "type": "person",
             "name": "Stéphanie Caroline BEDER",
             "gender": "F"
           },
           {
             "@id": "_:7318",
-            "display": "Lucienne Raymonde BEDER",
+            "display": "_:7318",
             "type": "person",
             "name": "Lucienne Raymonde BEDER",
             "gender": "F"
@@ -429,8 +526,31 @@
       "id": "_:735",
       "type": "foaf:Person",
       "title": "Yolande Aurélienne DESJARDINS",
-      "generation": 3,
-      "summary": "Yolande Aurélienne DESJARDINS, fille de Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT. Elle née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, à l'âge de 26 ans. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. Yolande Aurélienne DESJARDINS a été coupeuse en bonneterie. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise. (décédée au 13 rue Porte de Pontoise)",
+      "generation": [
+        3,
+        2
+      ],
+      "bound": [
+        1899,
+        1986
+      ],
+      "summary": [
+        "",
+        ", fille d'",
+        " et ",
+        ". Elle née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec ",
+        " le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, à l'âge de 26 ans. ",
+        " né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. ",
+        " a été coupeuse en bonneterie. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise. (décédée au 13 rue Porte de Pontoise)"
+      ],
+      "nom": [
+        "Yolande Aurélienne DESJARDINS",
+        "Arthur Alexandre DESJARDINS",
+        "Camille Augustine Angèle VINOT",
+        "Charles Arsène BEDER",
+        "Charles Arsène BEDER",
+        "Yolande Aurélienne DESJARDINS"
+      ],
       "lines": {
         "OCCU": "coupeuse en bonneterie",
         "_FIL": {
@@ -438,8 +558,8 @@
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Yolande Aurélienne DESJARDINS, fille de Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT. Elle est née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE.",
-          "ofFamily": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT"
+          "display": "Yolande Aurélienne DESJARDINS, fille d'Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT. Elle est née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE.",
+          "ofFamily": "_:709"
         },
         "foaf:name": {
           "display": "Yolande Aurélienne DESJARDINS",
@@ -457,30 +577,30 @@
             "display": "Elle née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE.",
             "SOUR": {
               "@id": "_:832",
-              "display": "Naissance - DESJARDINS Yolande Aurélienne (1908-1969)",
+              "display": "_:832",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/ark:/33518/gbqwknp91jv2/4a1672d2-114b-4763-a66d-280f433c0f46",
               "OBJE": [
                 {
                   "@id": "_:792",
-                  "display": "Pièce jointe 1/2 | Titre: N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:09:48.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg | [PRIMAIRE]",
+                  "display": "Pièce jointe 1/2 | Titre: N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:09:48.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg | [PRIMAIRE]",
                   "title": " N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:09:48.jpg",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg",
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg",
                   "_PRIM": "YES"
                 },
                 {
                   "@id": "_:793",
-                  "display": "Pièce jointe 2/2 | Titre: N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:10:19.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg",
+                  "display": "Pièce jointe 2/2 | Titre: N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:10:19.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg",
                   "title": " N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:10:19.jpg",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg"
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg"
                 }
               ]
             },
             "dc:date": "29 MAY 1908",
             "bio:principal": {
               "@id": "_:735",
-              "display": "Yolande Aurélienne DESJARDINS, mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:735",
               "type": "person",
               "name": "Yolande Aurélienne DESJARDINS",
               "gender": "F",
@@ -499,14 +619,14 @@
             "display": "Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise. (décédée au 13 rue Porte de Pontoise)",
             "SOUR": {
               "@id": "_:8319",
-              "display": "Décès - DESJARDINS Yolande",
+              "display": "_:8319",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7940",
-                "display": "Pièce jointe 1/1 | Titre: D Yolande Desjardins.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Yolande Desjardins.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: D Yolande Desjardins.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Yolande Desjardins.jpg | [PRIMAIRE]",
                 "title": "D Yolande Desjardins.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Yolande Desjardins.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Yolande Desjardins.jpg",
                 "_PRIM": "YES"
               }
             },
@@ -514,7 +634,7 @@
             "dc:date": "13 JAN 1969",
             "bio:principal": {
               "@id": "_:735",
-              "display": "Yolande Aurélienne DESJARDINS, mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+              "display": "_:735",
               "type": "person",
               "name": "Yolande Aurélienne DESJARDINS",
               "gender": "F",
@@ -528,17 +648,19 @@
         ],
         "bio:relationship": {
           "@id": "_:704",
-          "display": "Elle s'est mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE à l'âge de 26 ans. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. De cette union est né un enfant : Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans.",
+          "display": "Elle s'est mariée avec Charles Arsène BEDER le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. De cette union est né un enfant : Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans.",
           "type": "family",
           "name": "Charles Arsène BEDER et Yolande Aurélienne DESJARDINS",
           "participants": [
             "Charles Arsène BEDER",
             "Yolande Aurélienne DESJARDINS"
-          ]
+          ],
+          "date": "18 août 1934",
+          "lieu": "Maurecourt, 78780, Yvelines, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:734",
-          "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+          "display": "_:734",
           "type": "person",
           "name": "Charles Arsène BEDER",
           "gender": "M"
@@ -550,8 +672,27 @@
       "id": "_:736",
       "type": "foaf:Person",
       "title": "Anna HRYSIO",
-      "generation": 3,
-      "summary": "Anna HRYSIO, fille de HRYSIO. Elle née le samedi 18 février 1899 à Hnatkowice, Powiat Przemyski, Voïvodie des Basses-Carpates, POLOGNE. (Hypothèse : aurait une soeur Catherine née le 15 juin 1904 à HnatKowice (en Pologne), fille de Jean HRYSIO et Marie KIBALSKA. Elle s’est mariée le 25 octobre 1930 à Châlette-sur-Loing (45) avec Grégoire Cycyk né en Pologne à Arlamow.) Événement daté du 1936 (domestique agricole chez André Walerack (polonais)) Événement daté du 1937 Événement daté du 1946 (pas de recensements postérieurs à 1946) Anna HRYSIO a été domestique agricole. Elle est décédée le vendredi 1 avril 1977 à . (inhumée au Cimetière des hautes roches 9DIDN104 de Conflans Sainte-Honorine)",
+      "generation": [
+        3,
+        1
+      ],
+      "bound": [
+        1899,
+        1986
+      ],
+      "summary": [
+        "",
+        ", fille de ",
+        ". Elle née le samedi 18 février 1899 à Hnatkowice, Powiat Przemyski, Voïvodie des Basses-Carpates, POLOGNE. (Hypothèse : aurait une soeur Catherine née le 15 juin 1904 à HnatKowice (en Pologne), fille de Jean ",
+        " et Marie KIBALSKA. Elle s’est mariée le 25 octobre 1930 à Châlette-sur-Loing (45) avec Grégoire Cycyk né en Pologne à Arlamow.) Événement daté du 1936 (domestique agricole chez André Walerack (polonais)) Événement daté du 1937 Événement daté du 1946 (pas de recensements postérieurs à 1946) ",
+        " a été domestique agricole. Elle est décédée le vendredi 1 avril 1977 à . (inhumée au Cimetière des hautes roches 9DIDN104 de Conflans Sainte-Honorine)"
+      ],
+      "nom": [
+        "Anna HRYSIO",
+        "HRYSIO",
+        "HRYSIO",
+        "Anna HRYSIO"
+      ],
       "lines": {
         "OCCU": "domestique agricole",
         "_FIL": {
@@ -560,7 +701,7 @@
         },
         "FAMC": {
           "display": "Anna HRYSIO, fille de HRYSIO. Elle est née le samedi 18 février 1899 à Hnatkowice, Powiat Przemyski, Voïvodie des Basses-Carpates, POLOGNE.",
-          "ofFamily": "HRYSIO"
+          "ofFamily": "_:7019"
         },
         "foaf:name": {
           "display": "Anna HRYSIO",
@@ -577,7 +718,7 @@
             "dc:date": "18 FEB 1899",
             "bio:principal": {
               "@id": "_:736",
-              "display": "Anna HRYSIO",
+              "display": "_:736",
               "type": "person",
               "name": "Anna HRYSIO",
               "gender": "F",
@@ -595,7 +736,7 @@
             "dc:date": "1 APR 1977",
             "bio:principal": {
               "@id": "_:736",
-              "display": "Anna HRYSIO",
+              "display": "_:736",
               "type": "person",
               "name": "Anna HRYSIO",
               "gender": "F",
@@ -610,23 +751,23 @@
             "OBJE": [
               {
                 "@id": "_:7934",
-                "display": "Pièce jointe 1/2 | Titre: Recensement St Maurice sur Fessard 1936-1.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement St Maurice sur Fessard 1936-1.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/2 | Titre: Recensement St Maurice sur Fessard 1936-1.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement St Maurice sur Fessard 1936-1.jpg | [PRIMAIRE]",
                 "title": "Recensement St Maurice sur Fessard 1936-1.png",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement St Maurice sur Fessard 1936-1.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement St Maurice sur Fessard 1936-1.jpg",
                 "_PRIM": "YES"
               },
               {
                 "@id": "_:7935",
-                "display": "Pièce jointe 2/2 | Titre: Recensement St Maurice sur Fessard-2.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement St Maurice sur Fessard-2.jpg",
+                "display": "Pièce jointe 2/2 | Titre: Recensement St Maurice sur Fessard-2.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement St Maurice sur Fessard-2.jpg",
                 "title": "Recensement St Maurice sur Fessard-2.png",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement St Maurice sur Fessard-2.jpg"
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement St Maurice sur Fessard-2.jpg"
               }
             ],
             "NOTE": "domestique agricole chez André Walerack (polonais)",
             "dc:date": "1936",
             "bio:principal": {
               "@id": "_:736",
-              "display": "Anna HRYSIO",
+              "display": "_:736",
               "type": "person",
               "name": "Anna HRYSIO",
               "gender": "F",
@@ -644,7 +785,7 @@
             "dc:date": "1937",
             "bio:principal": {
               "@id": "_:736",
-              "display": "Anna HRYSIO",
+              "display": "_:736",
               "type": "person",
               "name": "Anna HRYSIO",
               "gender": "F",
@@ -664,16 +805,16 @@
             "TYPE": "Residence",
             "OBJE": {
               "@id": "_:7938",
-              "display": "Pièce jointe 1/1 | Titre: Recensement 1946 Corquilleroy quartier Buges.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement 1946 Corquilleroy quartier Buges.jpg | [PRIMAIRE]",
+              "display": "Pièce jointe 1/1 | Titre: Recensement 1946 Corquilleroy quartier Buges.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement 1946 Corquilleroy quartier Buges.jpg | [PRIMAIRE]",
               "title": "Recensement 1946 Corquilleroy quartier Buges.png",
-              "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Recensement 1946 Corquilleroy quartier Buges.jpg",
+              "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Recensement 1946 Corquilleroy quartier Buges.jpg",
               "_PRIM": "YES"
             },
             "NOTE": "pas de recensements postérieurs à 1946",
             "dc:date": "1946",
             "bio:principal": {
               "@id": "_:736",
-              "display": "Anna HRYSIO",
+              "display": "_:736",
               "type": "person",
               "name": "Anna HRYSIO",
               "gender": "F",
@@ -692,7 +833,9 @@
           "name": "Anna HRYSIO",
           "participants": [
             "Anna HRYSIO"
-          ]
+          ],
+          "date": "",
+          "lieu": ""
         }
       }
     },
@@ -701,8 +844,31 @@
       "id": "_:737",
       "type": "foaf:Person",
       "title": "Alfred Édouard BEDER",
-      "generation": 4,
-      "summary": "Alfred Édouard BEDER, fils de Florentin César BEDER et Stéphanie Marie Virginie BEYAERT. Il né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il s'est marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE, à l'âge de 27 ans. Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans. Événement daté du mercredi 11 décembre 1895 (Capitaine de remorqueur) Événement daté du lundi 23 avril 1923 (Capitaine de bateaux automobiles) Événement daté du 1890 Alfred Édouard BEDER a été capitaine de remorqueur à la société générale de touage et remorquage à Andrésy. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE.",
+      "generation": [
+        4,
+        2
+      ],
+      "bound": [
+        1870,
+        1963
+      ],
+      "summary": [
+        "",
+        ", fils de ",
+        " et ",
+        ". Il né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il s'est marié avec ",
+        " le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE, à l'âge de 27 ans. ",
+        " née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans. Événement daté du mercredi 11 décembre 1895 (Capitaine de remorqueur) Événement daté du lundi 23 avril 1923 (Capitaine de bateaux automobiles) Événement daté du 1890 ",
+        " a été capitaine de remorqueur à la société générale de touage et remorquage à Andrésy. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Alfred Édouard BEDER",
+        "Florentin César BEDER",
+        "Stéphanie Marie Virginie BEYAERT",
+        "Marie BOEGLER",
+        "Marie BOEGLER",
+        "Alfred Édouard BEDER"
+      ],
       "lines": {
         "OCCU": "capitaine de remorqueur à la société générale de touage et remorquage à Andrésy",
         "_FIL": {
@@ -713,21 +879,21 @@
         "OBJE": [
           {
             "@id": "_:794",
-            "display": "Pièce jointe 1/2 | Titre: Capture d’écran 2025-01-03 à 09.36.54.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-03 à 09.36.54.jpg | [PRIMAIRE]",
+            "display": "Pièce jointe 1/2 | Titre: Capture d’écran 2025-01-03 à 09.36.54.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-03 à 09.36.54.jpg | [PRIMAIRE]",
             "title": "Capture d’écran 2025-01-03 à 09.36.54.png",
-            "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-03 à 09.36.54.jpg",
+            "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-03 à 09.36.54.jpg",
             "_PRIM": "YES"
           },
           {
             "@id": "_:7920",
-            "display": "Pièce jointe 2/2 | Titre: image_berroux_charles_remorqueur_entr_ph38780_987707.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
+            "display": "Pièce jointe 2/2 | Titre: image_berroux_charles_remorqueur_entr_ph38780_987707.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
             "title": "image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
-            "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\image_berroux_charles_remorqueur_entr_ph38780_987707.jpg"
+            "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\image_berroux_charles_remorqueur_entr_ph38780_987707.jpg"
           }
         ],
         "FAMC": {
           "display": "Alfred Édouard BEDER, fils de Florentin César BEDER et Stéphanie Marie Virginie BEYAERT. Il est né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE.",
-          "ofFamily": "Florentin César BEDER et Stéphanie Marie Virginie BEYAERT"
+          "ofFamily": "_:7012"
         },
         "foaf:name": {
           "display": "Alfred Édouard BEDER",
@@ -742,22 +908,22 @@
             "display": "Il né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE.",
             "SOUR": {
               "@id": "_:833",
-              "display": "Naissance - BEDER Alfred Édouard (1870-1938)",
+              "display": "_:833",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/ark:/33518/5bnqf6px7th4/60849ca9-725c-41a9-a6a2-52096d26ca9c",
               "OBJE": {
                 "@id": "_:795",
-                "display": "Pièce jointe 1/1 | Titre: N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17:24:19.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17:24:19.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg | [PRIMAIRE]",
                 "title": " N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17:24:19.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "4 DEC 1870",
             "bio:principal": {
               "@id": "_:737",
-              "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:737",
               "type": "person",
               "name": "Alfred Édouard BEDER",
               "gender": "M",
@@ -774,82 +940,82 @@
             "SOUR": [
               {
                 "@id": "_:836",
-                "display": "Déclaration de succession 1",
+                "display": "_:836",
                 "type": "source",
                 "type_source": "Deed",
                 "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf3c8bd34/arko_default_60f543615a2d5/image/919273",
                 "OBJE": [
                   {
                     "@id": "_:7911",
-                    "display": "Pièce jointe 1/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:24:50.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg | [PRIMAIRE]",
+                    "display": "Pièce jointe 1/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:24:50.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg | [PRIMAIRE]",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:24:50.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg",
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg",
                     "_PRIM": "YES"
                   },
                   {
                     "@id": "_:7912",
-                    "display": "Pièce jointe 2/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:12.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg",
+                    "display": "Pièce jointe 2/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:12.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:12.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg"
                   },
                   {
                     "@id": "_:7913",
-                    "display": "Pièce jointe 3/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:25.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg",
+                    "display": "Pièce jointe 3/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:25.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:25.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg"
                   },
                   {
                     "@id": "_:7914",
-                    "display": "Pièce jointe 4/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:27.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg",
+                    "display": "Pièce jointe 4/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:27.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:27.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg"
                   },
                   {
                     "@id": "_:7915",
-                    "display": "Pièce jointe 5/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:45.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg",
+                    "display": "Pièce jointe 5/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:45.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:45.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg"
                   },
                   {
                     "@id": "_:7916",
-                    "display": "Pièce jointe 6/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:29:09.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg",
+                    "display": "Pièce jointe 6/6 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:29:09.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:29:09.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg"
                   }
                 ]
               },
               {
                 "@id": "_:837",
-                "display": "Déclaration de succession 2",
+                "display": "_:837",
                 "type": "source",
                 "type_source": "Deed",
                 "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf4495dc6/arko_default_60f543615a2d5/image/919276",
                 "OBJE": [
                   {
                     "@id": "_:7917",
-                    "display": "Pièce jointe 1/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:11.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg | [PRIMAIRE]",
+                    "display": "Pièce jointe 1/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:11.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg | [PRIMAIRE]",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:11.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg",
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg",
                     "_PRIM": "YES"
                   },
                   {
                     "@id": "_:7918",
-                    "display": "Pièce jointe 2/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:27.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg",
+                    "display": "Pièce jointe 2/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:27.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg",
                     "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:27.jpg",
-                    "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg"
+                    "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg"
                   }
                 ]
               },
               {
                 "@id": "_:8315",
-                "display": "Décès - BEDER Alfred",
+                "display": "_:8315",
                 "type": "source",
                 "type_source": "Deed",
                 "OBJE": {
                   "@id": "_:7931",
-                  "display": "Pièce jointe 1/1 | Titre: D Alfred Beder.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Alfred Beder.jpg | [PRIMAIRE]",
+                  "display": "Pièce jointe 1/1 | Titre: D Alfred Beder.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Alfred Beder.jpg | [PRIMAIRE]",
                   "title": "D Alfred Beder.jpg",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Alfred Beder.jpg",
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Alfred Beder.jpg",
                   "_PRIM": "YES"
                 }
               }
@@ -857,7 +1023,7 @@
             "dc:date": "13 AUG 1938",
             "bio:principal": {
               "@id": "_:737",
-              "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:737",
               "type": "person",
               "name": "Alfred Édouard BEDER",
               "gender": "M",
@@ -876,16 +1042,16 @@
             "display": "Événement daté du mercredi 11 décembre 1895 (Capitaine de remorqueur)",
             "OBJE": {
               "@id": "_:7928",
-              "display": "Pièce jointe 1/1 | Titre: Capture d’écran 2025-01-05 à 17.10.11.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-05 à 17.10.11.jpg | [PRIMAIRE]",
+              "display": "Pièce jointe 1/1 | Titre: Capture d’écran 2025-01-05 à 17.10.11.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-05 à 17.10.11.jpg | [PRIMAIRE]",
               "title": "Capture d’écran 2025-01-05 à 17.10.11.png",
-              "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-05 à 17.10.11.jpg",
+              "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-05 à 17.10.11.jpg",
               "_PRIM": "YES"
             },
             "NOTE": "Capitaine de remorqueur",
             "dc:date": "11 DEC 1895",
             "bio:principal": {
               "@id": "_:737",
-              "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:737",
               "type": "person",
               "name": "Alfred Édouard BEDER",
               "gender": "M",
@@ -904,16 +1070,16 @@
             "display": "Événement daté du lundi 23 avril 1923 (Capitaine de bateaux automobiles)",
             "OBJE": {
               "@id": "_:7929",
-              "display": "Pièce jointe 1/1 | Titre: PV examen.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\PV examen.jpg | [PRIMAIRE]",
+              "display": "Pièce jointe 1/1 | Titre: PV examen.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\PV examen.jpg | [PRIMAIRE]",
               "title": "PV examen.png",
-              "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\PV examen.jpg",
+              "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\PV examen.jpg",
               "_PRIM": "YES"
             },
             "NOTE": "Capitaine de bateaux automobiles",
             "dc:date": "23 APR 1923",
             "bio:principal": {
               "@id": "_:737",
-              "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:737",
               "type": "person",
               "name": "Alfred Édouard BEDER",
               "gender": "M",
@@ -930,23 +1096,23 @@
             "TYPE": "Military service",
             "SOUR": {
               "@id": "_:838",
-              "display": "Service militaire - BEDER Alfred Édouard (1870-1938)",
+              "display": "_:838",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/ark:/33518/cjf7hp8g01s5/2ee3d77c-4354-45e4-9155-fb21ff767869",
               "text": "{'GEDVALUE': 'Signalement : ', 'CONT': ['cheveux et sourcis chatains, yeux bleus, front large, nez ordinaire, bouche moyenne, menton rond, visage ovale, taille : 1m69.', 'Détail des services : parti le 10 novembre 1891 pour le 110e régiment d’infanterie. Dispensé de ses obligations militaires car un frère au service. Mais il a perdu ses droits à la dispense, le frère qui la lui avait conférée ayant obtenu une dispen'], 'CONC': 'se, comme aîné d’une famille de 7 enfants.'}",
               "OBJE": {
                 "@id": "_:7919",
-                "display": "Pièce jointe 1/1 | Titre: Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18:45:46.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18:45:46.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg | [PRIMAIRE]",
                 "title": "Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18:45:46.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "1890",
             "bio:principal": {
               "@id": "_:737",
-              "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:737",
               "type": "person",
               "name": "Alfred Édouard BEDER",
               "gender": "M",
@@ -960,17 +1126,19 @@
         ],
         "bio:relationship": {
           "@id": "_:707",
-          "display": "Il s'est marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE à l'âge de 27 ans. Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans. De cette union sont nés 4 enfants : Kleber Alfred BEDER né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans. Stéphanie Caroline BEDER née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. Lucienne Raymonde BEDER (née, date de naissance inconnue). Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
+          "display": "Il s'est marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE. Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans. De cette union sont nés 4 enfants : Kleber Alfred BEDER né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans. Stéphanie Caroline BEDER née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. Lucienne Raymonde BEDER (née, date de naissance inconnue). Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
           "type": "family",
           "name": "Alfred Édouard BEDER et Marie BOEGLER",
           "participants": [
             "Alfred Édouard BEDER",
             "Marie BOEGLER"
-          ]
+          ],
+          "date": "18 août 1898",
+          "lieu": "Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:738",
-          "display": "Marie BOEGLER, mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+          "display": "_:738",
           "type": "person",
           "name": "Marie BOEGLER",
           "gender": "F"
@@ -982,8 +1150,31 @@
       "id": "_:738",
       "type": "foaf:Person",
       "title": "Marie BOEGLER",
-      "generation": 4,
-      "summary": "Marie BOEGLER, fille de Jacques BOEGLER et Caroline REISSINGER. Elle née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle s'est mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE, à l'âge de 26 ans. Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans. Marie BOEGLER a été ménagère. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis.",
+      "generation": [
+        4,
+        2
+      ],
+      "bound": [
+        1870,
+        1963
+      ],
+      "summary": [
+        "",
+        ", fille de ",
+        " et ",
+        ". Elle née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle s'est mariée avec ",
+        " le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE, à l'âge de 26 ans. ",
+        " né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans. ",
+        " a été ménagère. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis."
+      ],
+      "nom": [
+        "Marie BOEGLER",
+        "Jacques BOEGLER",
+        "Caroline REISSINGER",
+        "Alfred Édouard BEDER",
+        "Alfred Édouard BEDER",
+        "Marie BOEGLER"
+      ],
       "lines": {
         "OCCU": "ménagère",
         "_FIL": {
@@ -992,7 +1183,7 @@
         },
         "FAMC": {
           "display": "Marie BOEGLER, fille de Jacques BOEGLER et Caroline REISSINGER. Elle est née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE.",
-          "ofFamily": "Jacques BOEGLER et Caroline REISSINGER"
+          "ofFamily": "_:7014"
         },
         "foaf:name": {
           "display": "Marie BOEGLER",
@@ -1007,22 +1198,22 @@
             "display": "Elle née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE.",
             "SOUR": {
               "@id": "_:8312",
-              "display": "Naissance - BOEGLER Marie",
+              "display": "_:8312",
               "type": "source",
               "type_source": "Deed",
               "text": "{'CONT': ['N°2', 'BOEGLER Caroline', 'née le 9 février', '1872', 'Décédée à Andresy', 'Le 10.8.1953', 'Colmar le 12.2.57', 'Le Greffier de l’Etat-civil', '      Mairie  de    Barr       _____________ arrondissement  de    Sélestat        ____________', '            Le  dix  février     mille huit  cent  soixante-douze                 à   onze          heures  du      matin ', '           Acte  de  naissance de       Marie BOEGLER     ________________________', 'née  à     Barr                     le     neuf  février         mille     huit     cent  soixante-douze', 'à     trois    heures              de  l’après-midi           enfant   légitime                de   Jacques BOEGLER                 ', '_____________    âgé de    trente-trois              ans ,        profession   commis tanneur         ', 'né     à     Barr                  habitant        à   Barr                      _______________________', 'et    de     Caroline REISSINGER                    ______________     âgée   de vingt-sept         ans', 'Profession  sans ______        habitant     à   Barr, son épouse légitime              ______________', \"            L'enfant   qui   nous   a   été   présenté   a   été  reconnu   de   sexe     féminin         ___________\", 'Premier témoin:     Jacques Adam               ________________       âgé   de    trente-quatre        ans', 'Profession   commis tanneur    ___  habitant  à   Barr           ____ département   Bas-Rhin   ', 'Deuxième témoin :     Guillaume Kleinhenni       ____________      âgé   de     trente-six              ans', 'Profession   (garde de couloir\\xa0?)      habitant   à   Barr   _______    département    Bas-Rhin', \"            Sur   la   présente   déclaration   qui   m'a   été   faite   par     le père de l’enfant             __________\", '  ____________________________________________ ___     et   après   lecture   du   présent   acte', 'ont    signé            ', '            Fait   devant    moi   Gottfried  Bossert                      ______________________________  maire ', \"en   ma   qualité   d'officier   de   l'état  civil .\", '         Jacques Boegler                                                          Le maire', '            Jacques Adam                                                          G. Bossert', '            Guillaume Kleinhennig']}",
               "OBJE": {
                 "@id": "_:7926",
-                "display": "Pièce jointe 1/1 | Titre: N Marie Boegler.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\N Marie Boegler.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: N Marie Boegler.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\N Marie Boegler.jpg | [PRIMAIRE]",
                 "title": "N Marie Boegler.png",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\N Marie Boegler.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\N Marie Boegler.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "9 FEB 1872",
             "bio:principal": {
               "@id": "_:738",
-              "display": "Marie BOEGLER, mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:738",
               "type": "person",
               "name": "Marie BOEGLER",
               "gender": "F",
@@ -1038,30 +1229,30 @@
             "display": "Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis.",
             "SOUR": {
               "@id": "_:835",
-              "display": "Décès - BOEGLER Marie (1872-1953)",
+              "display": "_:835",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1953%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf472817f/arko_default_60f543615a2d5/image/919317",
               "OBJE": [
                 {
                   "@id": "_:799",
-                  "display": "Pièce jointe 1/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:10.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg | [PRIMAIRE]",
+                  "display": "Pièce jointe 1/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:10.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg | [PRIMAIRE]",
                   "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:10.jpg",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg",
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg",
                   "_PRIM": "YES"
                 },
                 {
                   "@id": "_:7910",
-                  "display": "Pièce jointe 2/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:46.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg",
+                  "display": "Pièce jointe 2/2 | Titre: Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:46.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg",
                   "title": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:46.jpg",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg"
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg"
                 }
               ]
             },
             "dc:date": "10 AUG 1953",
             "bio:principal": {
               "@id": "_:738",
-              "display": "Marie BOEGLER, mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+              "display": "_:738",
               "type": "person",
               "name": "Marie BOEGLER",
               "gender": "F",
@@ -1075,17 +1266,19 @@
         ],
         "bio:relationship": {
           "@id": "_:707",
-          "display": "Elle s'est mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE à l'âge de 26 ans. Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans. De cette union sont nés 4 enfants : Kleber Alfred BEDER né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans. Stéphanie Caroline BEDER née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. Lucienne Raymonde BEDER (née, date de naissance inconnue). Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
+          "display": "Elle s'est mariée avec Alfred Édouard BEDER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE. Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans. De cette union sont nés 4 enfants : Kleber Alfred BEDER né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans. Stéphanie Caroline BEDER née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Charles Arsène BEDER né le jeudi 18 mai 1905 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mardi 9 décembre 1986 à Poissy, 78300, Yvelines, Île-de-France, FRANCE, Hôpiital, à l'âge de 81 ans. Lucienne Raymonde BEDER (née, date de naissance inconnue). Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
           "type": "family",
           "name": "Alfred Édouard BEDER et Marie BOEGLER",
           "participants": [
             "Alfred Édouard BEDER",
             "Marie BOEGLER"
-          ]
+          ],
+          "date": "18 août 1898",
+          "lieu": "Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:737",
-          "display": "Alfred Édouard BEDER, marié avec Marie BOEGLER le jeudi 18 août 1898 à Suresnes, 92150, Hauts-de-Seine, Île-de-France, FRANCE",
+          "display": "_:737",
           "type": "person",
           "name": "Alfred Édouard BEDER",
           "gender": "M"
@@ -1097,8 +1290,31 @@
       "id": "_:739",
       "type": "foaf:Person",
       "title": "Arthur Alexandre DESJARDINS",
-      "generation": 4,
-      "summary": "Arthur Alexandre DESJARDINS, fils de Henri DESJARDINS et Pauline VALCKE. Il né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il s'est marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe, à l'âge de 27 ans. Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans. Événement daté du 1893 Arthur Alexandre DESJARDINS a été batelier, marinier. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon.",
+      "generation": [
+        4,
+        2
+      ],
+      "bound": [
+        1870,
+        1963
+      ],
+      "summary": [
+        "",
+        ", fils de ",
+        " et ",
+        ". Il né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il s'est marié avec ",
+        " le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe, à l'âge de 27 ans. ",
+        " née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans. Événement daté du 1893 ",
+        " a été batelier, marinier. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon."
+      ],
+      "nom": [
+        "Arthur Alexandre DESJARDINS",
+        "Henri DESJARDINS",
+        "Pauline VALCKE",
+        "Camille Augustine Angèle VINOT",
+        "Camille Augustine Angèle VINOT",
+        "Arthur Alexandre DESJARDINS"
+      ],
       "lines": {
         "OCCU": "batelier, marinier",
         "_FIL": {
@@ -1107,7 +1323,7 @@
         },
         "FAMC": {
           "display": "Arthur Alexandre DESJARDINS, fils de Henri DESJARDINS et Pauline VALCKE. Il est né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin.",
-          "ofFamily": "Henri DESJARDINS et Pauline VALCKE"
+          "ofFamily": "_:7016"
         },
         "foaf:name": {
           "display": "Arthur Alexandre DESJARDINS",
@@ -1122,22 +1338,22 @@
             "display": "Il né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin.",
             "SOUR": {
               "@id": "_:839",
-              "display": "Naissance - DESJARDINS Arthur Alexandre (1873-)",
+              "display": "_:839",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/ark:/33518/gx5tps1kd6c0/8e32b65b-2085-4a82-ad05-f83331c81bdd",
               "OBJE": {
                 "@id": "_:7921",
-                "display": "Pièce jointe 1/1 | Titre: N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16:30:43.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16:30:43.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg | [PRIMAIRE]",
                 "title": " N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16:30:43.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "5 OCT 1873",
             "bio:principal": {
               "@id": "_:739",
-              "display": "Arthur Alexandre DESJARDINS, marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+              "display": "_:739",
               "type": "person",
               "name": "Arthur Alexandre DESJARDINS",
               "gender": "M",
@@ -1153,21 +1369,21 @@
             "display": "Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon.",
             "SOUR": {
               "@id": "_:8314",
-              "display": "Décès - DESJARDINS Arthur",
+              "display": "_:8314",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7930",
-                "display": "Pièce jointe 1/1 | Titre: D Arthur Desjardins.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Arthur Desjardins.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: D Arthur Desjardins.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Arthur Desjardins.jpg | [PRIMAIRE]",
                 "title": "D Arthur Desjardins.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Arthur Desjardins.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Arthur Desjardins.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "13 DEC 1923",
             "bio:principal": {
               "@id": "_:739",
-              "display": "Arthur Alexandre DESJARDINS, marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+              "display": "_:739",
               "type": "person",
               "name": "Arthur Alexandre DESJARDINS",
               "gender": "M",
@@ -1184,7 +1400,7 @@
             "TYPE": "Military service",
             "SOUR": {
               "@id": "_:8311",
-              "display": "Service militaire - DESJARDINS Arthur Alexandre (1873-)",
+              "display": "_:8311",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/images/5991753e-4096-4a44-8809-783feb8d2ed5.jpg",
@@ -1192,23 +1408,23 @@
               "OBJE": [
                 {
                   "@id": "_:7936",
-                  "display": "Pièce jointe 1/2 | Titre: Capture d’écran 2025-01-16 à 15.16.27.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.27.jpg | [PRIMAIRE]",
+                  "display": "Pièce jointe 1/2 | Titre: Capture d’écran 2025-01-16 à 15.16.27.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.27.jpg | [PRIMAIRE]",
                   "title": "Capture d’écran 2025-01-16 à 15.16.27.png",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.27.jpg",
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.27.jpg",
                   "_PRIM": "YES"
                 },
                 {
                   "@id": "_:7937",
-                  "display": "Pièce jointe 2/2 | Titre: Capture d’écran 2025-01-16 à 15.16.51.png | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.51.jpg",
+                  "display": "Pièce jointe 2/2 | Titre: Capture d’écran 2025-01-16 à 15.16.51.png | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.51.jpg",
                   "title": "Capture d’écran 2025-01-16 à 15.16.51.png",
-                  "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.51.jpg"
+                  "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\Capture d_écran 2025-01-16 à 15.16.51.jpg"
                 }
               ]
             },
             "dc:date": "1893",
             "bio:principal": {
               "@id": "_:739",
-              "display": "Arthur Alexandre DESJARDINS, marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+              "display": "_:739",
               "type": "person",
               "name": "Arthur Alexandre DESJARDINS",
               "gender": "M",
@@ -1222,17 +1438,19 @@
         ],
         "bio:relationship": {
           "@id": "_:709",
-          "display": "Il s'est marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe à l'âge de 27 ans. Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans. De cette union est né un enfant : Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans.",
+          "display": "Il s'est marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe. Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans. De cette union est né un enfant : Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans.",
           "type": "family",
           "name": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
           "participants": [
             "Arthur Alexandre DESJARDINS",
             "Camille Augustine Angèle VINOT"
-          ]
+          ],
+          "date": "23 JUL 1901",
+          "lieu": "Paris, 75000, Paris, Île-de-France, FRANCE, XIXe"
         },
         "rel:spouseOf": {
           "@id": "_:7310",
-          "display": "Camille Augustine Angèle VINOT, mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+          "display": "_:7310",
           "type": "person",
           "name": "Camille Augustine Angèle VINOT",
           "gender": "F"
@@ -1244,8 +1462,31 @@
       "id": "_:7310",
       "type": "foaf:Person",
       "title": "Camille Augustine Angèle VINOT",
-      "generation": 4,
-      "summary": "Camille Augustine Angèle VINOT, fille de Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND. Elle née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe, à l'âge de 23 ans. Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans. Camille Augustine Angèle VINOT a été bonne, ménagère. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo.",
+      "generation": [
+        4,
+        2
+      ],
+      "bound": [
+        1870,
+        1963
+      ],
+      "summary": [
+        "",
+        ", fille d'",
+        " et ",
+        ". Elle née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec ",
+        " le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe, à l'âge de 23 ans. ",
+        " né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans. ",
+        " a été bonne, ménagère. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo."
+      ],
+      "nom": [
+        "Camille Augustine Angèle VINOT",
+        "Arsène Armand Calixte VINOT",
+        "Elisa Pétronille MORGAND",
+        "Arthur Alexandre DESJARDINS",
+        "Arthur Alexandre DESJARDINS",
+        "Camille Augustine Angèle VINOT"
+      ],
       "lines": {
         "OCCU": "bonne, ménagère",
         "_FIL": {
@@ -1253,8 +1494,8 @@
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Camille Augustine Angèle VINOT, fille de Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND. Elle est née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE.",
-          "ofFamily": "Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND"
+          "display": "Camille Augustine Angèle VINOT, fille d'Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND. Elle est née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE.",
+          "ofFamily": "_:7018"
         },
         "foaf:name": {
           "display": "Camille Augustine Angèle VINOT",
@@ -1272,22 +1513,22 @@
             "display": "Elle née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE.",
             "SOUR": {
               "@id": "_:8313",
-              "display": "Naissance - VINOT Camille Augustine Angèle (1878-1963)",
+              "display": "_:8313",
               "type": "source",
               "type_source": "Deed",
               "url": "https://archivesdepartementales.lenord.fr/ark:/33518/bl0q1t8wpk96/e8ee6da7-7d35-481d-8240-d8d61a5384fe",
               "OBJE": {
                 "@id": "_:7927",
-                "display": "Pièce jointe 1/1 | Titre: NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16:53:26.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16:53:26.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg | [PRIMAIRE]",
                 "title": " NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16:53:26.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "29 JUN 1878",
             "bio:principal": {
               "@id": "_:7310",
-              "display": "Camille Augustine Angèle VINOT, mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+              "display": "_:7310",
               "type": "person",
               "name": "Camille Augustine Angèle VINOT",
               "gender": "F",
@@ -1303,21 +1544,21 @@
             "display": "Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo.",
             "SOUR": {
               "@id": "_:8320",
-              "display": "Décès - VINOT Camille",
+              "display": "_:8320",
               "type": "source",
               "type_source": "Deed",
               "OBJE": {
                 "@id": "_:7941",
-                "display": "Pièce jointe 1/1 | Titre: D Camille VINOT.jpg | Fichier: C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Camille VINOT.jpg | [PRIMAIRE]",
+                "display": "Pièce jointe 1/1 | Titre: D Camille VINOT.jpg | Fichier: C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Camille VINOT.jpg | [PRIMAIRE]",
                 "title": "D Camille VINOT.jpg",
-                "file": "C:\\Users\\raph_\\OneDrive\\Documents\\projet_geno\\genopresse-project\\projet_geno\\resources\\D Camille VINOT.jpg",
+                "file": "C:\\Users\\raph_\\Documents\\genopresse-project-main\\projet_geno\\resources\\D Camille VINOT.jpg",
                 "_PRIM": "YES"
               }
             },
             "dc:date": "10 MAR 1963",
             "bio:principal": {
               "@id": "_:7310",
-              "display": "Camille Augustine Angèle VINOT, mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+              "display": "_:7310",
               "type": "person",
               "name": "Camille Augustine Angèle VINOT",
               "gender": "F",
@@ -1331,17 +1572,19 @@
         ],
         "bio:relationship": {
           "@id": "_:709",
-          "display": "Elle s'est mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe à l'âge de 23 ans. Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans. De cette union est né un enfant : Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans.",
+          "display": "Elle s'est mariée avec Arthur Alexandre DESJARDINS le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe. Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans. De cette union est né un enfant : Yolande Aurélienne DESJARDINS née le vendredi 29 mai 1908 à Cambrai, 59400, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 13 janvier 1969 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, 13 rue Porte de Pontoise, à l'âge de 60 ans.",
           "type": "family",
           "name": "Arthur Alexandre DESJARDINS et Camille Augustine Angèle VINOT",
           "participants": [
             "Arthur Alexandre DESJARDINS",
             "Camille Augustine Angèle VINOT"
-          ]
+          ],
+          "date": "23 JUL 1901",
+          "lieu": "Paris, 75000, Paris, Île-de-France, FRANCE, XIXe"
         },
         "rel:spouseOf": {
           "@id": "_:739",
-          "display": "Arthur Alexandre DESJARDINS, marié avec Camille Augustine Angèle VINOT le 23 jul 1901 à Paris, 75000, Paris, Île-de-France, FRANCE, XIXe",
+          "display": "_:739",
           "type": "person",
           "name": "Arthur Alexandre DESJARDINS",
           "gender": "M"
@@ -1354,7 +1597,30 @@
       "type": "foaf:Person",
       "title": "Kleber Alfred BEDER",
       "generation": null,
-      "summary": "Kleber Alfred BEDER, fils de Alfred Édouard BEDER et Marie BOEGLER. Il né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il s'est marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 24 ans. Germaine Madeleine DEGAHIEL (née, date de naissance inconnue). Événement daté du 1954 Kleber Alfred BEDER a été chef d'atelier. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Frères et sœurs : Stéphanie Caroline BEDER, Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, Lucienne Raymonde BEDER.",
+      "bound": null,
+      "summary": [
+        "",
+        ", fils d'",
+        " et ",
+        ". Il né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il s'est marié avec ",
+        " le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 24 ans. ",
+        " (née, date de naissance inconnue). Événement daté du 1954 ",
+        " a été chef d'atelier. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Frères et sœurs : ",
+        ", ",
+        ", ",
+        "."
+      ],
+      "nom": [
+        "Kleber Alfred BEDER",
+        "Alfred Édouard BEDER",
+        "Marie BOEGLER",
+        "Germaine Madeleine DEGAHIEL",
+        "Germaine Madeleine DEGAHIEL",
+        "Kleber Alfred BEDER",
+        "Stéphanie Caroline BEDER",
+        "Charles Arsène BEDER",
+        "Lucienne Raymonde BEDER"
+      ],
       "lines": {
         "OCCU": "chef d'atelier",
         "_FIL": {
@@ -1362,8 +1628,8 @@
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Kleber Alfred BEDER, fils de Alfred Édouard BEDER et Marie BOEGLER. Il est né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
-          "ofFamily": "Alfred Édouard BEDER et Marie BOEGLER"
+          "display": "Kleber Alfred BEDER, fils d'Alfred Édouard BEDER et Marie BOEGLER. Il est né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
+          "ofFamily": "_:707"
         },
         "foaf:name": {
           "display": "Kleber Alfred BEDER",
@@ -1382,7 +1648,7 @@
             "dc:date": "23 JUN 1899",
             "bio:principal": {
               "@id": "_:7311",
-              "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+              "display": "_:7311",
               "type": "person",
               "name": "Kleber Alfred BEDER",
               "gender": "M",
@@ -1402,7 +1668,7 @@
             "dc:date": "26 AUG 1992",
             "bio:principal": {
               "@id": "_:7311",
-              "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+              "display": "_:7311",
               "type": "person",
               "name": "Kleber Alfred BEDER",
               "gender": "M",
@@ -1423,7 +1689,7 @@
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:7311",
-              "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+              "display": "_:7311",
               "type": "person",
               "name": "Kleber Alfred BEDER",
               "gender": "M",
@@ -1437,17 +1703,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7010",
-          "display": "Il s'est marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE à l'âge de 24 ans. Germaine Madeleine DEGAHIEL (née, date de naissance inconnue).",
+          "display": "Il s'est marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Germaine Madeleine DEGAHIEL (née, date de naissance inconnue).",
           "type": "family",
           "name": "Kleber Alfred BEDER et Germaine Madeleine DEGAHIEL",
           "participants": [
             "Kleber Alfred BEDER",
             "Germaine Madeleine DEGAHIEL"
-          ]
+          ],
+          "date": "18 août 1923",
+          "lieu": "Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7313",
-          "display": "Germaine Madeleine DEGAHIEL, mariée avec Kleber Alfred BEDER le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+          "display": "_:7313",
           "type": "person",
           "name": "Germaine Madeleine DEGAHIEL",
           "gender": "F"
@@ -1455,21 +1723,21 @@
         "rel:siblingOf": [
           {
             "@id": "_:7312",
-            "display": "Stéphanie Caroline BEDER",
+            "display": "_:7312",
             "type": "person",
             "name": "Stéphanie Caroline BEDER",
             "gender": "F"
           },
           {
             "@id": "_:734",
-            "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+            "display": "_:734",
             "type": "person",
             "name": "Charles Arsène BEDER",
             "gender": "M"
           },
           {
             "@id": "_:7318",
-            "display": "Lucienne Raymonde BEDER",
+            "display": "_:7318",
             "type": "person",
             "name": "Lucienne Raymonde BEDER",
             "gender": "F"
@@ -1483,15 +1751,32 @@
       "type": "foaf:Person",
       "title": "Stéphanie Caroline BEDER",
       "generation": null,
-      "summary": "Stéphanie Caroline BEDER, fille de Alfred Édouard BEDER et Marie BOEGLER. Elle née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Événement daté du 1954 Frères et sœurs : Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, Lucienne Raymonde BEDER.",
+      "bound": null,
+      "summary": [
+        "",
+        ", fille d'",
+        " et ",
+        ". Elle née le 21 JUL 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Événement daté du 1954 Frères et sœurs : ",
+        ", ",
+        ", ",
+        "."
+      ],
+      "nom": [
+        "Stéphanie Caroline BEDER",
+        "Alfred Édouard BEDER",
+        "Marie BOEGLER",
+        "Kleber Alfred BEDER",
+        "Charles Arsène BEDER",
+        "Lucienne Raymonde BEDER"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Stéphanie Caroline BEDER, fille de Alfred Édouard BEDER et Marie BOEGLER. Elle est née le 21 jul 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
-          "ofFamily": "Alfred Édouard BEDER et Marie BOEGLER"
+          "display": "Stéphanie Caroline BEDER, fille d'Alfred Édouard BEDER et Marie BOEGLER. Elle est née le 21 jul 1902 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE.",
+          "ofFamily": "_:707"
         },
         "foaf:name": {
           "display": "Stéphanie Caroline BEDER",
@@ -1510,7 +1795,7 @@
             "dc:date": "21 JUL 1902",
             "bio:principal": {
               "@id": "_:7312",
-              "display": "Stéphanie Caroline BEDER",
+              "display": "_:7312",
               "type": "person",
               "name": "Stéphanie Caroline BEDER",
               "gender": "F",
@@ -1528,7 +1813,7 @@
             "dc:date": "1954",
             "bio:principal": {
               "@id": "_:7312",
-              "display": "Stéphanie Caroline BEDER",
+              "display": "_:7312",
               "type": "person",
               "name": "Stéphanie Caroline BEDER",
               "gender": "F",
@@ -1543,21 +1828,21 @@
         "rel:siblingOf": [
           {
             "@id": "_:7311",
-            "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+            "display": "_:7311",
             "type": "person",
             "name": "Kleber Alfred BEDER",
             "gender": "M"
           },
           {
             "@id": "_:734",
-            "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+            "display": "_:734",
             "type": "person",
             "name": "Charles Arsène BEDER",
             "gender": "M"
           },
           {
             "@id": "_:7318",
-            "display": "Lucienne Raymonde BEDER",
+            "display": "_:7318",
             "type": "person",
             "name": "Lucienne Raymonde BEDER",
             "gender": "F"
@@ -1571,7 +1856,16 @@
       "type": "foaf:Person",
       "title": "Germaine Madeleine DEGAHIEL",
       "generation": null,
-      "summary": "Elle s'est mariée avec Kleber Alfred BEDER le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Kleber Alfred BEDER né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans.",
+      "bound": null,
+      "summary": [
+        "Elle s'est mariée avec ",
+        " le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. ",
+        " né le vendredi 23 juin 1899 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE. Il est décédé le mercredi 26 août 1992 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, à l'âge de 93 ans."
+      ],
+      "nom": [
+        "Kleber Alfred BEDER",
+        "Kleber Alfred BEDER"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
@@ -1592,11 +1886,13 @@
           "participants": [
             "Kleber Alfred BEDER",
             "Germaine Madeleine DEGAHIEL"
-          ]
+          ],
+          "date": "18 août 1923",
+          "lieu": "Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7311",
-          "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+          "display": "_:7311",
           "type": "person",
           "name": "Kleber Alfred BEDER",
           "gender": "M"
@@ -1608,8 +1904,25 @@
       "id": "_:7314",
       "type": "foaf:Person",
       "title": "Florentin César BEDER",
-      "generation": 5,
-      "summary": "Il né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il s'est marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE, à l'âge de 28 ans. Stéphanie Marie Virginie BEYAERT née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 47 ans. Événement daté du 1870 Florentin César BEDER a été cabaretier, batelier. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Il né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il s'est marié avec ",
+        " le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE, à l'âge de 28 ans. ",
+        " née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 47 ans. Événement daté du 1870 ",
+        " a été cabaretier, batelier. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE."
+      ],
+      "nom": [
+        "Stéphanie Marie Virginie BEYAERT",
+        "Stéphanie Marie Virginie BEYAERT",
+        "Florentin César BEDER"
+      ],
       "lines": {
         "OCCU": "cabaretier, batelier",
         "SIGN": "NO",
@@ -1634,7 +1947,7 @@
             "dc:date": "6 SEP 1838",
             "bio:principal": {
               "@id": "_:7314",
-              "display": "Florentin César BEDER, marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7314",
               "type": "person",
               "name": "Florentin César BEDER",
               "gender": "M",
@@ -1651,7 +1964,7 @@
             "dc:date": "6 NOV 1902",
             "bio:principal": {
               "@id": "_:7314",
-              "display": "Florentin César BEDER, marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7314",
               "type": "person",
               "name": "Florentin César BEDER",
               "gender": "M",
@@ -1669,7 +1982,7 @@
             "dc:date": "1870",
             "bio:principal": {
               "@id": "_:7314",
-              "display": "Florentin César BEDER, marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7314",
               "type": "person",
               "name": "Florentin César BEDER",
               "gender": "M",
@@ -1683,17 +1996,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7012",
-          "display": "Il s'est marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE à l'âge de 28 ans. Stéphanie Marie Virginie BEYAERT née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 47 ans. De cette union est né un enfant : Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans.",
+          "display": "Il s'est marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Stéphanie Marie Virginie BEYAERT née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 47 ans. De cette union est né un enfant : Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans.",
           "type": "family",
           "name": "Florentin César BEDER et Stéphanie Marie Virginie BEYAERT",
           "participants": [
             "Florentin César BEDER",
             "Stéphanie Marie Virginie BEYAERT"
-          ]
+          ],
+          "date": "30 JUL 1867",
+          "lieu": "Dunkerque, 59240, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7315",
-          "display": "Stéphanie Marie Virginie BEYAERT, mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7315",
           "type": "person",
           "name": "Stéphanie Marie Virginie BEYAERT",
           "gender": "F"
@@ -1705,8 +2020,25 @@
       "id": "_:7315",
       "type": "foaf:Person",
       "title": "Stéphanie Marie Virginie BEYAERT",
-      "generation": 5,
-      "summary": "Elle née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE, à l'âge de 34 ans. Florentin César BEDER né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 64 ans. Stéphanie Marie Virginie BEYAERT a été cabaretière. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Elle née le lundi 15 octobre 1832 à Broxeele, 59470, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec ",
+        " le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE, à l'âge de 34 ans. ",
+        " né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 64 ans. ",
+        " a été cabaretière. Elle est décédée le lundi 9 février 1880 à Meurchin, 62410, Pas-de-Calais, Hauts-de-France, FRANCE."
+      ],
+      "nom": [
+        "Florentin César BEDER",
+        "Florentin César BEDER",
+        "Stéphanie Marie Virginie BEYAERT"
+      ],
       "lines": {
         "OCCU": "cabaretière",
         "_FIL": {
@@ -1727,7 +2059,7 @@
             "dc:date": "15 OCT 1832",
             "bio:principal": {
               "@id": "_:7315",
-              "display": "Stéphanie Marie Virginie BEYAERT, mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7315",
               "type": "person",
               "name": "Stéphanie Marie Virginie BEYAERT",
               "gender": "F",
@@ -1744,7 +2076,7 @@
             "dc:date": "9 FEB 1880",
             "bio:principal": {
               "@id": "_:7315",
-              "display": "Stéphanie Marie Virginie BEYAERT, mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7315",
               "type": "person",
               "name": "Stéphanie Marie Virginie BEYAERT",
               "gender": "F",
@@ -1758,17 +2090,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7012",
-          "display": "Elle s'est mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE à l'âge de 34 ans. Florentin César BEDER né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 64 ans. De cette union est né un enfant : Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans.",
+          "display": "Elle s'est mariée avec Florentin César BEDER le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Florentin César BEDER né le jeudi 6 septembre 1838 à Condren, 02700, Aisne, Hauts-de-France, FRANCE. Il est décédé le jeudi 6 novembre 1902 à Harnes, 62440, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 64 ans. De cette union est né un enfant : Alfred Édouard BEDER né le dimanche 4 décembre 1870 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE. Il est décédé le samedi 13 août 1938 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 67 ans.",
           "type": "family",
           "name": "Florentin César BEDER et Stéphanie Marie Virginie BEYAERT",
           "participants": [
             "Florentin César BEDER",
             "Stéphanie Marie Virginie BEYAERT"
-          ]
+          ],
+          "date": "30 JUL 1867",
+          "lieu": "Dunkerque, 59240, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7314",
-          "display": "Florentin César BEDER, marié avec Stéphanie Marie Virginie BEYAERT le 30 jul 1867 à Dunkerque, 59240, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7314",
           "type": "person",
           "name": "Florentin César BEDER",
           "gender": "M"
@@ -1780,8 +2114,25 @@
       "id": "_:7316",
       "type": "foaf:Person",
       "title": "Jacques BOEGLER",
-      "generation": 5,
-      "summary": "Il né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il s'est marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 27 ans. Caroline REISSINGER née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. Jacques BOEGLER a été commis tanneur. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Il né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il s'est marié avec ",
+        " le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 27 ans. ",
+        " née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. ",
+        " a été commis tanneur. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE."
+      ],
+      "nom": [
+        "Caroline REISSINGER",
+        "Caroline REISSINGER",
+        "Jacques BOEGLER"
+      ],
       "lines": {
         "OCCU": "commis tanneur",
         "_FIL": {
@@ -1802,7 +2153,7 @@
             "dc:date": "29 SEP 1838",
             "bio:principal": {
               "@id": "_:7316",
-              "display": "Jacques BOEGLER, marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+              "display": "_:7316",
               "type": "person",
               "name": "Jacques BOEGLER",
               "gender": "M",
@@ -1819,7 +2170,7 @@
             "dc:date": "2 AUG 1905",
             "bio:principal": {
               "@id": "_:7316",
-              "display": "Jacques BOEGLER, marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+              "display": "_:7316",
               "type": "person",
               "name": "Jacques BOEGLER",
               "gender": "M",
@@ -1833,17 +2184,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7014",
-          "display": "Il s'est marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE à l'âge de 27 ans. Caroline REISSINGER née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. De cette union est né un enfant : Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans.",
+          "display": "Il s'est marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Caroline REISSINGER née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. De cette union est né un enfant : Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans.",
           "type": "family",
           "name": "Jacques BOEGLER et Caroline REISSINGER",
           "participants": [
             "Jacques BOEGLER",
             "Caroline REISSINGER"
-          ]
+          ],
+          "date": "18 janvier 1866",
+          "lieu": "Barr, 67140, Bas-Rhin, Grand Est, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7317",
-          "display": "Caroline REISSINGER, mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+          "display": "_:7317",
           "type": "person",
           "name": "Caroline REISSINGER",
           "gender": "F"
@@ -1855,8 +2208,25 @@
       "id": "_:7317",
       "type": "foaf:Person",
       "title": "Caroline REISSINGER",
-      "generation": 5,
-      "summary": "Elle née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle s'est mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 21 ans. Jacques BOEGLER né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. Caroline REISSINGER a été sans profession. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Elle née le mercredi 6 novembre 1844 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle s'est mariée avec ",
+        " le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 21 ans. ",
+        " né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. ",
+        " a été sans profession. Elle est décédée le dimanche 24 septembre 1911 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE."
+      ],
+      "nom": [
+        "Jacques BOEGLER",
+        "Jacques BOEGLER",
+        "Caroline REISSINGER"
+      ],
       "lines": {
         "OCCU": "sans profession",
         "_FIL": {
@@ -1877,7 +2247,7 @@
             "dc:date": "6 NOV 1844",
             "bio:principal": {
               "@id": "_:7317",
-              "display": "Caroline REISSINGER, mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+              "display": "_:7317",
               "type": "person",
               "name": "Caroline REISSINGER",
               "gender": "F",
@@ -1894,7 +2264,7 @@
             "dc:date": "24 SEP 1911",
             "bio:principal": {
               "@id": "_:7317",
-              "display": "Caroline REISSINGER, mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+              "display": "_:7317",
               "type": "person",
               "name": "Caroline REISSINGER",
               "gender": "F",
@@ -1908,17 +2278,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7014",
-          "display": "Elle s'est mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE à l'âge de 21 ans. Jacques BOEGLER né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. De cette union est né un enfant : Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans.",
+          "display": "Elle s'est mariée avec Jacques BOEGLER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Jacques BOEGLER né le samedi 29 septembre 1838 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Il est décédé le mercredi 2 août 1905 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE, à l'âge de 66 ans. De cette union est né un enfant : Marie BOEGLER née le vendredi 9 février 1872 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE. Elle est décédée le lundi 10 août 1953 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, rue Louis Désavis, à l'âge de 81 ans.",
           "type": "family",
           "name": "Jacques BOEGLER et Caroline REISSINGER",
           "participants": [
             "Jacques BOEGLER",
             "Caroline REISSINGER"
-          ]
+          ],
+          "date": "18 janvier 1866",
+          "lieu": "Barr, 67140, Bas-Rhin, Grand Est, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7316",
-          "display": "Jacques BOEGLER, marié avec Caroline REISSINGER le jeudi 18 janvier 1866 à Barr, 67140, Bas-Rhin, Grand Est, FRANCE",
+          "display": "_:7316",
           "type": "person",
           "name": "Jacques BOEGLER",
           "gender": "M"
@@ -1931,15 +2303,32 @@
       "type": "foaf:Person",
       "title": "Lucienne Raymonde BEDER",
       "generation": null,
-      "summary": "Lucienne Raymonde BEDER, fille de Alfred Édouard BEDER et Marie BOEGLER. Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE. Frères et sœurs : Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE, Stéphanie Caroline BEDER, Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE.",
+      "bound": null,
+      "summary": [
+        "",
+        ", fille d'",
+        " et ",
+        ". Elle est décédée le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE. Frères et sœurs : ",
+        ", ",
+        ", ",
+        "."
+      ],
+      "nom": [
+        "Lucienne Raymonde BEDER",
+        "Alfred Édouard BEDER",
+        "Marie BOEGLER",
+        "Kleber Alfred BEDER",
+        "Stéphanie Caroline BEDER",
+        "Charles Arsène BEDER"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
           "raw": "LEGITIMATE_CHILD"
         },
         "FAMC": {
-          "display": "Lucienne Raymonde BEDER, fille de Alfred Édouard BEDER et Marie BOEGLER. Elle est née le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
-          "ofFamily": "Alfred Édouard BEDER et Marie BOEGLER"
+          "display": "Lucienne Raymonde BEDER, fille d'Alfred Édouard BEDER et Marie BOEGLER. Elle est née le lundi 12 octobre 1908 à Tarascon-sur-Ariège, 09400, Ariège, Occitanie, FRANCE.",
+          "ofFamily": "_:707"
         },
         "foaf:name": {
           "display": "Lucienne Raymonde BEDER",
@@ -1954,7 +2343,7 @@
           "dc:date": "12 OCT 1908",
           "bio:principal": {
             "@id": "_:7318",
-            "display": "Lucienne Raymonde BEDER",
+            "display": "_:7318",
             "type": "person",
             "name": "Lucienne Raymonde BEDER",
             "gender": "F",
@@ -1968,21 +2357,21 @@
         "rel:siblingOf": [
           {
             "@id": "_:7311",
-            "display": "Kleber Alfred BEDER, marié avec Germaine Madeleine DEGAHIEL le samedi 18 août 1923 à Conflans-Sainte-Honorine, 78700, Yvelines, Île-de-France, FRANCE",
+            "display": "_:7311",
             "type": "person",
             "name": "Kleber Alfred BEDER",
             "gender": "M"
           },
           {
             "@id": "_:7312",
-            "display": "Stéphanie Caroline BEDER",
+            "display": "_:7312",
             "type": "person",
             "name": "Stéphanie Caroline BEDER",
             "gender": "F"
           },
           {
             "@id": "_:734",
-            "display": "Charles Arsène BEDER, marié avec Yolande Aurélienne DESJARDINS le samedi 18 août 1934 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE",
+            "display": "_:734",
             "type": "person",
             "name": "Charles Arsène BEDER",
             "gender": "M"
@@ -1995,8 +2384,25 @@
       "id": "_:7319",
       "type": "foaf:Person",
       "title": "Henri DESJARDINS",
-      "generation": 5,
-      "summary": "Il né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il s'est marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, à l'âge de 35 ans. Pauline VALCKE née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE, à l'âge de 70 ans. Henri DESJARDINS a été batelier. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Il né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il s'est marié avec ",
+        " le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, à l'âge de 35 ans. ",
+        " née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE, à l'âge de 70 ans. ",
+        " a été batelier. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE."
+      ],
+      "nom": [
+        "Pauline VALCKE",
+        "Pauline VALCKE",
+        "Henri DESJARDINS"
+      ],
       "lines": {
         "OCCU": "batelier",
         "_FIL": {
@@ -2017,7 +2423,7 @@
             "dc:date": "16 MAR 1821",
             "bio:principal": {
               "@id": "_:7319",
-              "display": "Henri DESJARDINS, marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7319",
               "type": "person",
               "name": "Henri DESJARDINS",
               "gender": "M",
@@ -2037,7 +2443,7 @@
             "dc:date": "9 NOV 1882",
             "bio:principal": {
               "@id": "_:7319",
-              "display": "Henri DESJARDINS, marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7319",
               "type": "person",
               "name": "Henri DESJARDINS",
               "gender": "M",
@@ -2051,17 +2457,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7016",
-          "display": "Il s'est marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE à l'âge de 35 ans. Pauline VALCKE née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE, à l'âge de 70 ans. De cette union est né un enfant : Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans.",
+          "display": "Il s'est marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE. Pauline VALCKE née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE, à l'âge de 70 ans. De cette union est né un enfant : Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans.",
           "type": "family",
           "name": "Henri DESJARDINS et Pauline VALCKE",
           "participants": [
             "Henri DESJARDINS",
             "Pauline VALCKE"
-          ]
+          ],
+          "date": "30 JUL 1856",
+          "lieu": "Deûlémont, 59890, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7320",
-          "display": "Pauline VALCKE, mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7320",
           "type": "person",
           "name": "Pauline VALCKE",
           "gender": "F"
@@ -2073,8 +2481,25 @@
       "id": "_:7320",
       "type": "foaf:Person",
       "title": "Pauline VALCKE",
-      "generation": 5,
-      "summary": "Elle née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle s'est mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, à l'âge de 23 ans. Henri DESJARDINS né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 61 ans. Pauline VALCKE a été batelière. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Elle née le jeudi 13 décembre 1832 à Warneton, 7784, Hainaut, Wallonie, BELGIQUE. Elle s'est mariée avec ",
+        " le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, à l'âge de 23 ans. ",
+        " né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 61 ans. ",
+        " a été batelière. Elle est décédée le jeudi 5 février 1903 à Bruay-sur-l'Escaut, 59860, Nord, Hauts-de-France, FRANCE."
+      ],
+      "nom": [
+        "Henri DESJARDINS",
+        "Henri DESJARDINS",
+        "Pauline VALCKE"
+      ],
       "lines": {
         "OCCU": "batelière",
         "_FIL": {
@@ -2095,7 +2520,7 @@
             "dc:date": "13 DEC 1832",
             "bio:principal": {
               "@id": "_:7320",
-              "display": "Pauline VALCKE, mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7320",
               "type": "person",
               "name": "Pauline VALCKE",
               "gender": "F",
@@ -2112,7 +2537,7 @@
             "dc:date": "5 FEB 1903",
             "bio:principal": {
               "@id": "_:7320",
-              "display": "Pauline VALCKE, mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7320",
               "type": "person",
               "name": "Pauline VALCKE",
               "gender": "F",
@@ -2126,17 +2551,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7016",
-          "display": "Elle s'est mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE à l'âge de 23 ans. Henri DESJARDINS né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 61 ans. De cette union est né un enfant : Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans.",
+          "display": "Elle s'est mariée avec Henri DESJARDINS le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE. Henri DESJARDINS né le vendredi 16 mars 1821 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE, hameau des écluses. Il est décédé le jeudi 9 novembre 1882 à Courrières, 62710, Pas-de-Calais, Hauts-de-France, FRANCE, à l'âge de 61 ans. De cette union est né un enfant : Arthur Alexandre DESJARDINS né le dimanche 5 octobre 1873 à Lille, 59000, Nord, Hauts-de-France, FRANCE, quai Saint Martin. Il est décédé le jeudi 13 décembre 1923 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE, rue de l'éperon, à l'âge de 50 ans.",
           "type": "family",
           "name": "Henri DESJARDINS et Pauline VALCKE",
           "participants": [
             "Henri DESJARDINS",
             "Pauline VALCKE"
-          ]
+          ],
+          "date": "30 JUL 1856",
+          "lieu": "Deûlémont, 59890, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7319",
-          "display": "Henri DESJARDINS, marié avec Pauline VALCKE le 30 jul 1856 à Deûlémont, 59890, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7319",
           "type": "person",
           "name": "Henri DESJARDINS",
           "gender": "M"
@@ -2148,8 +2575,25 @@
       "id": "_:7321",
       "type": "foaf:Person",
       "title": "Arsène Armand Calixte VINOT",
-      "generation": 5,
-      "summary": "Il né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il s'est marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE, à l'âge de 23 ans. Elisa Pétronille MORGAND née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 86 ans. Arsène Armand Calixte VINOT a été marinier. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Il né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il s'est marié avec ",
+        " le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE, à l'âge de 23 ans. ",
+        " née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 86 ans. ",
+        " a été marinier. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Elisa Pétronille MORGAND",
+        "Elisa Pétronille MORGAND",
+        "Arsène Armand Calixte VINOT"
+      ],
       "lines": {
         "OCCU": "marinier",
         "_FIL": {
@@ -2170,7 +2614,7 @@
             "dc:date": "8 APR 1853",
             "bio:principal": {
               "@id": "_:7321",
-              "display": "Arsène Armand Calixte VINOT, marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7321",
               "type": "person",
               "name": "Arsène Armand Calixte VINOT",
               "gender": "M",
@@ -2187,7 +2631,7 @@
             "dc:date": "24 FEB 1929",
             "bio:principal": {
               "@id": "_:7321",
-              "display": "Arsène Armand Calixte VINOT, marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7321",
               "type": "person",
               "name": "Arsène Armand Calixte VINOT",
               "gender": "M",
@@ -2201,17 +2645,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7018",
-          "display": "Il s'est marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE à l'âge de 23 ans. Elisa Pétronille MORGAND née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 86 ans. De cette union est né un enfant : Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans.",
+          "display": "Il s'est marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elisa Pétronille MORGAND née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 86 ans. De cette union est né un enfant : Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans.",
           "type": "family",
           "name": "Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND",
           "participants": [
             "Arsène Armand Calixte VINOT",
             "Elisa Pétronille MORGAND"
-          ]
+          ],
+          "date": "26 juin 1876",
+          "lieu": "Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7322",
-          "display": "Elisa Pétronille MORGAND, mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7322",
           "type": "person",
           "name": "Elisa Pétronille MORGAND",
           "gender": "F"
@@ -2223,8 +2669,23 @@
       "id": "_:7322",
       "type": "foaf:Person",
       "title": "Elisa Pétronille MORGAND",
-      "generation": 5,
-      "summary": "Elle née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE, à l'âge de 28 ans. Arsène Armand Calixte VINOT né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 75 ans. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE.",
+      "generation": [
+        5,
+        2
+      ],
+      "bound": [
+        1821,
+        1934
+      ],
+      "summary": [
+        "Elle née le mardi 23 novembre 1847 à Estaires, 59940, Nord, Hauts-de-France, FRANCE. Elle s'est mariée avec ",
+        " le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE, à l'âge de 28 ans. ",
+        " né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 75 ans. Elle est décédée le lundi 5 février 1934 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE."
+      ],
+      "nom": [
+        "Arsène Armand Calixte VINOT",
+        "Arsène Armand Calixte VINOT"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
@@ -2244,7 +2705,7 @@
             "dc:date": "23 NOV 1847",
             "bio:principal": {
               "@id": "_:7322",
-              "display": "Elisa Pétronille MORGAND, mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7322",
               "type": "person",
               "name": "Elisa Pétronille MORGAND",
               "gender": "F",
@@ -2261,7 +2722,7 @@
             "dc:date": "5 FEB 1934",
             "bio:principal": {
               "@id": "_:7322",
-              "display": "Elisa Pétronille MORGAND, mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+              "display": "_:7322",
               "type": "person",
               "name": "Elisa Pétronille MORGAND",
               "gender": "F",
@@ -2275,17 +2736,19 @@
         ],
         "bio:relationship": {
           "@id": "_:7018",
-          "display": "Elle s'est mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE à l'âge de 28 ans. Arsène Armand Calixte VINOT né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 75 ans. De cette union est né un enfant : Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans.",
+          "display": "Elle s'est mariée avec Arsène Armand Calixte VINOT le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Arsène Armand Calixte VINOT né le vendredi 8 avril 1853 à Mauvages, 55190, Meuse, Grand Est, FRANCE. Il est décédé le dimanche 24 février 1929 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 75 ans. De cette union est né un enfant : Camille Augustine Angèle VINOT née le samedi 29 juin 1878 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE. Elle est décédée le dimanche 10 mars 1963 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, 3 rue Victor Hugo, à l'âge de 84 ans.",
           "type": "family",
           "name": "Arsène Armand Calixte VINOT et Elisa Pétronille MORGAND",
           "participants": [
             "Arsène Armand Calixte VINOT",
             "Elisa Pétronille MORGAND"
-          ]
+          ],
+          "date": "26 juin 1876",
+          "lieu": "Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:7321",
-          "display": "Arsène Armand Calixte VINOT, marié avec Elisa Pétronille MORGAND le lundi 26 juin 1876 à Coudekerque-Branche, 59210, Nord, Hauts-de-France, FRANCE",
+          "display": "_:7321",
           "type": "person",
           "name": "Arsène Armand Calixte VINOT",
           "gender": "M"
@@ -2297,8 +2760,18 @@
       "id": "_:7323",
       "type": "foaf:Person",
       "title": "HRYSIO",
-      "generation": 4,
-      "summary": "",
+      "generation": [
+        4,
+        1
+      ],
+      "bound": [
+        1870,
+        1963
+      ],
+      "summary": [
+        ""
+      ],
+      "nom": [],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
@@ -2317,7 +2790,9 @@
           "name": "HRYSIO",
           "participants": [
             "HRYSIO"
-          ]
+          ],
+          "date": "",
+          "lieu": ""
         }
       }
     },
@@ -2327,7 +2802,16 @@
       "type": "foaf:Person",
       "title": "Maryse Alice Odette LOUSTE",
       "generation": null,
-      "summary": "Elle s'est mariée avec Michel Charles BEDER le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE. Michel Charles BEDER né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans.",
+      "bound": null,
+      "summary": [
+        "Elle s'est mariée avec ",
+        " le samedi 24 juin 1978 à Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE. ",
+        " né le lundi 3 janvier 1938 à Maurecourt, 78780, Yvelines, Île-de-France, FRANCE. Il est décédé le dimanche 7 novembre 1999 à Andrésy, 78570, Yvelines, Île-de-France, FRANCE, à l'âge de 61 ans."
+      ],
+      "nom": [
+        "Michel Charles BEDER",
+        "Michel Charles BEDER"
+      ],
       "lines": {
         "_FIL": {
           "display": "Enfant légitime",
@@ -2348,11 +2832,13 @@
           "participants": [
             "Michel Charles BEDER",
             "Maryse Alice Odette LOUSTE"
-          ]
+          ],
+          "date": "24 juin 1978",
+          "lieu": "Fontenay-le-Fleury, 78330, Yvelines, Île-de-France, FRANCE"
         },
         "rel:spouseOf": {
           "@id": "_:733",
-          "display": "Michel Charles BEDER, marié avec Jeannine HRYSIO le lundi 6 juin 1960 à Paris, 75000, Paris, Île-de-France, FRANCE, XVIIe",
+          "display": "_:733",
           "type": "person",
           "name": "Michel Charles BEDER",
           "gender": "M"
