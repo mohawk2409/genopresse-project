@@ -1,0 +1,5 @@
+# Les scripts lancés sur Mac/Linux doivent garder des fins de ligne Unix (LF),
+# sinon ils échouent avec "bad interpreter" / "\r: command not found".
+*.sh        text eol=lf
+*.command   text eol=lf
+*.yml       text eol=lf

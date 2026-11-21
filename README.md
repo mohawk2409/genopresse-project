@@ -1,5 +1,9 @@
 # GEDCOM JSON → Word Document Generator
 
+> **Mac users:**
+> - Just want to use the app, nothing installed? → **[README_MAC.md](README_MAC.md)** (download a ready-made app)
+> - Have Python and want to run from source? → **[README_MAC_PYTHON.md](README_MAC_PYTHON.md)**
+
 Convert GEDCOM genealogy data (as JSON-LD) into formatted Word documents (.docx) with full person profiles, including birth/death events, relationships, and media file path references.
 
 ## Overview

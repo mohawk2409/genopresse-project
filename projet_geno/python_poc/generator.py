@@ -26,7 +26,7 @@ from datetime import date
 import copy 
 from docx import Document
 from docx.text.paragraph import Paragraph
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT, WD_TAB_LEADER
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, Cm
@@ -1854,13 +1854,13 @@ def _create_cover_page(document: Document, first_person_name: str):
     try:
         # p_image = document.add_paragraph()
         # p_image.alignment = 
-        document.add_picture(str(PROJECT_ROOT / 'image1.png'), width=Pt(200))
+        document.add_picture(str(PROJECT_ROOT / 'resources' / 'image1.png'), width=Pt(200))
         # Permet d'accéder au dernier paragraphe et de le centrer
         last_paragraph = document.paragraphs[-1] 
         last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
         document.add_paragraph() # Espace entre les images
-        document.add_picture(str(PROJECT_ROOT / 'image2.png'), width=Pt(200))
-        last_paragraph = document.paragraphs[-1] 
+        document.add_picture(str(PROJECT_ROOT / 'resources'/ 'image2.png'), width=Pt(200))
+        last_paragraph = document.paragraphs[-1]
         last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
         # run_image = paragraph.add_run()
         # inline_shapes = run
@@ -1922,7 +1922,7 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
 
     title_paragraph = document.add_paragraph()
     title_paragraph.add_run(f"\n\n\n\n\n")
-    title_run = document.add_heading_with_level(f"Ancêtres de \n{first_person_name}", level=1)
+    title_run = _add_heading(document, f"Ancêtres de \n{first_person_name}", 1)
 
     title_run.runs[0].font.size = Pt(44)
     title_run.runs[0].font.name = "Garamond"
@@ -1945,29 +1945,43 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
 
 
 
+    # Table des matières : on réserve sa place ici, et on la remplit à la fin
+    # (une fois que toutes les sections existent), voir _fill_table_of_contents.
+    document.add_page_break()
+    toc_title = _add_heading(document, "Table des matières", 1)
+    setStyle(toc_title, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
+    toc_title.runs[0].bold = False
+    toc_anchor = document.add_paragraph()
+    toc_entries: List[Tuple[str, str]] = []   # (texte affiché, nom du signet)
+    document.add_page_break()
+
+    # Nombre de personnes connues par génération (pour "Cette section présente N ancêtres…")
+    people_per_gen: Dict[int, int] = {}
+    for person in report.get('people', []):
+        gen = _generation_number(person.get('generation'))
+        if gen is not None:
+            people_per_gen[gen] = people_per_gen.get(gen, 0) + 1
+
+    last_gen = None
     for person in report.get('people', []):
 
-        if person.get('generation') == 1:
-            meta_paragraph = document.add_paragraph()
-            generation = 1
-            last_gen = 1
-            generation_str = f"Génération {generation}" if generation is not None else "    Génération: non reliée"
-            meta_run = meta_paragraph.add_run(f"{generation_str}")
-            meta_run.font.size = Pt(20)
-        elif person.get('generation') != None and person.get('generation')[0] != last_gen and person.get('generation')[0] != 2:
-            document.add_page_break()
-            meta_paragraph = document.add_paragraph()
-            generation = person.get('generation')[0]
+        generation = _generation_number(person.get('generation'))
+        if generation is not None and generation != last_gen:
+            if last_gen is not None:
+                document.add_page_break()
             last_gen = generation
-            generation_str = f"Génération: {generation}" if generation is not None else "    Génération: non reliée"
-            meta_run = meta_paragraph.add_run(f"{generation_str}")
+            meta_paragraph = document.add_paragraph()
+            meta_run = meta_paragraph.add_run(f"Génération {generation}")
             meta_run.font.size = Pt(20)
+            bookmark = f"toc_gen_{generation}_{len(toc_entries)}"
+            _add_bookmark(meta_paragraph, bookmark)
+            toc_entries.append((f"Génération {generation}", bookmark))
 
-            bound = person.get('bound')
-            generation_number = person.get('generation')[1]
-            generation_paragraph = document.add_paragraph()
-            periode = f" Ces personnes ont vécu entre les années {bound[0]} et {bound[1]}." if bound else ""
-            generation_paragraph.add_run(f"Cette section présente {generation_number} ancêtres de Didier Michel connus à la {generation}ème génération.{periode} ")
+            if generation > 1:
+                bound = person.get('bound')
+                generation_paragraph = document.add_paragraph()
+                periode = f" Ces personnes ont vécu entre les années {bound[0]} et {bound[1]}." if bound else ""
+                generation_paragraph.add_run(f"Cette section présente {people_per_gen[generation]} ancêtres de Didier Michel connus à la {generation}ème génération.{periode} ")
 
         title_paragraph = document.add_paragraph()
         title_paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
@@ -2015,17 +2029,20 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
     document.add_page_break()
 
 
-    p = document.add_heading_with_level("Statistiques",1)
+    p = _add_heading(document, "Statistiques", 1)
+    _register_toc_entry(p, "Statistiques", toc_entries)
     setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
     p.runs[0].bold = False
     document.add_page_break()
 
-    p = document.add_heading_with_level("Origine du patronyme paternel",1)
+    p = _add_heading(document, "Origine du patronyme paternel", 1)
+    _register_toc_entry(p, "Origine du patronyme paternel", toc_entries)
     setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
     p.runs[0].bold = False
     document.add_page_break()
 
-    p = document.add_heading_with_level("Origine du patronyme maternel",1)
+    p = _add_heading(document, "Origine du patronyme maternel", 1)
+    _register_toc_entry(p, "Origine du patronyme maternel", toc_entries)
     setStyle(p, "Titre", WD_ALIGN_PARAGRAPH.LEFT)
     p.runs[0].bold = False
     document.add_page_break()
@@ -2036,7 +2053,8 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
     if indexNoms:
         document.add_page_break()
         p = document.add_paragraph()
-        text_unit = document.add_heading_with_level('Index des noms', level=1)
+        text_unit = _add_heading(document, 'Index des noms', 1)
+        _register_toc_entry(text_unit, 'Index des noms', toc_entries)
         setStyle(text_unit,"Titre")
         new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
         set_columns(new_section, num_columns=2)
@@ -2107,7 +2125,8 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
     # avant de trier, car une personne peut avoir plusieurs lieux associés.
     if indexLieux:
         document.add_page_break()
-        indexLieu = document.add_heading_with_level("Index des lieux", level=1)
+        indexLieu = _add_heading(document, "Index des lieux", 1)
+        _register_toc_entry(indexLieu, "Index des lieux", toc_entries)
         p = document.add_paragraph()
         new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
         set_columns(new_section, num_columns=2)
@@ -2179,7 +2198,8 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
         document.add_page_break()
         new_section = document.add_section(WD_SECTION.CONTINUOUS) # Permet que le texte soit sur deux colonnes 
         set_columns(new_section, num_columns=1)
-        indexProfession = document.add_heading_with_level("Index des professions", level=1)
+        indexProfession = _add_heading(document, "Index des professions", 1)
+        _register_toc_entry(indexProfession, "Index des professions", toc_entries)
         setStyle(indexProfession, "Titre")
 
         p = document.add_paragraph()
@@ -2241,7 +2261,11 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
         section.bottom_margin = Inches(0.99)
         section.left_margin = Inches(1.62)
         section.right_margin = Inches(0.79)
-    document.add_heading_with_level("test",level=8)
+
+    # Remplit la table des matières (maintenant que toutes les sections et les marges existent)
+    first_section = document.sections[0]
+    _fill_table_of_contents(toc_anchor, toc_entries,
+                            first_section.page_width - first_section.left_margin - first_section.right_margin)
 
     # Force Word à recalculer tous les champs (PAGE, PAGEREF, ...) à l'ouverture,
     # sans quoi les renvois de page restent affichés avec leur valeur de repli
@@ -2255,6 +2279,63 @@ def generate_docx(report_path: Optional[str] = None, output_path: Optional[str] 
     print(f"Intermediate report: {report_file}")
     print(f"Document generated: {output_file}")
     return output_file
+
+def _add_heading(document: Document, text: str, level: int = 1) -> Paragraph:
+    """Ajoute un titre de niveau `level` (style Word "Heading N", ou "Title" pour 0).
+
+    Remplace `document.add_heading_with_level`, qui n'existait que dans une copie
+    modifiée de python-docx : ici on n'utilise que l'API standard, donc ça marche
+    avec une installation normale (Mac, Windows, pipeline GitHub).
+    """
+    if not 0 <= level <= 9:
+        raise ValueError(f"level must be in range 0-9, got {level}")
+    style = "Title" if level == 0 else f"Heading {level}"
+    return document.add_paragraph(text, style)
+
+
+def _generation_number(generation: Any) -> Optional[int]:
+    """La génération est 1 pour la personne de référence, puis un tuple (génération, …) : renvoie juste le numéro."""
+    if isinstance(generation, (tuple, list)):
+        return generation[0] if generation else None
+    return generation
+
+
+def _register_toc_entry(paragraph: Paragraph, text: str, toc_entries: List[Tuple[str, str]]) -> None:
+    """Pose un signet sur ce titre et l'ajoute à la table des matières."""
+    bookmark = f"toc_{len(toc_entries)}"
+    _add_bookmark(paragraph, bookmark)
+    toc_entries.append((text, bookmark))
+
+
+def _fill_table_of_contents(anchor: Paragraph, toc_entries: List[Tuple[str, str]], text_width) -> None:
+    """
+    Écrit la table des matières juste avant `anchor` : une ligne par section,
+    "Titre ........ page", le titre étant un lien cliquable vers la section.
+    Les numéros de page sont des champs PAGEREF, calculés par Word à l'ouverture
+    (comme pour les index).
+    """
+    for text, bookmark in toc_entries:
+        paragraph = anchor.insert_paragraph_before()
+        paragraph.paragraph_format.tab_stops.add_tab_stop(
+            text_width, WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS)
+        paragraph.paragraph_format.space_after = Pt(4)
+
+        # Titre cliquable : le run est placé dans un <w:hyperlink w:anchor="signet">
+        run = paragraph.add_run(text)
+        hyperlink = OxmlElement('w:hyperlink')
+        hyperlink.set(qn('w:anchor'), bookmark)
+        hyperlink.set(qn('w:history'), '1')
+        run._r.addprevious(hyperlink)
+        hyperlink.append(run._r)
+
+        paragraph.add_run('	')
+        _add_page_ref(paragraph, bookmark)
+
+        # paragraph.runs ne voit pas le run déplacé dans le lien : on l'ajoute à la main
+        for r in [run] + list(paragraph.runs):
+            r.font.name = "Garamond"
+            r.font.size = Pt(13)
+
 
 def setStyle(paragraph, style: str, alignment=WD_ALIGN_PARAGRAPH.LEFT):
     paragraph.runs[0].font.name = "Garamond"
@@ -2333,5 +2414,4 @@ if __name__ == '__main__':
     parser.add_argument('--report', help='Path to the intermediate extracted report JSON', default=str(DEFAULT_REPORT))
     parser.add_argument('--out', help='Output DOCX path', default=str(DEFAULT_OUTPUT))
     args = parser.parse_args()
-
     generate_docx(report_path=args.report, output_path=args.out, json_path=args.json)

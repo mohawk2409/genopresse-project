@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Construction de l'application Mac (PyInstaller)
+build/
+dist/
+*.spec
+
+# macOS
+.DS_Store

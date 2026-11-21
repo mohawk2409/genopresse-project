@@ -1,0 +1,62 @@
+# Construit l'application Mac (GED2DOCX.app) à chaque push sur main,
+# et publie une "Release" téléchargeable quand on pousse un tag (ex : v1.0.0).
+name: Build Mac app
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:        # bouton "Run workflow" dans l'onglet Actions
+
+permissions:
+  contents: write           # nécessaire pour créer la Release
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-latest       # Mac Apple Silicon (M1, M2, M3, M4…)
+          - runner: macos-15-intel     # Mac Intel
+    runs-on: ${{ matrix.runner }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build the .app
+        run: bash packaging/build_mac.sh
+
+      - name: Upload the zip (Actions tab)
+        uses: actions/upload-artifact@v4
+        with:
+          name: GED2DOCX-${{ matrix.runner }}
+          path: dist/*.zip
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: zips
+          merge-multiple: true
+
+      - name: Publish the GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: zips/*.zip
+          body: |
+            ## Télécharger pour Mac
+
+            - **Mac Apple Silicon** (M1, M2, M3, M4… — tous les Mac depuis fin 2020) : `GED2DOCX-mac-apple-silicon.zip`
+            - **Mac Intel** (Mac plus anciens) : `GED2DOCX-mac-intel.zip`
+
+            Pas sûr ? Menu  → « À propos de ce Mac » : si la ligne « Puce » indique *Apple M…*, prenez Apple Silicon ; si elle indique « Processeur … Intel », prenez Intel.
+
+            Instructions d'installation : voir `README_MAC.md` dans le dépôt.
