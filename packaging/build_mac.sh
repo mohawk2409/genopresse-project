@@ -19,6 +19,7 @@ python3 -m pip install -r requirements.txt pyinstaller
 
 echo "==> Construction de ${APP_NAME}.app (${ARCH})"
 rm -rf build dist
+DOCX_DIR="$(python3 -c 'import docx, os; print(os.path.dirname(docx.__file__))')"
 python3 -m PyInstaller \
     --noconfirm \
     --windowed \
@@ -26,6 +27,7 @@ python3 -m PyInstaller \
     --osx-bundle-identifier "com.genopresse.ged2docx" \
     --paths "${SRC_DIR}" \
     --collect-data docx \
+	--add-data "${DOCX_DIR}/parts:docx/parts" \
     "${SRC_DIR}/app.py"
 
 echo "==> Vérification : l'application démarre et génère un document"
