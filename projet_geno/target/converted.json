@@ -1,0 +1,3415 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rel": "http://purl.org/vocab/relationship",
+    "bio": "http://purl.org/vocab/bio/0.1/",
+    "dc": "http://purl.org/dc/elements/1.1/"
+  },
+  "SOUR": {
+    "GEDVALUE": "Heredis MAC2025",
+    "VERS": "2025",
+    "NAME": "Heredis MAC",
+    "CORP": {
+      "GEDVALUE": "Heredis SCOP",
+      "WWW": "www.heredis.com"
+    }
+  },
+  "GEDC": {
+    "VERS": "5.5.1",
+    "FORM": "LINEAGE-LINKED"
+  },
+  "CHAR": "UTF-8",
+  "_GUID": "560A00F6-CA63-4FCB-B0C4-CFA6470308A1",
+  "PLAC": {
+    "FORM": "Town, Area code, County, Region, Country, Subdivision"
+  },
+  "dc:date": "23 APR 2026",
+  "@graph": [
+    {
+      "@id": "_:731",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 10:18:28"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 15:36:20"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:702"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Didier Michel/BEDER/",
+        "GIVN": "Didier Michel",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "31 AUG 1962",
+        "bio:principal": {
+          "@id": "_:731"
+        },
+        "@type": "bio:Birth",
+        "bio:place": {
+          "GEDVALUE": "Saint-Germain-en-Laye,78100,Yvelines,Île-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N48.900000",
+            "LONG": "E2.083330"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:732",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 10:19:48"
+      },
+      "CHAN": {
+        "dc:date": "3 OCT 2025 13:14:39"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:705"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Jeannine/HRYSIO/",
+        "GIVN": "Jeannine",
+        "SURN": "HRYSIO"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8317",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "9 DEC 1937",
+          "bio:principal": {
+            "@id": "_:732"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Montargis,45200,Loiret,Centre-Val de Loire,FRANCE,25 rue Jean Jaurès",
+            "MAP": {
+              "LATI": "N48.000000",
+              "LONG": "E2.750000"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "25 NOV 1973",
+          "bio:principal": {
+            "@id": "_:732"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Évecquemont,78740,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.014390",
+              "LONG": "E1.944250"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:702"
+      },
+      "rel:spouseOf": {
+        "@id": "_:733"
+      }
+    },
+    {
+      "@id": "_:733",
+      "@type": "foaf:Person",
+      "OCCU": "menuisier, ingenieur électronicien des arts et métiers",
+      "SIGN": "YES",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:34:21"
+      },
+      "CHAN": {
+        "dc:date": "3 OCT 2025 13:14:39"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:704"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Michel Charles/BEDER/",
+        "GIVN": "Michel Charles",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8318",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "3 JAN 1938",
+          "bio:principal": {
+            "@id": "_:733"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.996140",
+              "LONG": "E2.061540"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "7 NOV 1999",
+          "bio:principal": {
+            "@id": "_:733"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "bio:relationship": [
+        {
+          "@id": "_:702"
+        },
+        {
+          "@id": "_:7020"
+        }
+      ],
+      "rel:spouseOf": [
+        {
+          "@id": "_:732"
+        },
+        {
+          "@id": "_:7324"
+        }
+      ]
+    },
+    {
+      "@id": "_:734",
+      "@type": "foaf:Person",
+      "OCCU": "batelier, capitaine de remorqueur",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:36:29"
+      },
+      "CHAN": {
+        "dc:date": "11 JUN 2025 15:48:20"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:707"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Charles Arsène/BEDER/",
+        "GIVN": "Charles Arsène",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:831",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "18 MAY 1905",
+          "bio:principal": {
+            "@id": "_:734"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8321",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "NOTE": "habite au 13 avenue porte de Pontoise à Conflans",
+          "dc:date": "9 DEC 1986",
+          "bio:principal": {
+            "@id": "_:734"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Poissy,78300,Yvelines,Île-de-France,FRANCE,Hôpiital",
+            "MAP": {
+              "LATI": "N48.929020",
+              "LONG": "E2.049520"
+            }
+          }
+        },
+        {
+          "TYPE": "Military service",
+          "_FNA": "NO",
+          "NOTE": "Cote 1R/RM 701",
+          "dc:date": "1925",
+          "bio:principal": {
+            "@id": "_:734"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Versailles,78000,Yvelines,Île-de-France,FRANCE,Matricule 654",
+            "MAP": {
+              "LATI": "N48.800000",
+              "LONG": "E2.133330"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "dc:date": "1954",
+          "bio:principal": {
+            "@id": "_:734"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:704"
+      },
+      "rel:spouseOf": {
+        "@id": "_:735"
+      },
+      "rel:siblingOf": [
+        {
+          "@id": "_:7311"
+        },
+        {
+          "@id": "_:7312"
+        },
+        {
+          "@id": "_:7318"
+        }
+      ]
+    },
+    {
+      "@id": "_:735",
+      "@type": "foaf:Person",
+      "OCCU": "coupeuse en bonneterie",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:36:44"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:34:55"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:709"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Yolande Aurélienne/DESJARDINS/",
+        "GIVN": "Yolande Aurélienne",
+        "SURN": "DESJARDINS"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:832",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "29 MAY 1908",
+          "bio:principal": {
+            "@id": "_:735"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Cambrai,59400,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.166670",
+              "LONG": "E3.233330"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8319",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "NOTE": "décédée au 13 rue Porte de Pontoise",
+          "dc:date": "13 JAN 1969",
+          "bio:principal": {
+            "@id": "_:735"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,13 rue Porte de Pontoise",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:704"
+      },
+      "rel:spouseOf": {
+        "@id": "_:734"
+      }
+    },
+    {
+      "@id": "_:736",
+      "@type": "foaf:Person",
+      "OCCU": "domestique agricole",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:48:08"
+      },
+      "CHAN": {
+        "dc:date": "11 JUN 2025 16:56:52"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:7019"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Anna/HRYSIO/",
+        "GIVN": "Anna",
+        "SURN": "HRYSIO"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "NOTE": "Hypothèse : aurait une soeur Catherine née le 15 juin 1904 à HnatKowice (en Pologne), fille de Jean HRYSIO et Marie KIBALSKA. Elle s’est mariée le 25 octobre 1930 à Châlette-sur-Loing (45) avec Grégoire Cycyk né en Pologne à Arlamow.",
+          "dc:date": "18 FEB 1899",
+          "bio:principal": {
+            "@id": "_:736"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Hnatkowice,,Powiat Przemyski,Voïvodie des Basses-Carpates,POLOGNE,",
+            "MAP": {
+              "LATI": "N49.871742",
+              "LONG": "E22.767924"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "NOTE": "inhumée au Cimetière des hautes roches 9DIDN104 de Conflans Sainte-Honorine",
+          "dc:date": "1 APR 1977",
+          "bio:principal": {
+            "@id": "_:736"
+          },
+          "@type": "bio:Death"
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "OBJE": [
+            {
+              "@id": "_:7934",
+              "_PRIM": "YES"
+            },
+            {
+              "@id": "_:7935"
+            }
+          ],
+          "NOTE": "domestique agricole chez André Walerack (polonais)",
+          "dc:date": "1936",
+          "bio:principal": {
+            "@id": "_:736"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,Le Casrouge",
+            "MAP": {
+              "LATI": "N47.992310",
+              "LONG": "E2.621570"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "dc:date": "1937",
+          "bio:principal": {
+            "@id": "_:736"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Saint-Maurice-sur-Fessard,45700,Loiret,Centre-Val de Loire,FRANCE,",
+            "MAP": {
+              "LATI": "N47.992310",
+              "LONG": "E2.621570"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "OBJE": {
+            "@id": "_:7938",
+            "_PRIM": "YES"
+          },
+          "NOTE": "pas de recensements postérieurs à 1946",
+          "dc:date": "1946",
+          "bio:principal": {
+            "@id": "_:736"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Corquilleroy,45120,Loiret,Centre-Val de Loire,FRANCE,Buges",
+            "MAP": {
+              "LATI": "N48.042120",
+              "LONG": "E2.703820"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:705"
+      }
+    },
+    {
+      "@id": "_:737",
+      "@type": "foaf:Person",
+      "OCCU": "capitaine de remorqueur à la société générale de touage et remorquage à Andrésy",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:55:33"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:24:47"
+      },
+      "NOTE": "son bateau est la « guèpe 15 »",
+      "OBJE": [
+        {
+          "@id": "_:794",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7920"
+        }
+      ],
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:7012"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Alfred Édouard/BEDER/",
+        "GIVN": "Alfred Édouard",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:833",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "4 DEC 1870",
+          "bio:principal": {
+            "@id": "_:737"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N51.034771",
+              "LONG": "E2.377253"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": [
+            {
+              "@id": "_:836",
+              "QUAY": "3",
+              "_QUAL": {
+                "_SOUR": "O",
+                "_INFO": "P",
+                "_EVID": "D"
+              }
+            },
+            {
+              "@id": "_:837",
+              "QUAY": "3",
+              "_QUAL": {
+                "_SOUR": "O",
+                "_INFO": "P",
+                "_EVID": "D"
+              }
+            },
+            {
+              "@id": "_:8315",
+              "QUAY": "3",
+              "_QUAL": {
+                "_SOUR": "O",
+                "_INFO": "P",
+                "_EVID": "D"
+              }
+            }
+          ],
+          "dc:date": "13 AUG 1938",
+          "bio:principal": {
+            "@id": "_:737"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "OBJE": {
+            "@id": "_:7928",
+            "_PRIM": "YES"
+          },
+          "NOTE": "Capitaine de remorqueur",
+          "dc:date": "11 DEC 1895",
+          "bio:principal": {
+            "@id": "_:737"
+          },
+          "@type": "bio:Graduation",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "OBJE": {
+            "@id": "_:7929",
+            "_PRIM": "YES"
+          },
+          "NOTE": "Capitaine de bateaux automobiles",
+          "dc:date": "23 APR 1923",
+          "bio:principal": {
+            "@id": "_:737"
+          },
+          "@type": "bio:Graduation",
+          "bio:place": {
+            "GEDVALUE": "Bougival,78380,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.862230",
+              "LONG": "E2.141480"
+            }
+          }
+        },
+        {
+          "TYPE": "Military service",
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:838",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "1890",
+          "bio:principal": {
+            "@id": "_:737"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N51.034771",
+              "LONG": "E2.377253"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:707"
+      },
+      "rel:spouseOf": {
+        "@id": "_:738"
+      }
+    },
+    {
+      "@id": "_:738",
+      "@type": "foaf:Person",
+      "OCCU": "ménagère",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:56:10"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 16:38:59"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:7014"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Marie/BOEGLER/",
+        "GIVN": "Marie",
+        "SURN": "BOEGLER"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8312",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "9 FEB 1872",
+          "bio:principal": {
+            "@id": "_:738"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.407550",
+              "LONG": "E7.448730"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:835",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "10 AUG 1953",
+          "bio:principal": {
+            "@id": "_:738"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:707"
+      },
+      "rel:spouseOf": {
+        "@id": "_:737"
+      }
+    },
+    {
+      "@id": "_:739",
+      "@type": "foaf:Person",
+      "OCCU": "batelier, marinier",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:11:21"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:12:47"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:7016"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Arthur Alexandre/DESJARDINS/",
+        "GIVN": "Arthur Alexandre",
+        "SURN": "DESJARDINS"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:839",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "5 OCT 1873",
+          "bio:principal": {
+            "@id": "_:739"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Lille,59000,Nord,Hauts-de-France,FRANCE,quai Saint Martin",
+            "MAP": {
+              "LATI": "N50.632970",
+              "LONG": "E3.058580"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8314",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "13 DEC 1923",
+          "bio:principal": {
+            "@id": "_:739"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,rue de l'éperon",
+            "MAP": {
+              "LATI": "N48.996140",
+              "LONG": "E2.061540"
+            }
+          }
+        },
+        {
+          "TYPE": "Military service",
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8311",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "1893",
+          "bio:principal": {
+            "@id": "_:739"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Lille,59000,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.632970",
+              "LONG": "E3.058580"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:709"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7310"
+      }
+    },
+    {
+      "@id": "_:7310",
+      "@type": "foaf:Person",
+      "OCCU": "bonne, ménagère",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:11:41"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:49:57"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:7018"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Camille Augustine Angèle/VINOT/",
+        "GIVN": "Camille Augustine Angèle",
+        "SURN": "VINOT"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8313",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "29 JUN 1878",
+          "bio:principal": {
+            "@id": "_:7310"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N51.022880",
+              "LONG": "E2.393590"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "SOUR": {
+            "@id": "_:8320",
+            "QUAY": "3",
+            "_QUAL": {
+              "_SOUR": "O",
+              "_INFO": "P",
+              "_EVID": "D"
+            }
+          },
+          "dc:date": "10 MAR 1963",
+          "bio:principal": {
+            "@id": "_:7310"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,3 rue Victor Hugo",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:709"
+      },
+      "rel:spouseOf": {
+        "@id": "_:739"
+      }
+    },
+    {
+      "@id": "_:7311",
+      "@type": "foaf:Person",
+      "OCCU": "chef d'atelier",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:18:56"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:26:08"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:707"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Kleber Alfred/BEDER/",
+        "GIVN": "Kleber Alfred",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "23 JUN 1899",
+          "bio:principal": {
+            "@id": "_:7311"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "26 AUG 1992",
+          "bio:principal": {
+            "@id": "_:7311"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "dc:date": "1954",
+          "bio:principal": {
+            "@id": "_:7311"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,1 rue de Verdun",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7010"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7313"
+      },
+      "rel:siblingOf": [
+        {
+          "@id": "_:7312"
+        },
+        {
+          "@id": "_:734"
+        },
+        {
+          "@id": "_:7318"
+        }
+      ]
+    },
+    {
+      "@id": "_:7312",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:19:22"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:09:32"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:707"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Stéphanie Caroline/BEDER/",
+        "GIVN": "Stéphanie Caroline",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "21 JUL 1902",
+          "bio:principal": {
+            "@id": "_:7312"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.001580",
+              "LONG": "E2.096940"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "dc:date": "1954",
+          "bio:principal": {
+            "@id": "_:7312"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,rue Louis Désavis",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "rel:siblingOf": [
+        {
+          "@id": "_:7311"
+        },
+        {
+          "@id": "_:734"
+        },
+        {
+          "@id": "_:7318"
+        }
+      ]
+    },
+    {
+      "@id": "_:7313",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 09:04:47"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:07:21"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Germaine Madeleine/DEGAHIEL/",
+        "GIVN": "Germaine Madeleine",
+        "SURN": "DEGAHIEL"
+      },
+      "foaf:gender": "F",
+      "bio:relationship": {
+        "@id": "_:7010"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7311"
+      }
+    },
+    {
+      "@id": "_:7314",
+      "@type": "foaf:Person",
+      "OCCU": "cabaretier, batelier",
+      "SIGN": "NO",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:20:39"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:34:59"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Florentin César/BEDER/",
+        "GIVN": "Florentin César",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "6 SEP 1838",
+          "bio:principal": {
+            "@id": "_:7314"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Condren,02700,Aisne,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N49.629400",
+              "LONG": "E3.281070"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "6 NOV 1902",
+          "bio:principal": {
+            "@id": "_:7314"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Harnes,62440,Pas-de-Calais,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.446430",
+              "LONG": "E2.904810"
+            }
+          }
+        },
+        {
+          "TYPE": "Residence",
+          "_FNA": "NO",
+          "dc:date": "1870",
+          "bio:principal": {
+            "@id": "_:7314"
+          },
+          "@type": "bio:IndividualEvent",
+          "bio:place": {
+            "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,28 marché aux poissons",
+            "MAP": {
+              "LATI": "N51.034771",
+              "LONG": "E2.377253"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7012"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7315"
+      }
+    },
+    {
+      "@id": "_:7315",
+      "@type": "foaf:Person",
+      "OCCU": "cabaretière",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:22:06"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:04:48"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Stéphanie Marie Virginie/BEYAERT/",
+        "GIVN": "Stéphanie Marie Virginie",
+        "SURN": "BEYAERT"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "15 OCT 1832",
+          "bio:principal": {
+            "@id": "_:7315"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Broxeele,59470,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.829820",
+              "LONG": "E2.319870"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "9 FEB 1880",
+          "bio:principal": {
+            "@id": "_:7315"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Meurchin,62410,Pas-de-Calais,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.498310",
+              "LONG": "E2.893180"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7012"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7314"
+      }
+    },
+    {
+      "@id": "_:7316",
+      "@type": "foaf:Person",
+      "OCCU": "commis tanneur",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:35:01"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:39:00"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Jacques/BOEGLER/",
+        "GIVN": "Jacques",
+        "SURN": "BOEGLER"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "29 SEP 1838",
+          "bio:principal": {
+            "@id": "_:7316"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.407550",
+              "LONG": "E7.448730"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "2 AUG 1905",
+          "bio:principal": {
+            "@id": "_:7316"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.407550",
+              "LONG": "E7.448730"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7014"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7317"
+      }
+    },
+    {
+      "@id": "_:7317",
+      "@type": "foaf:Person",
+      "OCCU": "sans profession",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:35:19"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:42:40"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Caroline/REISSINGER/",
+        "GIVN": "Caroline",
+        "SURN": "REISSINGER"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "6 NOV 1844",
+          "bio:principal": {
+            "@id": "_:7317"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.407550",
+              "LONG": "E7.448730"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "24 SEP 1911",
+          "bio:principal": {
+            "@id": "_:7317"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.407550",
+              "LONG": "E7.448730"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7014"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7316"
+      }
+    },
+    {
+      "@id": "_:7318",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:12:03"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:13:09"
+      },
+      "FAMC": {
+        "ofFamily": {
+          "@id": "_:707"
+        }
+      },
+      "foaf:name": {
+        "GEDVALUE": "Lucienne Raymonde/BEDER/",
+        "GIVN": "Lucienne Raymonde",
+        "SURN": "BEDER"
+      },
+      "foaf:gender": "F",
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "12 OCT 1908",
+        "bio:principal": {
+          "@id": "_:7318"
+        },
+        "@type": "bio:Death",
+        "bio:place": {
+          "GEDVALUE": "Tarascon-sur-Ariège,09400,Ariège,Occitanie,FRANCE,",
+          "MAP": {
+            "LATI": "N42.845450",
+            "LONG": "E1.603320"
+          }
+        }
+      },
+      "rel:siblingOf": [
+        {
+          "@id": "_:7311"
+        },
+        {
+          "@id": "_:7312"
+        },
+        {
+          "@id": "_:734"
+        }
+      ]
+    },
+    {
+      "@id": "_:7319",
+      "@type": "foaf:Person",
+      "OCCU": "batelier",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "4 JAN 2025 16:29:30"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:18:37"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Henri/DESJARDINS/",
+        "GIVN": "Henri",
+        "SURN": "DESJARDINS"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "16 MAR 1821",
+          "bio:principal": {
+            "@id": "_:7319"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Deûlémont,59890,Nord,Hauts-de-France,FRANCE,hameau des écluses",
+            "MAP": {
+              "LATI": "N50.733330",
+              "LONG": "E2.950000"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "9 NOV 1882",
+          "bio:principal": {
+            "@id": "_:7319"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Courrières,62710,Pas-de-Calais,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.457010",
+              "LONG": "E2.947240"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7016"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7320"
+      }
+    },
+    {
+      "@id": "_:7320",
+      "@type": "foaf:Person",
+      "OCCU": "batelière",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "4 JAN 2025 16:29:58"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:19:45"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Pauline/VALCKE/",
+        "GIVN": "Pauline",
+        "SURN": "VALCKE"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "13 DEC 1832",
+          "bio:principal": {
+            "@id": "_:7320"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Warneton,7784,Hainaut,Wallonie,BELGIQUE,",
+            "MAP": {
+              "LATI": "N50.751580",
+              "LONG": "E2.946350"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "5 FEB 1903",
+          "bio:principal": {
+            "@id": "_:7320"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Bruay-sur-l'Escaut,59860,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.399180",
+              "LONG": "E3.543800"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7016"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7319"
+      }
+    },
+    {
+      "@id": "_:7321",
+      "@type": "foaf:Person",
+      "OCCU": "marinier",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:52:04"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:46:12"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Arsène Armand Calixte/VINOT/",
+        "GIVN": "Arsène Armand Calixte",
+        "SURN": "VINOT"
+      },
+      "foaf:gender": "M",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "8 APR 1853",
+          "bio:principal": {
+            "@id": "_:7321"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Mauvages,55190,Meuse,Grand Est,FRANCE,",
+            "MAP": {
+              "LATI": "N48.594800",
+              "LONG": "E5.553980"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "24 FEB 1929",
+          "bio:principal": {
+            "@id": "_:7321"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7018"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7322"
+      }
+    },
+    {
+      "@id": "_:7322",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:52:30"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:46:33"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Elisa Pétronille/MORGAND/",
+        "GIVN": "Elisa Pétronille",
+        "SURN": "MORGAND"
+      },
+      "foaf:gender": "F",
+      "bio:event": [
+        {
+          "_FNA": "NO",
+          "dc:date": "23 NOV 1847",
+          "bio:principal": {
+            "@id": "_:7322"
+          },
+          "@type": "bio:Birth",
+          "bio:place": {
+            "GEDVALUE": "Estaires,59940,Nord,Hauts-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N50.645740",
+              "LONG": "E2.727820"
+            }
+          }
+        },
+        {
+          "_FNA": "NO",
+          "dc:date": "5 FEB 1934",
+          "bio:principal": {
+            "@id": "_:7322"
+          },
+          "@type": "bio:Death",
+          "bio:place": {
+            "GEDVALUE": "Andrésy,78570,Yvelines,Île-de-France,FRANCE,",
+            "MAP": {
+              "LATI": "N48.982340",
+              "LONG": "E2.056870"
+            }
+          }
+        }
+      ],
+      "bio:relationship": {
+        "@id": "_:7018"
+      },
+      "rel:spouseOf": {
+        "@id": "_:7321"
+      }
+    },
+    {
+      "@id": "_:7323",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "5 MAR 2025 10:55:38"
+      },
+      "CHAN": {
+        "dc:date": "5 MAR 2025 10:55:40"
+      },
+      "foaf:name": {
+        "GEDVALUE": "/HRYSIO/",
+        "SURN": "HRYSIO"
+      },
+      "foaf:gender": "M",
+      "bio:relationship": {
+        "@id": "_:7019"
+      }
+    },
+    {
+      "@id": "_:7324",
+      "@type": "foaf:Person",
+      "_FIL": "LEGITIMATE_CHILD",
+      "_CREA": {
+        "dc:date": "2 JUN 2025 12:14:35"
+      },
+      "CHAN": {
+        "dc:date": "2 JUN 2025 12:15:28"
+      },
+      "foaf:name": {
+        "GEDVALUE": "Maryse Alice Odette/LOUSTE/",
+        "GIVN": "Maryse Alice Odette",
+        "SURN": "LOUSTE"
+      },
+      "foaf:gender": "F",
+      "bio:relationship": {
+        "@id": "_:7020"
+      },
+      "rel:spouseOf": {
+        "@id": "_:733"
+      }
+    },
+    {
+      "@id": "_:702",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:731"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:36:20"
+      },
+      "CHAN": {
+        "dc:date": "3 OCT 2025 13:14:39"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:733"
+        },
+        {
+          "@id": "_:732"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "NOTE": "demande faite le 3 octobre 2025",
+        "dc:date": "6 JUN 1960",
+        "bio:partner": [
+          {
+            "@id": "_:733"
+          },
+          {
+            "@id": "_:732"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Paris,75000,Paris,Île-de-France,FRANCE,XVIIe",
+          "MAP": {
+            "LATI": "N48.853410",
+            "LONG": "E2.348800"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7020",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "_CREA": {
+        "dc:date": "2 JUN 2025 12:14:35"
+      },
+      "CHAN": {
+        "dc:date": "2 JUN 2025 12:15:28"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:733"
+        },
+        {
+          "@id": "_:7324"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "24 JUN 1978",
+        "bio:partner": [
+          {
+            "@id": "_:733"
+          },
+          {
+            "@id": "_:7324"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Fontenay-le-Fleury,78330,Yvelines,Île-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N48.812530",
+            "LONG": "E2.048630"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:704",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:733"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:37:04"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:27:27"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:734"
+        },
+        {
+          "@id": "_:735"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "SOUR": {
+          "@id": "_:8316",
+          "QUAY": "3",
+          "_QUAL": {
+            "_SOUR": "O",
+            "_INFO": "P",
+            "_EVID": "D"
+          }
+        },
+        "dc:date": "18 AUG 1934",
+        "bio:partner": [
+          {
+            "@id": "_:734"
+          },
+          {
+            "@id": "_:735"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Maurecourt,78780,Yvelines,Île-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N48.996140",
+            "LONG": "E2.061540"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:705",
+      "@type": "bio:Relationship",
+      "CHIL": {
+        "@id": "_:732"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:48:20"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 15:48:20"
+      },
+      "bio:participant": {
+        "@id": "_:736"
+      }
+    },
+    {
+      "@id": "_:707",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": [
+        {
+          "@id": "_:7311"
+        },
+        {
+          "@id": "_:7312"
+        },
+        {
+          "@id": "_:734"
+        },
+        {
+          "@id": "_:7318"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:56:27"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:32:28"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:737"
+        },
+        {
+          "@id": "_:738"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "SOUR": {
+          "@id": "_:834",
+          "QUAY": "3",
+          "_QUAL": {
+            "_SOUR": "O",
+            "_INFO": "P",
+            "_EVID": "D"
+          }
+        },
+        "dc:date": "18 AUG 1898",
+        "bio:partner": [
+          {
+            "@id": "_:737"
+          },
+          {
+            "@id": "_:738"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Suresnes,92150,Hauts-de-Seine,Île-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N48.871430",
+            "LONG": "E2.229290"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:709",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:735"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:12:03"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 10:39:16"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:739"
+        },
+        {
+          "@id": "_:7310"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "SOUR": {
+          "@id": "_:8310",
+          "QUAY": "3",
+          "_QUAL": {
+            "_SOUR": "O",
+            "_INFO": "P",
+            "_EVID": "D"
+          }
+        },
+        "dc:date": "23 JUL 1901",
+        "bio:partner": [
+          {
+            "@id": "_:739"
+          },
+          {
+            "@id": "_:7310"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Paris,75000,Paris,Île-de-France,FRANCE,XIXe",
+          "MAP": {
+            "LATI": "N48.853410",
+            "LONG": "E2.348800"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7010",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "_CREA": {
+        "dc:date": "3 JAN 2025 09:04:47"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:07:21"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:7311"
+        },
+        {
+          "@id": "_:7313"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "18 AUG 1923",
+        "bio:partner": [
+          {
+            "@id": "_:7311"
+          },
+          {
+            "@id": "_:7313"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Conflans-Sainte-Honorine,78700,Yvelines,Île-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N49.001580",
+            "LONG": "E2.096940"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7012",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:737"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:22:53"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:34:59"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:7314"
+        },
+        {
+          "@id": "_:7315"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "30 JUL 1867",
+        "bio:partner": [
+          {
+            "@id": "_:7314"
+          },
+          {
+            "@id": "_:7315"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Dunkerque,59240,Nord,Hauts-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N51.034771",
+            "LONG": "E2.377253"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7014",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:738"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:35:51"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:38:39"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:7316"
+        },
+        {
+          "@id": "_:7317"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "18 JAN 1866",
+        "bio:partner": [
+          {
+            "@id": "_:7316"
+          },
+          {
+            "@id": "_:7317"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Barr,67140,Bas-Rhin,Grand Est,FRANCE,",
+          "MAP": {
+            "LATI": "N48.407550",
+            "LONG": "E7.448730"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7016",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:739"
+      },
+      "_CREA": {
+        "dc:date": "4 JAN 2025 16:30:15"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:18:37"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:7319"
+        },
+        {
+          "@id": "_:7320"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "30 JUL 1856",
+        "bio:partner": [
+          {
+            "@id": "_:7319"
+          },
+          {
+            "@id": "_:7320"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Deûlémont,59890,Nord,Hauts-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N50.733330",
+            "LONG": "E2.950000"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7018",
+      "@type": "bio:Relationship",
+      "_UST": "MARRIED",
+      "CHIL": {
+        "@id": "_:7310"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:52:42"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 17:46:12"
+      },
+      "bio:participant": [
+        {
+          "@id": "_:7321"
+        },
+        {
+          "@id": "_:7322"
+        }
+      ],
+      "bio:event": {
+        "_FNA": "NO",
+        "dc:date": "26 JUN 1876",
+        "bio:partner": [
+          {
+            "@id": "_:7321"
+          },
+          {
+            "@id": "_:7322"
+          }
+        ],
+        "@type": "bio:Marriage",
+        "bio:place": {
+          "GEDVALUE": "Coudekerque-Branche,59210,Nord,Hauts-de-France,FRANCE,",
+          "MAP": {
+            "LATI": "N51.022880",
+            "LONG": "E2.393590"
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:7019",
+      "@type": "bio:Relationship",
+      "CHIL": {
+        "@id": "_:736"
+      },
+      "_CREA": {
+        "dc:date": "5 MAR 2025 10:55:40"
+      },
+      "CHAN": {
+        "dc:date": "5 MAR 2025 10:55:40"
+      },
+      "bio:participant": {
+        "@id": "_:7323"
+      }
+    },
+    {
+      "@id": "_:8317",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "TITL": "Naissance - HRYSIO Jeannine",
+      "ABBR": "Naissance - HRYSIO Jeannine",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7933",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "14 JAN 2025 10:33:06"
+      },
+      "CHAN": {
+        "dc:date": "14 JAN 2025 10:33:06"
+      }
+    },
+    {
+      "@id": "_:8318",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "ABBR": "Naissance - BEDER Michel Charles",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7939",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "2 JUN 2025 12:17:46"
+      },
+      "CHAN": {
+        "dc:date": "2 JUN 2025 12:17:46"
+      }
+    },
+    {
+      "@id": "_:831",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Naissance - BEDER Charles Arsène (1905-1986)",
+      "ABBR": "Naissance - BEDER Charles Arsène (1905-1986)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.yvelines.fr/rechercher/archives-en-ligne/registres-paroissiaux-et-detat-civil/registres-paroissiaux-et-detat-civil?arko_default_618914e3ee7e4--ficheFocus=&arko_default_618914e3ee7e4--filtreGroupes%5Bmode%5D=simple&arko_default_618914e3ee7e4--filtreGroupes%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bq%5D%5B%5D=Conflans-Sainte-Honorine%20(Yvelines%2C%20France)%5B%5Barko_fiche_60ddacc735846%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61894fee776d8%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bq%5D%5B%5D=1905&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61dc724e9cab6%5D%5Bextras%5D%5Bmode%5D=input&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bop%5D=AND&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bq%5D%5B%5D=Bapt%C3%AAmes%20et%20naissances%5B%5Barko_fiche_614201ec39f69%5D%5D&arko_default_618914e3ee7e4--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_61a63c2ef379b%5D%5Bextras%5D%5Bmode%5D=select&arko_default_618914e3ee7e4--from=0&arko_default_618914e3ee7e4--resultSize=25&arko_default_618914e3ee7e4--contenuIds%5B%5D=1750004&arko_default_618914e3ee7e4--modeRestit=arko_default_6189505357e83#/_recherche-api/visionneuse-infos/arko_default_618914e3ee7e4/arko_fiche_619509edd404b/arko_default_61891b88cb0c3/image/1449203",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": {
+        "@id": "_:791",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:54:58"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 15:55:12"
+      }
+    },
+    {
+      "@id": "_:8321",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "ABBR": "Décès - BEDER Charles Arsène",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7942",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "11 JUN 2025 15:48:20"
+      },
+      "CHAN": {
+        "dc:date": "11 JUN 2025 15:48:20"
+      }
+    },
+    {
+      "@id": "_:832",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Naissance - DESJARDINS Yolande Aurélienne (1908-1969)",
+      "ABBR": "Naissance - DESJARDINS Yolande Aurélienne (1908-1969)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/ark:/33518/gbqwknp91jv2/4a1672d2-114b-4763-a66d-280f433c0f46",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:792",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:793"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:10:52"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 16:11:09"
+      }
+    },
+    {
+      "@id": "_:8319",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "ABBR": "Décès - DESJARDINS Yolande",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7940",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "4 JUN 2025 16:34:55"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:34:55"
+      }
+    },
+    {
+      "@id": "_:833",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Naissance - BEDER Alfred Édouard (1870-1938)",
+      "ABBR": "Naissance - BEDER Alfred Édouard (1870-1938)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/ark:/33518/5bnqf6px7th4/60849ca9-725c-41a9-a6a2-52096d26ca9c",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": {
+        "@id": "_:795",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:24:37"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:24:51"
+      }
+    },
+    {
+      "@id": "_:838",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Service militaire - BEDER Alfred Édouard (1870-1938)",
+      "ABBR": "Service militaire - BEDER Alfred Édouard (1870-1938)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/ark:/33518/cjf7hp8g01s5/2ee3d77c-4354-45e4-9155-fb21ff767869",
+      "DATA": {
+        "TEXT": {
+          "GEDVALUE": "Signalement : ",
+          "CONT": [
+            "cheveux et sourcis chatains, yeux bleus, front large, nez ordinaire, bouche moyenne, menton rond, visage ovale, taille : 1m69.",
+            "Détail des services : parti le 10 novembre 1891 pour le 110e régiment d’infanterie. Dispensé de ses obligations militaires car un frère au service. Mais il a perdu ses droits à la dispense, le frère qui la lui avait conférée ayant obtenu une dispen"
+          ],
+          "CONC": "se, comme aîné d’une famille de 7 enfants."
+        }
+      },
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7919",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:46:09"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:51:24"
+      }
+    },
+    {
+      "@id": "_:836",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Déclaration de succession 1",
+      "ABBR": "Déclaration de succession - BEDER Alfred Édouard (1870-1938)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf3c8bd34/arko_default_60f543615a2d5/image/919273",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:7911",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7912"
+        },
+        {
+          "@id": "_:7913"
+        },
+        {
+          "@id": "_:7914"
+        },
+        {
+          "@id": "_:7915"
+        },
+        {
+          "@id": "_:7916"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:29:45"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:23:13"
+      }
+    },
+    {
+      "@id": "_:837",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Déclaration de succession 2",
+      "ABBR": "Déclaration de succession - BEDER Alfred Édouard (1870-1938)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1938%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf4495dc6/arko_default_60f543615a2d5/image/919276",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:7917",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7918"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:32:50"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:23:39"
+      }
+    },
+    {
+      "@id": "_:8315",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "TITL": "Décès - BEDER Alfred",
+      "ABBR": "Décès - BEDER Alfred",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7931",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:24:47"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:24:47"
+      }
+    },
+    {
+      "@id": "_:8312",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "ABBR": "Naissance - BOEGLER Marie",
+      "TYPE": "Deed",
+      "DATA": {
+        "TEXT": {
+          "CONT": [
+            "N°2",
+            "BOEGLER Caroline",
+            "née le 9 février",
+            "1872",
+            "Décédée à Andresy",
+            "Le 10.8.1953",
+            "Colmar le 12.2.57",
+            "Le Greffier de l’Etat-civil",
+            "      Mairie  de    Barr       _____________ arrondissement  de    Sélestat        ____________",
+            "            Le  dix  février     mille huit  cent  soixante-douze                 à   onze          heures  du      matin ",
+            "           Acte  de  naissance de       Marie BOEGLER     ________________________",
+            "née  à     Barr                     le     neuf  février         mille     huit     cent  soixante-douze",
+            "à     trois    heures              de  l’après-midi           enfant   légitime                de   Jacques BOEGLER                 ",
+            "_____________    âgé de    trente-trois              ans ,        profession   commis tanneur         ",
+            "né     à     Barr                  habitant        à   Barr                      _______________________",
+            "et    de     Caroline REISSINGER                    ______________     âgée   de vingt-sept         ans",
+            "Profession  sans ______        habitant     à   Barr, son épouse légitime              ______________",
+            "            L'enfant   qui   nous   a   été   présenté   a   été  reconnu   de   sexe     féminin         ___________",
+            "Premier témoin:     Jacques Adam               ________________       âgé   de    trente-quatre        ans",
+            "Profession   commis tanneur    ___  habitant  à   Barr           ____ département   Bas-Rhin   ",
+            "Deuxième témoin :     Guillaume Kleinhenni       ____________      âgé   de     trente-six              ans",
+            "Profession   (garde de couloir ?)      habitant   à   Barr   _______    département    Bas-Rhin",
+            "            Sur   la   présente   déclaration   qui   m'a   été   faite   par     le père de l’enfant             __________",
+            "  ____________________________________________ ___     et   après   lecture   du   présent   acte",
+            "ont    signé            ",
+            "            Fait   devant    moi   Gottfried  Bossert                      ______________________________  maire ",
+            "en   ma   qualité   d'officier   de   l'état  civil .",
+            "         Jacques Boegler                                                          Le maire",
+            "            Jacques Adam                                                          G. Bossert",
+            "            Guillaume Kleinhennig"
+          ]
+        }
+      },
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7926",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:38:59"
+      },
+      "CHAN": {
+        "dc:date": "8 JUN 2025 10:34:17"
+      }
+    },
+    {
+      "@id": "_:835",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Décès - BOEGLER Marie (1872-1953)",
+      "ABBR": "Décès - BOEGLER Marie (1872-1953)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.yvelines.fr/rechercher/archives-en-ligne/enregistrementbrtables-referencant-les-actesbret-declarations-de-successions/declarations-de-successions?arko_default_60e806efe299d--ficheFocus=&arko_default_60e806efe299d--filtreGroupes%5Bmode%5D=simple&arko_default_60e806efe299d--filtreGroupes%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bq%5D%5B%5D=andr%C3%A9sy&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b10b266%5D%5Bextras%5D%5Bmode%5D=popup&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bop%5D=AND&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bq%5D%5B%5D=1953%7C1969&arko_default_60e806efe299d--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_60f542b13cfe9%5D%5Bextras%5D%5Bmode%5D=slider&arko_default_60e806efe299d--from=0&arko_default_60e806efe299d--resultSize=25&arko_default_60e806efe299d--contenuIds%5B%5D=1286066&arko_default_60e806efe299d--modeRestit=arko_default_60f5475cb0eeb#/_recherche-api/visionneuse-infos/arko_default_60e806efe299d/arko_fiche_60dddf472817f/arko_default_60f543615a2d5/image/919317",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:799",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7910"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:16:03"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:16:12"
+      }
+    },
+    {
+      "@id": "_:839",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Naissance - DESJARDINS Arthur Alexandre (1873-)",
+      "ABBR": "Naissance - DESJARDINS Arthur Alexandre (1873-)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/ark:/33518/gx5tps1kd6c0/8e32b65b-2085-4a82-ad05-f83331c81bdd",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7921",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "4 JAN 2025 16:31:02"
+      },
+      "CHAN": {
+        "dc:date": "4 JAN 2025 16:31:17"
+      }
+    },
+    {
+      "@id": "_:8311",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Service militaire - DESJARDINS Arthur Alexandre (1873-)",
+      "ABBR": "Service militaire - DESJARDINS Arthur Alexandre (1873-)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/images/5991753e-4096-4a44-8809-783feb8d2ed5.jpg",
+      "DATA": {
+        "TEXT": {
+          "GEDVALUE": "Signalement : taille 1m77.",
+          "CONT": "Etat des services : Rappelé à l’activité le 2 août 1914, arrivé au corps le 9 août. Passé au 10e régiment de génie comme sapeur marinier le 1er décembre 1915. Il est en suite mis en sursis au titre des voies navigables. Sa mission est suspendue le ",
+          "CONC": "30 janvier 1919 et terminée le 11 juin 1920."
+        }
+      },
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:7936",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7937"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "5 JAN 2025 11:04:04"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 17:27:49"
+      }
+    },
+    {
+      "@id": "_:8314",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "TITL": "Décès - DESJARDINS Arthur",
+      "ABBR": "Décès - DESJARDINS Arthur",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7930",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:12:47"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:12:47"
+      }
+    },
+    {
+      "@id": "_:8313",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Naissance - VINOT Camille Augustine Angèle (1878-1963)",
+      "ABBR": "Naissance - VINOT Camille Augustine Angèle (1878-1963)",
+      "TYPE": "Deed",
+      "WWW": "https://archivesdepartementales.lenord.fr/ark:/33518/bl0q1t8wpk96/e8ee6da7-7d35-481d-8240-d8d61a5384fe",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7927",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:53:45"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 16:54:34"
+      }
+    },
+    {
+      "@id": "_:8320",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "ABBR": "Décès - VINOT Camille",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7941",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "4 JUN 2025 16:49:57"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:49:57"
+      }
+    },
+    {
+      "@id": "_:8316",
+      "@type": "_:SOUR",
+      "QUAY": "0",
+      "TITL": "Mariage - BEDER & DESJARDINS",
+      "ABBR": "Mariage - BEDER & DESJARDINS",
+      "TYPE": "Deed",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Other"
+        }
+      },
+      "OBJE": {
+        "@id": "_:7932",
+        "_PRIM": "YES"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:27:27"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:27:27"
+      }
+    },
+    {
+      "@id": "_:834",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Mariage - BEDER Alfred Édouard (1870-1938) & BOEGLER Marie (1872-)",
+      "ABBR": "Mariage - BEDER Alfred Édouard (1870-1938) & BOEGLER Marie (1872-)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.hauts-de-seine.fr/ark:/74903/vta23390521634902a2/dao/0/1/idsearch:RECH_31aeaa0c293d1d88dfcad570a8baedde?id=https%3A%2F%2Farchives.hauts-de-seine.fr%2Fark%3A%2F74903%2Fvta23390521634902a2%2Fcanvas%2F0%2F59&vx=2860.03&vy=-1221.4&vr=0&vz=5.03872",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:796",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:797"
+        },
+        {
+          "@id": "_:798"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:32:28"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:32:38"
+      }
+    },
+    {
+      "@id": "_:8310",
+      "@type": "_:SOUR",
+      "QUAY": "3",
+      "TITL": "Mariage - DESJARDINS Arthur Alexandre (1873-) & VINOT Camille Augustine Angèle (1878-1963)",
+      "ABBR": "Mariage - DESJARDINS Arthur Alexandre (1873-) & VINOT Camille Augustine Angèle (1878-1963)",
+      "TYPE": "Deed",
+      "WWW": "https://archives.paris.fr/arkotheque/visionneuse/visionneuse.php?arko=YTo2OntzOjQ6ImRhdGUiO3M6MTA6IjIwMjUtMDEtMDQiO3M6MTA6InR5cGVfZm9uZHMiO3M6MTE6ImFya29fc2VyaWVsIjtzOjQ6InJlZjEiO2k6NDtzOjQ6InJlZjIiO2k6MzAwNTEwO3M6MTY6InZpc2lvbm5ldXNlX2h0bWwiO2I6MTtzOjIxOiJ2aXNpb25uZXVzZV9odG1sX21vZGUiO3M6NDoicHJvZCI7fQ==#uielem_move=-1863%2C-1544&uielem_islocked=0&uielem_zoom=208&uielem_brightness=0&uielem_contrast=0&uielem_isinverted=0&uielem_rotate=F",
+      "REPO": {
+        "CALN": {
+          "MEDI": "Numerisation"
+        }
+      },
+      "OBJE": [
+        {
+          "@id": "_:7922",
+          "_PRIM": "YES"
+        },
+        {
+          "@id": "_:7923"
+        },
+        {
+          "@id": "_:7924"
+        }
+      ],
+      "_CREA": {
+        "dc:date": "5 JAN 2025 10:39:16"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 10:39:37"
+      }
+    },
+    {
+      "@id": "_:7934",
+      "@type": "_:OBJE",
+      "TITL": "Recensement St Maurice sur Fessard 1936-1.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Recensement St Maurice sur Fessard 1936-1.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "14 JAN 2025 18:15:09"
+      },
+      "CHAN": {
+        "dc:date": "14 JAN 2025 18:15:09"
+      }
+    },
+    {
+      "@id": "_:7935",
+      "@type": "_:OBJE",
+      "TITL": "Recensement St Maurice sur Fessard-2.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Recensement St Maurice sur Fessard-2.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "14 JAN 2025 18:15:13"
+      },
+      "CHAN": {
+        "dc:date": "14 JAN 2025 18:15:13"
+      }
+    },
+    {
+      "@id": "_:7938",
+      "@type": "_:OBJE",
+      "TITL": "Recensement 1946 Corquilleroy quartier Buges.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Recensement 1946 Corquilleroy quartier Buges.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 MAR 2025 12:52:11"
+      },
+      "CHAN": {
+        "dc:date": "5 MAR 2025 12:52:11"
+      }
+    },
+    {
+      "@id": "_:7928",
+      "@type": "_:OBJE",
+      "TITL": "Capture d’écran 2025-01-05 à 17.10.11.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Capture d_écran 2025-01-05 à 17.10.11.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 17:21:16"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 17:21:16"
+      }
+    },
+    {
+      "@id": "_:7929",
+      "@type": "_:OBJE",
+      "TITL": "PV examen.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/PV examen.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 17:25:53"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 17:25:53"
+      }
+    },
+    {
+      "@id": "_:794",
+      "@type": "_:OBJE",
+      "TITL": "Capture d’écran 2025-01-03 à 09.36.54.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Capture d_écran 2025-01-03 à 09.36.54.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 09:37:31"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 09:37:31"
+      }
+    },
+    {
+      "@id": "_:7920",
+      "@type": "_:OBJE",
+      "TITL": "image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/image_berroux_charles_remorqueur_entr_ph38780_987707.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:56:33"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:56:33"
+      }
+    },
+    {
+      "@id": "_:7933",
+      "@type": "_:OBJE",
+      "TITL": "N Jeannine Hrysio.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/N Jeannine Hrysio.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "14 JAN 2025 10:32:54"
+      },
+      "CHAN": {
+        "dc:date": "14 JAN 2025 10:32:54"
+      }
+    },
+    {
+      "@id": "_:7939",
+      "@type": "_:OBJE",
+      "TITL": "Extrait de Naissance M. BEDER.pdf",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Extrait de Naissance M. BEDER.pdf",
+        "FORM": "pdf"
+      },
+      "_CREA": {
+        "dc:date": "2 JUN 2025 12:17:36"
+      },
+      "CHAN": {
+        "dc:date": "2 JUN 2025 12:17:36"
+      }
+    },
+    {
+      "@id": "_:791",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Registres paroissiaux et d'état-civil 2025-01-02 15:54:34.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Registres paroissiaux et d_état-civil 2025-01-02 15_54_34.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 15:54:35"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 15:54:49"
+      }
+    },
+    {
+      "@id": "_:7942",
+      "@type": "_:OBJE",
+      "TITL": "D BEDER Charles Arsène.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/D BEDER Charles Arsène.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "11 JUN 2025 15:48:07"
+      },
+      "CHAN": {
+        "dc:date": "11 JUN 2025 15:48:07"
+      }
+    },
+    {
+      "@id": "_:792",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": " N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:09:48.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_09_48.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:09:48"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 16:10:44"
+      }
+    },
+    {
+      "@id": "_:793",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": " N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16:10:19.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/ N [1908-01 - 1908-06] - 3 E 6465 - Site Web des Archives départementales du Nord 2025-01-02 16_10_19.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "2 JAN 2025 16:10:19"
+      },
+      "CHAN": {
+        "dc:date": "2 JAN 2025 16:10:28"
+      }
+    },
+    {
+      "@id": "_:7940",
+      "@type": "_:OBJE",
+      "TITL": "D Yolande Desjardins.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/D Yolande Desjardins.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "4 JUN 2025 16:34:42"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:34:42"
+      }
+    },
+    {
+      "@id": "_:795",
+      "@type": "_:OBJE",
+      "TITL": " N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17:24:19.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/ N [1868-1871] - 5 Mi 027 R 082 - Site Web des Archives départementales du Nord 2025-01-03 17_24_19.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:24:19"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:24:50"
+      }
+    },
+    {
+      "@id": "_:7919",
+      "@type": "_:OBJE",
+      "TITL": "Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18:45:46.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Volume 5 - 1R 2260 - Site Web des Archives départementales du Nord 2025-01-03 18_45_46.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:45:46"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:46:13"
+      }
+    },
+    {
+      "@id": "_:7911",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:24:50.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_24_50.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:24:50"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:25:03"
+      }
+    },
+    {
+      "@id": "_:7912",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:12.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_12.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:25:12"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:25:20"
+      }
+    },
+    {
+      "@id": "_:7913",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:25:25.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_25_25.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:25:25"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:25:38"
+      }
+    },
+    {
+      "@id": "_:7914",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:27.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_27.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:28:27"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:28:38"
+      }
+    },
+    {
+      "@id": "_:7915",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:28:45.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_28_45.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:28:45"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:28:57"
+      }
+    },
+    {
+      "@id": "_:7916",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:29:09.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_29_09.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:29:09"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:29:20"
+      }
+    },
+    {
+      "@id": "_:7917",
+      "@type": "_:OBJE",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:11.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_11.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:32:11"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:32:53"
+      }
+    },
+    {
+      "@id": "_:7918",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:32:27.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_32_27.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:32:27"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:32:37"
+      }
+    },
+    {
+      "@id": "_:7931",
+      "@type": "_:OBJE",
+      "TITL": "D Alfred Beder.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/D Alfred Beder.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:24:32"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:24:32"
+      }
+    },
+    {
+      "@id": "_:7926",
+      "@type": "_:OBJE",
+      "TITL": "N Marie Boegler.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/N Marie Boegler.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:38:14"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 16:38:14"
+      }
+    },
+    {
+      "@id": "_:799",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:10.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_10.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:15:10"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:15:32"
+      }
+    },
+    {
+      "@id": "_:7910",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "Enregistrement. Registres de déclarations de successions 2025-01-03 18:15:46.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Enregistrement. Registres de déclarations de successions 2025-01-03 18_15_46.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 18:15:46"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 18:15:57"
+      }
+    },
+    {
+      "@id": "_:7921",
+      "@type": "_:OBJE",
+      "TITL": " N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16:30:43.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/ N [1873-1874] - 5 Mi 044 R 193 - Site Web des Archives départementales du Nord 2025-01-04 16_30_43.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "4 JAN 2025 16:30:43"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 10:40:05"
+      }
+    },
+    {
+      "@id": "_:7936",
+      "@type": "_:OBJE",
+      "TITL": "Capture d’écran 2025-01-16 à 15.16.27.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Capture d_écran 2025-01-16 à 15.16.27.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "16 JAN 2025 15:17:08"
+      },
+      "CHAN": {
+        "dc:date": "16 JAN 2025 15:17:08"
+      }
+    },
+    {
+      "@id": "_:7937",
+      "@type": "_:OBJE",
+      "TITL": "Capture d’écran 2025-01-16 à 15.16.51.png",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/Capture d_écran 2025-01-16 à 15.16.51.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "16 JAN 2025 15:17:12"
+      },
+      "CHAN": {
+        "dc:date": "16 JAN 2025 15:17:12"
+      }
+    },
+    {
+      "@id": "_:7930",
+      "@type": "_:OBJE",
+      "TITL": "D Arthur Desjardins.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/D Arthur Desjardins.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:11:50"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:11:50"
+      }
+    },
+    {
+      "@id": "_:7927",
+      "@type": "_:OBJE",
+      "TITL": " NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16:53:26.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/ NMD (sauf NMD 1877) [1863-1878] - 5 Mi 027 R 007 - Site Web des Archives départementales du Nord 2025-01-05 16_53_26.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 16:53:26"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 16:53:50"
+      }
+    },
+    {
+      "@id": "_:7941",
+      "@type": "_:OBJE",
+      "TITL": "D Camille VINOT.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/D Camille VINOT.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "4 JUN 2025 16:49:53"
+      },
+      "CHAN": {
+        "dc:date": "4 JUN 2025 16:49:53"
+      }
+    },
+    {
+      "@id": "_:7932",
+      "@type": "_:OBJE",
+      "TITL": "M Beder & DESJARDINS.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/M Beder _ DESJARDINS.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "8 JAN 2025 16:27:25"
+      },
+      "CHAN": {
+        "dc:date": "8 JAN 2025 16:27:25"
+      }
+    },
+    {
+      "@id": "_:796",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:30:17.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_30_17.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:30:17"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:30:29"
+      }
+    },
+    {
+      "@id": "_:797",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:31:28.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_31_28.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:31:28"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:31:41"
+      }
+    },
+    {
+      "@id": "_:798",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17:32:11.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/E_NUM_SUR_M1898 - 1898 - 1898 Démo - Archives départementales des Hauts-de-Seine 2025-01-03 17_32_11.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "3 JAN 2025 17:32:12"
+      },
+      "CHAN": {
+        "dc:date": "3 JAN 2025 17:32:24"
+      }
+    },
+    {
+      "@id": "_:7922",
+      "@type": "_:OBJE",
+      "TITL": "1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:37:40.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_37_40.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 10:37:40"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 10:39:35"
+      }
+    },
+    {
+      "@id": "_:7923",
+      "@type": "_:OBJE",
+      "RESN": "privacy",
+      "TITL": "1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:38:20.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_38_20.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 10:38:20"
+      },
+      "CHAN": {
+        "dc:date": "5 JAN 2025 10:38:41"
+      }
+    },
+    {
+      "@id": "_:7924",
+      "@type": "_:OBJE",
+      "TITL": "1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10:38:56.jpg",
+      "FILE": {
+        "GEDVALUE": "C:/Users/raph_/Documents/genopresse-project-main/projet_geno/resources/1901 , Mariages , 19 - Visionneuse - Archives de Paris 2025-01-05 10_38_56.jpg",
+        "FORM": "jpg"
+      },
+      "_CREA": {
+        "dc:date": "5 JAN 2025 10:38:56"
+      },
+      "CHAN": {
+        "dc:date": "23 APR 2026 16:47:56"
+      }
+    }
+  ]
+}
